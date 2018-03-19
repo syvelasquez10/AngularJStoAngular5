@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="Angularjs" nsURI="https://uniandes.edu.co/angular" nsPrefix="Angularjs">
+  <eClassifiers xsi:type="ecore:EClass" name="AngularJS">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="neweclass2" upperBound="-1"
+        eType="#//Template" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="controller" upperBound="-1"
+        eType="#//Controller" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Template">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="setenciahtml" upperBound="-1"
+        eType="#//SetenciaHTML" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SetenciaHTML">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="markup" upperBound="-1"
+        eType="#//MarkUp" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MarkUp" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Directivas" eSuperTypes="#//MarkUp">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="referencia" lowerBound="1"
+        eType="#//Referencia"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CurlyBraces" eSuperTypes="#//MarkUp">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="expresion" lowerBound="1"
+        eType="#//Expresion" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="filtro" upperBound="-1"
+        eType="#//Filtro" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Expresion"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Filtro"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Referencia"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Controller"/>
+</ecore:EPackage>
