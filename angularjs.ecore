@@ -20,12 +20,12 @@
         eType="#//SetenciaHTML"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="propiedades" upperBound="-1"
-        eType="#//Propiedades" containment="true"/>
+        eType="#//Propiedad" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MarkUp" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Directivas" eSuperTypes="#//MarkUp">
+  <eClassifiers xsi:type="ecore:EClass" name="Directiva" eSuperTypes="#//MarkUp">
     <eStructuralFeatures xsi:type="ecore:EReference" name="referencia" lowerBound="1"
         eType="#//Referencia"/>
   </eClassifiers>
@@ -45,16 +45,15 @@
   <eClassifiers xsi:type="ecore:EClass" name="Referencia">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="objeto" lowerBound="1"
-        eType="#//Objeto"/>
+        eType="#//ObjetoJavaScript"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Controller">
+  <eClassifiers xsi:type="ecore:EClass" name="Controller" eSuperTypes="#//ObjetoJavaScript">
     <eStructuralFeatures xsi:type="ecore:EReference" name="services" upperBound="-1"
-        eType="#//Services"/>
+        eType="#//Service"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="funcion" upperBound="-1"
         eType="#//Funcion" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Propiedades">
+  <eClassifiers xsi:type="ecore:EClass" name="Propiedad">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Module">
@@ -63,24 +62,24 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="modules" upperBound="-1"
         eType="#//Module"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="services" upperBound="-1"
-        eType="#//Services" containment="true"/>
+        eType="#//Service" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Services">
+  <eClassifiers xsi:type="ecore:EClass" name="Service">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Funcion" eSuperTypes="#//Objeto">
+  <eClassifiers xsi:type="ecore:EClass" name="Funcion" eSuperTypes="#//ObjetoJavaScript">
     <eStructuralFeatures xsi:type="ecore:EReference" name="parametros" upperBound="-1"
-        eType="#//Parametros" containment="true"/>
+        eType="#//Parametro" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="variable" upperBound="-1"
         eType="#//Variable" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Parametros">
+  <eClassifiers xsi:type="ecore:EClass" name="Parametro">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="services" eType="#//Services"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="services" eType="#//Service"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Objeto" abstract="true">
+  <eClassifiers xsi:type="ecore:EClass" name="ObjetoJavaScript" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Variable" eSuperTypes="#//Objeto"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Variable" eSuperTypes="#//ObjetoJavaScript"/>
 </ecore:EPackage>
