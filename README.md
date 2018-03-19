@@ -43,4 +43,4 @@ Se utilizo aproximadamente 2 horas para levantamiento de documentación y entend
 
 ## Autores
 
-Wendell Arias, Jairo Bautista, Sergio Velasquez, 
+Wendell Arias, Jairo Bautista, Sergio Velasquez,
