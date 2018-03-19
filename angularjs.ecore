@@ -27,7 +27,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Directiva" eSuperTypes="#//MarkUp">
     <eStructuralFeatures xsi:type="ecore:EReference" name="referencia" lowerBound="1"
-        eType="#//Referencia"/>
+        eType="#//Referencia" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CurlyBraces" eSuperTypes="#//MarkUp">
     <eStructuralFeatures xsi:type="ecore:EReference" name="expresion" lowerBound="1"
@@ -36,8 +36,9 @@
         eType="#//Filtro" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Expresion">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="referencia" eType="#//Referencia"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="referencia" eType="#//Referencia"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Filtro">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
