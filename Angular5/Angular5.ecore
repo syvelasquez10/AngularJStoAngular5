@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="Angular5" nsURI="http://uniandes.edu.co/angular5" nsPrefix="Angular5">
+  <eClassifiers xsi:type="ecore:EClass" name="Angular5App">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="modules" lowerBound="1"
+        upperBound="-1" eType="#//mvc/Module" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="components" lowerBound="1"
+        upperBound="-1" eType="#//mvc/Component" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="htmltemplates" lowerBound="1"
+        upperBound="-1" eType="#//html/HTMLTemplate" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="directivas" upperBound="-1"
+        eType="#//html/Directiva" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="services" upperBound="-1"
+        eType="#//mvc/Service" containment="true"/>
+  </eClassifiers>
+  <eSubpackages name="html">
+    <eClassifiers xsi:type="ecore:EClass" name="HTMLTemplate">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="sentenciashtml" upperBound="-1"
+          eType="#//html/SentenciaHTML" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="SentenciaHTML">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="propiedades" upperBound="-1"
+          eType="#//html/Propiedad" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="sentenciahtml" upperBound="-1"
+          eType="#//html/SentenciaHTML"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="selfClosing" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="directivas" upperBound="-1"
+          eType="#//html/Directiva"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="curlybraces" upperBound="-1"
+          eType="#//html/CurlyBraces" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Propiedad">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="valor" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Directiva">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="referencia" lowerBound="1"
+          eType="#//html/Referencia" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Referencia">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="objetotypescript" lowerBound="1"
+          eType="#//mvc/ObjetoTypeScript"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="CurlyBraces">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="filtros" upperBound="-1"
+          eType="#//html/Filtro" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="expresion" lowerBound="1"
+          eType="#//html/Expresion"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Filtro">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="parametros" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Expresion">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="valor" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="referencia" upperBound="-1"
+          eType="#//html/Referencia" containment="true"/>
+    </eClassifiers>
+  </eSubpackages>
+  <eSubpackages name="mvc">
+    <eClassifiers xsi:type="ecore:EClass" name="Module">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="objetotypescript" upperBound="-1"
+          eType="#//mvc/ObjetoTypeScript" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="rootcomponent" eType="#//mvc/Component"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="services" upperBound="-1"
+          eType="#//mvc/Service"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="newMomentInterval4">
+      <eAnnotations source="http://www.obeo.fr/dsl/dnc/archetype">
+        <details key="archetype" value="MomentInterval"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Component">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="htmltemplate" lowerBound="1"
+          eType="#//html/HTMLTemplate"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="services" upperBound="-1"
+          eType="#//mvc/Service"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="objetotypescript" upperBound="-1"
+          eType="#//mvc/ObjetoTypeScript" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="modules" upperBound="-1"
+          eType="#//mvc/Module"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Service">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="objetotypescript" upperBound="-1"
+          eType="#//mvc/ObjetoTypeScript" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ObjetoTypeScript" abstract="true">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Funcion" eSuperTypes="#//mvc/ObjetoTypeScript">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="body" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="tieneRetorno" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="parametro" upperBound="-1"
+          eType="#//mvc/Parametro" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Variable" eSuperTypes="#//mvc/ObjetoTypeScript">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="valor" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="tipo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Parametro">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eClassifiers>
+  </eSubpackages>
+</ecore:EPackage>
