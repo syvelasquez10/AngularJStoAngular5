@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Angular5:Angular5App xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Angular5="http://uniandes.edu.co/angular5" xmlns:Angular5.mvc="http://uniandes.edu.co/angular5/mvc" xsi:schemaLocation="http://uniandes.edu.co/angular5 http://uniandes.edu.co/angular5/mvc">
+  <modules name="RootComponent" rootcomponent="//@components.0" services="//@services.0">
+    <objetotypescript xsi:type="Angular5.mvc:Funcion" name="constructor"/>
+    <objetotypescript xsi:type="Angular5.mvc:Variable" name="hero" valor="[{&quot;hero&quot;},{&quot;hero&quot;}]" tipo="List&lt;Hero>"/>
+  </modules>
+  <components name="HeroListComponet">
+    <htmltemplate>
+      <sentenciashtml name="p">
+        <propiedades/>
+        <curlybraces>
+          <filtros name="order" parametros="heros"/>
+          <expresion valor="heros" referencia="//@directivas.0/@referencia"/>
+        </curlybraces>
+      </sentenciashtml>
+      <sentenciashtml name="a">
+        <propiedades name="href" valor="#"/>
+      </sentenciashtml>
+    </htmltemplate>
+  </components>
+  <directivas>
+    <referencia name="heroList" objetotypescript="//@modules.0/@objetotypescript.1"/>
+  </directivas>
+  <services name="request">
+    <objetotypescript xsi:type="Angular5.mvc:Funcion" name="get" body="return heroList" tieneRetorno="true"/>
+  </services>
+</Angular5:Angular5App>
