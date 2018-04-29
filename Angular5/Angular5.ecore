@@ -10,6 +10,8 @@
         eType="#//html/Directive" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="services" upperBound="-1"
         eType="#//mvc/Service" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="modelos" upperBound="-1"
+        eType="#//mvc/Modelo" containment="true"/>
   </eClassifiers>
   <eSubpackages name="html">
     <eClassifiers xsi:type="ecore:EClass" name="HTMLTemplate">
@@ -82,6 +84,8 @@
           eType="#//mvc/Module"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="htmltemplate" lowerBound="1"
           eType="#//html/HTMLTemplate" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="modelo" upperBound="-1"
+          eType="#//mvc/Modelo"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Service">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -104,5 +108,6 @@
     <eClassifiers xsi:type="ecore:EClass" name="Parametro">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Modelo"/>
   </eSubpackages>
 </ecore:EPackage>
