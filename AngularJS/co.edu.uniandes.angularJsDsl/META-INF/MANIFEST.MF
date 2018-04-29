@@ -1,0 +1,26 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: co.edu.uniandes.angularJsDsl
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: co.edu.uniandes.angularJsDsl; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: AngularJStoAngular5,
+ org.eclipse.xtext,
+ org.eclipse.xtext.xbase,
+ org.eclipse.equinox.common;bundle-version="3.5.0",
+ org.eclipse.xtext.xbase.lib,
+ org.antlr.runtime,
+ org.eclipse.xtext.util,
+ org.eclipse.xtend.lib
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: co.edu.uniandes.angularJsDsl.generator,
+ co.edu.uniandes.angularJsDsl.scoping,
+ co.edu.uniandes.angularJsDsl.services,
+ co.edu.uniandes.angularJsDsl.parser.antlr.internal,
+ co.edu.uniandes.angularJsDsl.validation,
+ co.edu.uniandes.angularJsDsl,
+ co.edu.uniandes.angularJsDsl.serializer,
+ co.edu.uniandes.angularJsDsl.parser.antlr,
+ co.edu.uniandes.angularJsDsl.formatting2
+Import-Package: org.apache.log4j
