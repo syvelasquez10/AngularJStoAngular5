@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/AngularJStoAngular5/src" modelPluginID="AngularJStoAngular5"
+    modelName="Angularjs" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" copyrightFields="false" operationReflection="false"
+    importOrganizing="true">
+  <foreignModel>angularjs.ecore</foreignModel>
+  <genPackages prefix="Angularjs" disposableProviderFactory="true" ecorePackage="angularjs.ecore#/">
+    <genClasses ecoreClass="angularjs.ecore#//AngularJSApp">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference angularjs.ecore#//AngularJSApp/templates"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference angularjs.ecore#//AngularJSApp/modules"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute angularjs.ecore#//AngularJSApp/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference angularjs.ecore#//AngularJSApp/parametros"/>
+    </genClasses>
+    <genClasses ecoreClass="angularjs.ecore#//Template">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference angularjs.ecore#//Template/setenciahtml"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute angularjs.ecore#//Template/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute angularjs.ecore#//Template/rutaArchivo"/>
+    </genClasses>
+    <genClasses ecoreClass="angularjs.ecore#//SetenciaHTML">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference angularjs.ecore#//SetenciaHTML/markup"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference angularjs.ecore#//SetenciaHTML/setenciahtml"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute angularjs.ecore#//SetenciaHTML/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference angularjs.ecore#//SetenciaHTML/propiedades"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute angularjs.ecore#//SetenciaHTML/selfClosing"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="angularjs.ecore#//MarkUp"/>
+    <genClasses ecoreClass="angularjs.ecore#//Directiva">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference angularjs.ecore#//Directiva/referencia"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute angularjs.ecore#//Directiva/name"/>
+    </genClasses>
+    <genClasses ecoreClass="angularjs.ecore#//CurlyBraces">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference angularjs.ecore#//CurlyBraces/expresion"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference angularjs.ecore#//CurlyBraces/filtro"/>
+    </genClasses>
+    <genClasses ecoreClass="angularjs.ecore#//Expresion">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute angularjs.ecore#//Expresion/valor"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference angularjs.ecore#//Expresion/referencia"/>
+    </genClasses>
+    <genClasses ecoreClass="angularjs.ecore#//Filtro">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute angularjs.ecore#//Filtro/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute angularjs.ecore#//Filtro/parametros"/>
+    </genClasses>
+    <genClasses ecoreClass="angularjs.ecore#//Referencia">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference angularjs.ecore#//Referencia/objeto"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute angularjs.ecore#//Referencia/name"/>
+    </genClasses>
+    <genClasses ecoreClass="angularjs.ecore#//Controller">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference angularjs.ecore#//Controller/services"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference angularjs.ecore#//Controller/funcion"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference angularjs.ecore#//Controller/parametro"/>
+    </genClasses>
+    <genClasses ecoreClass="angularjs.ecore#//Propiedad">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute angularjs.ecore#//Propiedad/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute angularjs.ecore#//Propiedad/valor"/>
+    </genClasses>
+    <genClasses ecoreClass="angularjs.ecore#//Module">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference angularjs.ecore#//Module/controller"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference angularjs.ecore#//Module/modules"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference angularjs.ecore#//Module/services"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference angularjs.ecore#//Module/parametro"/>
+    </genClasses>
+    <genClasses ecoreClass="angularjs.ecore#//Service">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference angularjs.ecore#//Service/funcion"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference angularjs.ecore#//Service/parametro"/>
+    </genClasses>
+    <genClasses ecoreClass="angularjs.ecore#//Funcion">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference angularjs.ecore#//Funcion/variable"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference angularjs.ecore#//Funcion/funcion"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference angularjs.ecore#//Funcion/parametro"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute angularjs.ecore#//Funcion/tieneRetorno"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference angularjs.ecore#//Funcion/referencia"/>
+    </genClasses>
+    <genClasses ecoreClass="angularjs.ecore#//Parametro">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute angularjs.ecore#//Parametro/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference angularjs.ecore#//Parametro/services"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="angularjs.ecore#//ObjetoJavaScript">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute angularjs.ecore#//ObjetoJavaScript/name"/>
+    </genClasses>
+    <genClasses ecoreClass="angularjs.ecore#//Variable">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute angularjs.ecore#//Variable/valor"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
