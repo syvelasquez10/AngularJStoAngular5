@@ -1606,7 +1606,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_nf4BUE8fEeiZep-N5Wb0Pw" name="[1..*] angularjsapp" sourceNode="_mSxVAE8fEeiZep-N5Wb0Pw" targetNode="_QKBFACsLEeiuxOdBzHSPMA">
+    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_nf4BUE8fEeiZep-N5Wb0Pw" name="[1..1] angularjsapp" sourceNode="_mSxVAE8fEeiZep-N5Wb0Pw" targetNode="_QKBFACsLEeiuxOdBzHSPMA">
       <target xmi:type="ecore:EReference" href="angularjs.ecore#//AppAngularJS/angularjsapp"/>
       <semanticElements xmi:type="ecore:EReference" href="angularjs.ecore#//AppAngularJS/angularjsapp"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_ploM4E8fEeiZep-N5Wb0Pw" description="_PbMasCsMEeiuxOdBzHSPMA" sourceArrow="FillDiamond" routingStyle="manhattan" strokeColor="0,0,0">

@@ -3,7 +3,7 @@
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="Angularjs" nsURI="https://uniandes.edu.co/angular" nsPrefix="Angularjs">
   <eClassifiers xsi:type="ecore:EClass" name="AppAngularJS">
     <eStructuralFeatures xsi:type="ecore:EReference" name="angularjsapp" lowerBound="1"
-        upperBound="-1" eType="#//mvc/AngularJSApp" containment="true"/>
+        eType="#//mvc/AngularJSApp" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="template" upperBound="-1"
         eType="#//html/Template" containment="true"/>
   </eClassifiers>
