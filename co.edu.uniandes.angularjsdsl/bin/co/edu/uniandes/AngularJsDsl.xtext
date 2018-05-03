@@ -14,18 +14,6 @@ AngularJSApp returns AngularJSApp:
 		('parametros' '{' parametros+=Parametro ( "," parametros+=Parametro)* '}' )?
 	'}';
 
-
-
-
-
-
-
-
-
-
-
-
-
 ObjetoJavaScript returns ObjetoJavaScript:
 	Variable | Funcion | Controller | Service | Module;
 
