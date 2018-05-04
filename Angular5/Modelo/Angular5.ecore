@@ -56,7 +56,7 @@
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Expresion">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="valor" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="referencia" upperBound="-1"
+      <eStructuralFeatures xsi:type="ecore:EReference" name="referencias" upperBound="-1"
           eType="#//html/Referencia"/>
     </eClassifiers>
   </eSubpackages>
@@ -68,11 +68,6 @@
       <eStructuralFeatures xsi:type="ecore:EReference" name="rootcomponent" eType="#//mvc/Component"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="services" upperBound="-1"
           eType="#//mvc/Service"/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="newMomentInterval4">
-      <eAnnotations source="http://www.obeo.fr/dsl/dnc/archetype">
-        <details key="archetype" value="MomentInterval"/>
-      </eAnnotations>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Component">
       <eStructuralFeatures xsi:type="ecore:EReference" name="services" upperBound="-1"
