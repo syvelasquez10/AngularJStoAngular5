@@ -10,7 +10,7 @@
   <eSubpackages name="mvc">
     <eClassifiers xsi:type="ecore:EClass" name="Module" eSuperTypes="#//mvc/ObjetoJavaScript">
       <eStructuralFeatures xsi:type="ecore:EReference" name="controller" upperBound="-1"
-          eType="#//mvc/Controller" containment="true"/>
+          eType="#//mvc/Component" containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="modules" upperBound="-1"
           eType="#//mvc/Module"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="services" upperBound="-1"
@@ -21,7 +21,7 @@
     <eClassifiers xsi:type="ecore:EClass" name="ObjetoJavaScript" abstract="true">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="Controller" eSuperTypes="#//mvc/ObjetoJavaScript">
+    <eClassifiers xsi:type="ecore:EClass" name="Component" eSuperTypes="#//mvc/ObjetoJavaScript">
       <eStructuralFeatures xsi:type="ecore:EReference" name="services" upperBound="-1"
           eType="#//mvc/Service"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="funcion" upperBound="-1"
@@ -31,6 +31,8 @@
       <eStructuralFeatures xsi:type="ecore:EReference" name="parametros" upperBound="-1"
           eType="#//mvc/Parametro" containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="body" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="template" lowerBound="1"
+          eType="#//html/Template"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Service" eSuperTypes="#//mvc/ObjetoJavaScript">
       <eStructuralFeatures xsi:type="ecore:EReference" name="funcion" upperBound="-1"
