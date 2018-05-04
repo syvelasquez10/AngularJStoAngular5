@@ -4,7 +4,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="AppAngularJS">
     <eStructuralFeatures xsi:type="ecore:EReference" name="angularjsapp" lowerBound="1"
         eType="#//mvc/AngularJSApp" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="template" upperBound="-1"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="template" lowerBound="1"
         eType="#//html/Template" containment="true"/>
   </eClassifiers>
   <eSubpackages name="mvc">
