@@ -2,9 +2,15 @@
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="Angularjs" nsURI="https://uniandes.edu.co/angular" nsPrefix="Angularjs">
   <eClassifiers xsi:type="ecore:EClass" name="AppAngularJS">
+<<<<<<< HEAD
     <eStructuralFeatures xsi:type="ecore:EReference" name="modulos" lowerBound="1"
         upperBound="-1" eType="#//mvc/Modulo" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="template" upperBound="-1"
+=======
+    <eStructuralFeatures xsi:type="ecore:EReference" name="angularjsapp" lowerBound="1"
+        eType="#//mvc/AngularJSApp" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="template" lowerBound="1"
+>>>>>>> 9f74702448842a877f9787a84736b2c7db28a3ba
         eType="#//html/Template" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="modelos" upperBound="-1"
         eType="#//mvc/Modelo" containment="true"/>
