@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Angular5:Angular5App xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Angular5="http://uniandes.edu.co/angular5" xmlns:Angular5.mvc="http://uniandes.edu.co/angular5/mvc" xsi:schemaLocation="http://uniandes.edu.co/angular5 http://uniandes.edu.co/angular5/mvc">
-  <modules name="RootComponent" rootcomponent="//@components.0"/>
-  <components name="HeroListComponet">
-    <objetotypescript xsi:type="Angular5.mvc:Funcion" name="printHola" body="console.log(&quot;hola&quot;)"/>
-  </components>
-  <directivas/>
-</Angular5:Angular5App>
