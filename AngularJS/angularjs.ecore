@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="Angularjs" nsURI="https://uniandes.edu.co/angular" nsPrefix="Angularjs">
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="angularjs" nsURI="https://uniandes.edu.co/angular" nsPrefix="angularjs">
   <eClassifiers xsi:type="ecore:EClass" name="AppAngularJS">
     <eStructuralFeatures xsi:type="ecore:EReference" name="modulos" lowerBound="1"
         upperBound="-1" eType="#//Modulo" containment="true"/>
@@ -8,8 +8,9 @@
         eType="#//Template" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="modelos" upperBound="-1"
         eType="#//Modelo" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Modulo">
+  <eClassifiers xsi:type="ecore:EClass" name="Modulo" eSuperTypes="#//ObjetoJavaScript">
     <eStructuralFeatures xsi:type="ecore:EReference" name="parametros" upperBound="-1"
         eType="#//Parametro" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="services" upperBound="-1"
