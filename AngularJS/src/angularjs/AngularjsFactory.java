@@ -1,8 +1,7 @@
-/**
- */
 package angularjs;
 
 import org.eclipse.emf.ecore.EFactory;
+
 
 /**
  * <!-- begin-user-doc -->
@@ -12,7 +11,7 @@ import org.eclipse.emf.ecore.EFactory;
  * @see angularjs.AngularjsPackage
  * @generated
  */
-public interface AngularjsFactory extends EFactory {
+public interface AngularjsFactory extends EFactory  {
 	/**
 	 * The singleton instance of the factory.
 	 * <!-- begin-user-doc -->
@@ -58,15 +57,6 @@ public interface AngularjsFactory extends EFactory {
 	Funcion createFuncion();
 
 	/**
-	 * Returns a new object of class '<em>Parametro</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Parametro</em>'.
-	 * @generated
-	 */
-	Parametro createParametro();
-
-	/**
 	 * Returns a new object of class '<em>Variable</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -76,13 +66,13 @@ public interface AngularjsFactory extends EFactory {
 	Variable createVariable();
 
 	/**
-	 * Returns a new object of class '<em>Controller</em>'.
+	 * Returns a new object of class '<em>Componente</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Controller</em>'.
+	 * @return a new object of class '<em>Componente</em>'.
 	 * @generated
 	 */
-	Controller createController();
+	Componente createComponente();
 
 	/**
 	 * Returns a new object of class '<em>Service</em>'.
@@ -112,13 +102,13 @@ public interface AngularjsFactory extends EFactory {
 	Template createTemplate();
 
 	/**
-	 * Returns a new object of class '<em>Setencia HTML</em>'.
+	 * Returns a new object of class '<em>Sentencia HTML</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Setencia HTML</em>'.
+	 * @return a new object of class '<em>Sentencia HTML</em>'.
 	 * @generated
 	 */
-	SetenciaHTML createSetenciaHTML();
+	SentenciaHTML createSentenciaHTML();
 
 	/**
 	 * Returns a new object of class '<em>Propiedad</em>'.
@@ -128,15 +118,6 @@ public interface AngularjsFactory extends EFactory {
 	 * @generated
 	 */
 	Propiedad createPropiedad();
-
-	/**
-	 * Returns a new object of class '<em>Referencia</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Referencia</em>'.
-	 * @generated
-	 */
-	Referencia createReferencia();
 
 	/**
 	 * Returns a new object of class '<em>Expresion</em>'.

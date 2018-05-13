@@ -14,54 +14,54 @@ import org.eclipse.emf.common.util.EList;
  * </p>
  * <ul>
  *   <li>{@link angularjs.Service#getFuncion <em>Funcion</em>}</li>
- *   <li>{@link angularjs.Service#getParametro <em>Parametro</em>}</li>
+ *   <li>{@link angularjs.Service#getParametros <em>Parametros</em>}</li>
  * </ul>
  *
  * @see angularjs.AngularjsPackage#getService()
  * @model
  * @generated
  */
-public interface Service extends ObjetoJavaScript {
+public interface Service extends ObjetoAngular {
 	/**
-	 * Returns the value of the '<em><b>Funcion</b></em>' containment reference list.
-	 * The list contents are of type {@link angularjs.Funcion}.
+	 * Returns the value of the '<em><b>Funcion</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Funcion</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Funcion</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Funcion</em>' containment reference list.
+	 * @return the value of the '<em>Funcion</em>' containment reference.
+	 * @see #setFuncion(Funcion)
 	 * @see angularjs.AngularjsPackage#getService_Funcion()
-	 * @model containment="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	EList<Funcion> getFuncion();
+	Funcion getFuncion();
 
 	/**
-	 * Returns the value of the '<em><b>Parametro</b></em>' reference.
+	 * Sets the value of the '{@link angularjs.Service#getFuncion <em>Funcion</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Funcion</em>' containment reference.
+	 * @see #getFuncion()
+	 * @generated
+	 */
+	void setFuncion(Funcion value);
+
+	/**
+	 * Returns the value of the '<em><b>Parametros</b></em>' reference list.
+	 * The list contents are of type {@link angularjs.ObjetoAngular}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Parametro</em>' reference isn't clear,
+	 * If the meaning of the '<em>Parametros</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Parametro</em>' reference.
-	 * @see #setParametro(Parametro)
-	 * @see angularjs.AngularjsPackage#getService_Parametro()
-	 * @model required="true"
+	 * @return the value of the '<em>Parametros</em>' reference list.
+	 * @see angularjs.AngularjsPackage#getService_Parametros()
+	 * @model
 	 * @generated
 	 */
-	Parametro getParametro();
-
-	/**
-	 * Sets the value of the '{@link angularjs.Service#getParametro <em>Parametro</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Parametro</em>' reference.
-	 * @see #getParametro()
-	 * @generated
-	 */
-	void setParametro(Parametro value);
+	EList<ObjetoAngular> getParametros();
 
 } // Service

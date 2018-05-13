@@ -13,51 +13,34 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link angularjs.Controller#getServices <em>Services</em>}</li>
- *   <li>{@link angularjs.Controller#getFuncion <em>Funcion</em>}</li>
+ *   <li>{@link angularjs.Controller#getFunciones <em>Funciones</em>}</li>
  *   <li>{@link angularjs.Controller#getVariable <em>Variable</em>}</li>
- *   <li>{@link angularjs.Controller#getParametros <em>Parametros</em>}</li>
  *   <li>{@link angularjs.Controller#getBody <em>Body</em>}</li>
  *   <li>{@link angularjs.Controller#getTemplate <em>Template</em>}</li>
  *   <li>{@link angularjs.Controller#getModelo <em>Modelo</em>}</li>
+ *   <li>{@link angularjs.Controller#getParametros <em>Parametros</em>}</li>
  * </ul>
  *
  * @see angularjs.AngularjsPackage#getController()
  * @model
  * @generated
  */
-public interface Controller extends ObjetoJavaScript {
+public interface Controller extends ObjetoAngular {
 	/**
-	 * Returns the value of the '<em><b>Services</b></em>' reference list.
-	 * The list contents are of type {@link angularjs.Service}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Services</em>' reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Services</em>' reference list.
-	 * @see angularjs.AngularjsPackage#getController_Services()
-	 * @model
-	 * @generated
-	 */
-	EList<Service> getServices();
-
-	/**
-	 * Returns the value of the '<em><b>Funcion</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Funciones</b></em>' containment reference list.
 	 * The list contents are of type {@link angularjs.Funcion}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Funcion</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Funciones</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Funcion</em>' containment reference list.
-	 * @see angularjs.AngularjsPackage#getController_Funcion()
+	 * @return the value of the '<em>Funciones</em>' containment reference list.
+	 * @see angularjs.AngularjsPackage#getController_Funciones()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Funcion> getFuncion();
+	EList<Funcion> getFunciones();
 
 	/**
 	 * Returns the value of the '<em><b>Variable</b></em>' containment reference list.
@@ -76,20 +59,20 @@ public interface Controller extends ObjetoJavaScript {
 	EList<Variable> getVariable();
 
 	/**
-	 * Returns the value of the '<em><b>Parametros</b></em>' containment reference list.
-	 * The list contents are of type {@link angularjs.Parametro}.
+	 * Returns the value of the '<em><b>Parametros</b></em>' reference list.
+	 * The list contents are of type {@link angularjs.ObjetoAngular}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Parametros</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Parametros</em>' containment reference list.
+	 * @return the value of the '<em>Parametros</em>' reference list.
 	 * @see angularjs.AngularjsPackage#getController_Parametros()
-	 * @model containment="true"
+	 * @model
 	 * @generated
 	 */
-	EList<Parametro> getParametros();
+	EList<ObjetoAngular> getParametros();
 
 	/**
 	 * Returns the value of the '<em><b>Body</b></em>' attribute.

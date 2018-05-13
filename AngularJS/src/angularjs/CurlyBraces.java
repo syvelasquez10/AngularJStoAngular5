@@ -2,8 +2,6 @@
  */
 package angularjs;
 
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -51,19 +49,29 @@ public interface CurlyBraces extends EObject {
 	void setExpresion(Expresion value);
 
 	/**
-	 * Returns the value of the '<em><b>Filtro</b></em>' containment reference list.
-	 * The list contents are of type {@link angularjs.Filtro}.
+	 * Returns the value of the '<em><b>Filtro</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Filtro</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Filtro</em>' containment reference list.
+	 * @return the value of the '<em>Filtro</em>' containment reference.
+	 * @see #setFiltro(Filtro)
 	 * @see angularjs.AngularjsPackage#getCurlyBraces_Filtro()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Filtro> getFiltro();
+	Filtro getFiltro();
+
+	/**
+	 * Sets the value of the '{@link angularjs.CurlyBraces#getFiltro <em>Filtro</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Filtro</em>' containment reference.
+	 * @see #getFiltro()
+	 * @generated
+	 */
+	void setFiltro(Filtro value);
 
 } // CurlyBraces

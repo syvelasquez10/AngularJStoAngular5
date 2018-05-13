@@ -3,7 +3,9 @@
 package angularjs.impl;
 
 import angularjs.AngularjsPackage;
+import angularjs.CurlyBraces;
 import angularjs.Directiva;
+import angularjs.ObjetoAngular;
 import angularjs.Referencia;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -23,23 +25,14 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link angularjs.impl.DirectivaImpl#getReferencia <em>Referencia</em>}</li>
  *   <li>{@link angularjs.impl.DirectivaImpl#getName <em>Name</em>}</li>
+ *   <li>{@link angularjs.impl.DirectivaImpl#getCurlybraces <em>Curlybraces</em>}</li>
+ *   <li>{@link angularjs.impl.DirectivaImpl#getReferencia <em>Referencia</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class DirectivaImpl extends MinimalEObjectImpl.Container implements Directiva {
-	/**
-	 * The cached value of the '{@link #getReferencia() <em>Referencia</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getReferencia()
-	 * @generated
-	 * @ordered
-	 */
-	protected Referencia referencia;
-
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -61,6 +54,26 @@ public class DirectivaImpl extends MinimalEObjectImpl.Container implements Direc
 	protected String name = NAME_EDEFAULT;
 
 	/**
+	 * The cached value of the '{@link #getCurlybraces() <em>Curlybraces</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCurlybraces()
+	 * @generated
+	 * @ordered
+	 */
+	protected CurlyBraces curlybraces;
+
+	/**
+	 * The cached value of the '{@link #getReferencia() <em>Referencia</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getReferencia()
+	 * @generated
+	 * @ordered
+	 */
+	protected ObjetoAngular referencia;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -77,49 +90,6 @@ public class DirectivaImpl extends MinimalEObjectImpl.Container implements Direc
 	@Override
 	protected EClass eStaticClass() {
 		return AngularjsPackage.Literals.DIRECTIVA;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Referencia getReferencia() {
-		return referencia;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetReferencia(Referencia newReferencia, NotificationChain msgs) {
-		Referencia oldReferencia = referencia;
-		referencia = newReferencia;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, AngularjsPackage.DIRECTIVA__REFERENCIA, oldReferencia, newReferencia);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setReferencia(Referencia newReferencia) {
-		if (newReferencia != referencia) {
-			NotificationChain msgs = null;
-			if (referencia != null)
-				msgs = ((InternalEObject)referencia).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - AngularjsPackage.DIRECTIVA__REFERENCIA, null, msgs);
-			if (newReferencia != null)
-				msgs = ((InternalEObject)newReferencia).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - AngularjsPackage.DIRECTIVA__REFERENCIA, null, msgs);
-			msgs = basicSetReferencia(newReferencia, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, AngularjsPackage.DIRECTIVA__REFERENCIA, newReferencia, newReferencia));
 	}
 
 	/**
@@ -148,13 +118,75 @@ public class DirectivaImpl extends MinimalEObjectImpl.Container implements Direc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case AngularjsPackage.DIRECTIVA__REFERENCIA:
-				return basicSetReferencia(null, msgs);
+	public CurlyBraces getCurlybraces() {
+		if (curlybraces != null && curlybraces.eIsProxy()) {
+			InternalEObject oldCurlybraces = (InternalEObject)curlybraces;
+			curlybraces = (CurlyBraces)eResolveProxy(oldCurlybraces);
+			if (curlybraces != oldCurlybraces) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, AngularjsPackage.DIRECTIVA__CURLYBRACES, oldCurlybraces, curlybraces));
+			}
 		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
+		return curlybraces;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public CurlyBraces basicGetCurlybraces() {
+		return curlybraces;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCurlybraces(CurlyBraces newCurlybraces) {
+		CurlyBraces oldCurlybraces = curlybraces;
+		curlybraces = newCurlybraces;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, AngularjsPackage.DIRECTIVA__CURLYBRACES, oldCurlybraces, curlybraces));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ObjetoAngular getReferencia() {
+		if (referencia != null && referencia.eIsProxy()) {
+			InternalEObject oldReferencia = (InternalEObject)referencia;
+			referencia = (ObjetoAngular)eResolveProxy(oldReferencia);
+			if (referencia != oldReferencia) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, AngularjsPackage.DIRECTIVA__REFERENCIA, oldReferencia, referencia));
+			}
+		}
+		return referencia;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ObjetoAngular basicGetReferencia() {
+		return referencia;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setReferencia(ObjetoAngular newReferencia) {
+		ObjetoAngular oldReferencia = referencia;
+		referencia = newReferencia;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, AngularjsPackage.DIRECTIVA__REFERENCIA, oldReferencia, referencia));
 	}
 
 	/**
@@ -165,10 +197,14 @@ public class DirectivaImpl extends MinimalEObjectImpl.Container implements Direc
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case AngularjsPackage.DIRECTIVA__REFERENCIA:
-				return getReferencia();
 			case AngularjsPackage.DIRECTIVA__NAME:
 				return getName();
+			case AngularjsPackage.DIRECTIVA__CURLYBRACES:
+				if (resolve) return getCurlybraces();
+				return basicGetCurlybraces();
+			case AngularjsPackage.DIRECTIVA__REFERENCIA:
+				if (resolve) return getReferencia();
+				return basicGetReferencia();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -181,11 +217,14 @@ public class DirectivaImpl extends MinimalEObjectImpl.Container implements Direc
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case AngularjsPackage.DIRECTIVA__REFERENCIA:
-				setReferencia((Referencia)newValue);
-				return;
 			case AngularjsPackage.DIRECTIVA__NAME:
 				setName((String)newValue);
+				return;
+			case AngularjsPackage.DIRECTIVA__CURLYBRACES:
+				setCurlybraces((CurlyBraces)newValue);
+				return;
+			case AngularjsPackage.DIRECTIVA__REFERENCIA:
+				setReferencia((ObjetoAngular)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -199,11 +238,14 @@ public class DirectivaImpl extends MinimalEObjectImpl.Container implements Direc
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case AngularjsPackage.DIRECTIVA__REFERENCIA:
-				setReferencia((Referencia)null);
-				return;
 			case AngularjsPackage.DIRECTIVA__NAME:
 				setName(NAME_EDEFAULT);
+				return;
+			case AngularjsPackage.DIRECTIVA__CURLYBRACES:
+				setCurlybraces((CurlyBraces)null);
+				return;
+			case AngularjsPackage.DIRECTIVA__REFERENCIA:
+				setReferencia((ObjetoAngular)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -217,10 +259,12 @@ public class DirectivaImpl extends MinimalEObjectImpl.Container implements Direc
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case AngularjsPackage.DIRECTIVA__REFERENCIA:
-				return referencia != null;
 			case AngularjsPackage.DIRECTIVA__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case AngularjsPackage.DIRECTIVA__CURLYBRACES:
+				return curlybraces != null;
+			case AngularjsPackage.DIRECTIVA__REFERENCIA:
+				return referencia != null;
 		}
 		return super.eIsSet(featureID);
 	}

@@ -15,10 +15,8 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link angularjs.Template#getSetenciahtml <em>Setenciahtml</em>}</li>
+ *   <li>{@link angularjs.Template#getSentenciashtml <em>Sentenciashtml</em>}</li>
  *   <li>{@link angularjs.Template#getName <em>Name</em>}</li>
- *   <li>{@link angularjs.Template#getRutaArchivo <em>Ruta Archivo</em>}</li>
- *   <li>{@link angularjs.Template#getDirectiva <em>Directiva</em>}</li>
  *   <li>{@link angularjs.Template#getController <em>Controller</em>}</li>
  * </ul>
  *
@@ -28,20 +26,20 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface Template extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Setenciahtml</b></em>' containment reference list.
-	 * The list contents are of type {@link angularjs.SetenciaHTML}.
+	 * Returns the value of the '<em><b>Sentenciashtml</b></em>' containment reference list.
+	 * The list contents are of type {@link angularjs.SentenciaHTML}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Setenciahtml</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Sentenciashtml</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Setenciahtml</em>' containment reference list.
-	 * @see angularjs.AngularjsPackage#getTemplate_Setenciahtml()
+	 * @return the value of the '<em>Sentenciashtml</em>' containment reference list.
+	 * @see angularjs.AngularjsPackage#getTemplate_Sentenciashtml()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<SetenciaHTML> getSetenciahtml();
+	EList<SentenciaHTML> getSentenciashtml();
 
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
@@ -70,48 +68,6 @@ public interface Template extends EObject {
 	void setName(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Ruta Archivo</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Ruta Archivo</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Ruta Archivo</em>' attribute.
-	 * @see #setRutaArchivo(String)
-	 * @see angularjs.AngularjsPackage#getTemplate_RutaArchivo()
-	 * @model
-	 * @generated
-	 */
-	String getRutaArchivo();
-
-	/**
-	 * Sets the value of the '{@link angularjs.Template#getRutaArchivo <em>Ruta Archivo</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Ruta Archivo</em>' attribute.
-	 * @see #getRutaArchivo()
-	 * @generated
-	 */
-	void setRutaArchivo(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Directiva</b></em>' containment reference list.
-	 * The list contents are of type {@link angularjs.Directiva}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Directiva</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Directiva</em>' containment reference list.
-	 * @see angularjs.AngularjsPackage#getTemplate_Directiva()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<Directiva> getDirectiva();
-
-	/**
 	 * Returns the value of the '<em><b>Controller</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -120,12 +76,12 @@ public interface Template extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Controller</em>' reference.
-	 * @see #setController(Controller)
+	 * @see #setController(Componente)
 	 * @see angularjs.AngularjsPackage#getTemplate_Controller()
 	 * @model
 	 * @generated
 	 */
-	Controller getController();
+	Componente getController();
 
 	/**
 	 * Sets the value of the '{@link angularjs.Template#getController <em>Controller</em>}' reference.
@@ -135,6 +91,6 @@ public interface Template extends EObject {
 	 * @see #getController()
 	 * @generated
 	 */
-	void setController(Controller value);
+	void setController(Componente value);
 
 } // Template

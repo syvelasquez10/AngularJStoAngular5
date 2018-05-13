@@ -49,29 +49,29 @@ public interface Expresion extends EObject {
 	void setValor(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Referencia</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Referencia</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Referencia</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Referencia</em>' containment reference.
-	 * @see #setReferencia(Referencia)
+	 * @return the value of the '<em>Referencia</em>' reference.
+	 * @see #setReferencia(ObjetoAngular)
 	 * @see angularjs.AngularjsPackage#getExpresion_Referencia()
-	 * @model containment="true"
+	 * @model
 	 * @generated
 	 */
-	Referencia getReferencia();
+	ObjetoAngular getReferencia();
 
 	/**
-	 * Sets the value of the '{@link angularjs.Expresion#getReferencia <em>Referencia</em>}' containment reference.
+	 * Sets the value of the '{@link angularjs.Expresion#getReferencia <em>Referencia</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Referencia</em>' containment reference.
+	 * @param value the new value of the '<em>Referencia</em>' reference.
 	 * @see #getReferencia()
 	 * @generated
 	 */
-	void setReferencia(Referencia value);
+	void setReferencia(ObjetoAngular value);
 
 } // Expresion

@@ -5,32 +5,16 @@ import "https://uniandes.edu.co/angular"
 import "http://www.eclipse.org/emf/2002/Ecore" as ecore
 
 AppAngularJS returns AppAngularJS:
-		'angular.module(\''name=[Modulo|EString] | template+=Template ( "," template+=Template)* '}';;
+		modulos+=Modulo | templates+=Template | services+=Service | modelos+=Modelo | componentes+=Componente;
 
-ObjetoJavaScript returns ObjetoJavaScript:
-	Modulo | Funcion | Variable | Controller | Service;
+ObjetoAngular  returns ObjetoAngular:
+	Modulo | Componente | Service;
 
 Modulo returns Modulo:
-	{Modulo}
-	'Modulo'
-	name=EString
-	'{'
-		('modulos' '(' modulos+=[Modulo|EString] ( "," modulos+=[Modulo|EString])* ')' )?
-		('parametros' '{' parametros+=Parametro ( "," parametros+=Parametro)* '}' )?
-		('services' '{' services+=Service ( "," services+=Service)* '}' )?
-		('controller' '{' controller+=Controller ( "," controller+=Controller)* '}' )?
-	'}';
+	('\'use strict\';')? 'angular.module(\''name=EString'\',['parametros+=[ObjetoAngular|EString] ( "," parametros+=[ObjetoAngular|EString])* ']);';
 
 Template returns Template:
-	{Template}
-	'Template'
-	name=EString
-	'{'
-		('rutaArchivo' rutaArchivo=EString)?
-		('controller' controller=[Controller|EString])?
-		('setenciahtml' '{' setenciahtml+=SetenciaHTML ( "," setenciahtml+=SetenciaHTML)* '}' )?
-		('directiva' '{' directiva+=Directiva ( "," directiva+=Directiva)* '}' )?
-	'}';
+	name=EString '-' sentenciashtml+=SentenciaHTML*;
 
 Modelo returns Modelo:
 	{Modelo}
@@ -40,118 +24,47 @@ Modelo returns Modelo:
 EString returns ecore::EString:
 	STRING | ID;
 
-Parametro returns Parametro:
-	{Parametro}
-	'Parametro'
-	name=EString
-	'{'
-		('services' services=[Service|EString])?
-	'}';
-
 Service returns Service:
-	'Service'
-	name=EString
-	'{'
-		'parametro' parametro=[Parametro|EString]
-		('funcion' '{' funcion+=Funcion ( "," funcion+=Funcion)* '}' )?
-	'}';
+	('\'use strict\';')? 'describe(\''name=EString'\','funcion=Funcion;
 
-Controller returns Controller:
-	'Controller'
-	name=EString
+Componente returns Componente:
+	('\'use strict\';')? 'angular.module(\'' modulo=[Modulo|EString] ').component(\'' name=EString'\','
 	'{'
-		('body' body=EString)?
-		('services' '(' services+=[Service|EString] ( "," services+=[Service|EString])* ')' )?
-		'template' template=[Template|EString]
-		('modelo' '(' modelo+=[Modelo|EString] ( "," modelo+=[Modelo|EString])* ')' )?
-		('funcion' '{' funcion+=Funcion ( "," funcion+=Funcion)* '}' )?
-		('variable' '{' variable+=Variable ( "," variable+=Variable)* '}' )?
-		('parametros' '{' parametros+=Parametro ( "," parametros+=Parametro)* '}' )?
-	'}';
+		'templateUrl:\'' template=[Template|EString] '\','
+		'controller:['parametros+=[ObjetoAngular|EString] ( "," parametros+=[ObjetoAngular|EString])* 
+		',' funcion=Funcion
+	']});';
 
 Funcion returns Funcion:
-	{Funcion}
-	(tieneRetorno?='tieneRetorno')?
-	'Funcion'
-	name=EString
-	'{'
-		('body' body=EString)?
-		('funcion' '(' funcion+=[Funcion|EString] ( "," funcion+=[Funcion|EString])* ')' )?
-		('parametros' '{' parametros+=Parametro ( "," parametros+=Parametro)* '}' )?
-	'}';
+	'function ' name=EString '('parametros=EString'){' variables+=Variable* body=EString '}';
 
 EBoolean returns ecore::EBoolean:
 	'true' | 'false';
 
 Variable returns Variable:
-	{Variable}
-	'Variable'
-	name=EString
-	'{'
-		('valor' valor=EString)?
-		('anotacion' anotacion=Anotacion)?
-	'}';
+	'var' name=EString '=' valor=EString ';';
 
 Anotacion returns Anotacion:
 	{Anotacion}
-	'Anotacion'
-	'{'
-		('value' value=EString)?
-	'}';
+	;
 
-SetenciaHTML returns SetenciaHTML:
-	{SetenciaHTML}
-	(selfClosing?='selfClosing')?
-	'SetenciaHTML'
-	name=EString
-	'{'
-		('setenciahtml' '(' setenciahtml+=[SetenciaHTML|EString] ( "," setenciahtml+=[SetenciaHTML|EString])* ')' )?
-		('directivas' '(' directivas+=[Directiva|EString] ( "," directivas+=[Directiva|EString])* ')' )?
-		('propiedades' '{' propiedades+=Propiedad ( "," propiedades+=Propiedad)* '}' )?
-		('curlybraces' '{' curlybraces+=CurlyBraces ( "," curlybraces+=CurlyBraces)* '}' )?
-	'}';
+SentenciaHTML returns SentenciaHTML:
+	'<'name=EString (propiedades+=Propiedad)* (directivas+=Directiva)* '>'
+		(curlybraces+=CurlyBraces)*
+		(sentenciashtml+=[SentenciaHTML|EString])*
+	('</' EString '>')?;
 
 Directiva returns Directiva:
-	'Directiva'
-	name=EString
-	'{'
-		'referencia' referencia=Referencia
-	'}';
+	name=EString'="' curlybraces=[CurlyBraces|EString]? referencia=[ObjetoAngular|EString] '"';
 
 Propiedad returns Propiedad:
-	{Propiedad}
-	'Propiedad'
-	name=EString
-	'{'
-		('valor' valor=EString)?
-	'}';
+	name=EString'"' EString '"';
 
 CurlyBraces returns CurlyBraces:
-	'CurlyBraces'
-	'{'
-		'expresion' expresion=Expresion
-		('filtro' '{' filtro+=Filtro ( "," filtro+=Filtro)* '}' )?
-	'}';
+	'{{' expresion=Expresion filtro=Filtro? '}}';
 
 Expresion returns Expresion:
-	{Expresion}
-	'Expresion'
-	'{'
-		('valor' valor=EString)?
-		('referencia' referencia=Referencia)?
-	'}';
+	valor=EString | referencia=[ObjetoAngular|EString];
 
 Filtro returns Filtro:
-	{Filtro}
-	'Filtro'
-	name=EString
-	'{'
-		('parametros' parametros=EString)?
-	'}';
-
-Referencia returns Referencia:
-	'Referencia'
-	name=EString
-	'{'
-		'objeto' objeto=[ObjetoJavaScript|EString]
-	'}';
+	'|' parametros=EString;

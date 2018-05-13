@@ -6,13 +6,18 @@ import angularjs.AngularjsPackage;
 import angularjs.Anotacion;
 import angularjs.Variable;
 
+import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,11 +29,12 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <ul>
  *   <li>{@link angularjs.impl.VariableImpl#getValor <em>Valor</em>}</li>
  *   <li>{@link angularjs.impl.VariableImpl#getAnotacion <em>Anotacion</em>}</li>
+ *   <li>{@link angularjs.impl.VariableImpl#getName <em>Name</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class VariableImpl extends ObjetoJavaScriptImpl implements Variable {
+public class VariableImpl extends MinimalEObjectImpl.Container implements Variable {
 	/**
 	 * The default value of the '{@link #getValor() <em>Valor</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -50,14 +56,34 @@ public class VariableImpl extends ObjetoJavaScriptImpl implements Variable {
 	protected String valor = VALOR_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getAnotacion() <em>Anotacion</em>}' containment reference.
+	 * The cached value of the '{@link #getAnotacion() <em>Anotacion</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getAnotacion()
 	 * @generated
 	 * @ordered
 	 */
-	protected Anotacion anotacion;
+	protected EList<Anotacion> anotacion;
+
+	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String name = NAME_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -104,7 +130,10 @@ public class VariableImpl extends ObjetoJavaScriptImpl implements Variable {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Anotacion getAnotacion() {
+	public EList<Anotacion> getAnotacion() {
+		if (anotacion == null) {
+			anotacion = new EObjectContainmentEList<Anotacion>(Anotacion.class, this, AngularjsPackage.VARIABLE__ANOTACION);
+		}
 		return anotacion;
 	}
 
@@ -113,14 +142,8 @@ public class VariableImpl extends ObjetoJavaScriptImpl implements Variable {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetAnotacion(Anotacion newAnotacion, NotificationChain msgs) {
-		Anotacion oldAnotacion = anotacion;
-		anotacion = newAnotacion;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, AngularjsPackage.VARIABLE__ANOTACION, oldAnotacion, newAnotacion);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
+	public String getName() {
+		return name;
 	}
 
 	/**
@@ -128,18 +151,11 @@ public class VariableImpl extends ObjetoJavaScriptImpl implements Variable {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setAnotacion(Anotacion newAnotacion) {
-		if (newAnotacion != anotacion) {
-			NotificationChain msgs = null;
-			if (anotacion != null)
-				msgs = ((InternalEObject)anotacion).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - AngularjsPackage.VARIABLE__ANOTACION, null, msgs);
-			if (newAnotacion != null)
-				msgs = ((InternalEObject)newAnotacion).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - AngularjsPackage.VARIABLE__ANOTACION, null, msgs);
-			msgs = basicSetAnotacion(newAnotacion, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, AngularjsPackage.VARIABLE__ANOTACION, newAnotacion, newAnotacion));
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, AngularjsPackage.VARIABLE__NAME, oldName, name));
 	}
 
 	/**
@@ -151,7 +167,7 @@ public class VariableImpl extends ObjetoJavaScriptImpl implements Variable {
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case AngularjsPackage.VARIABLE__ANOTACION:
-				return basicSetAnotacion(null, msgs);
+				return ((InternalEList<?>)getAnotacion()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -168,6 +184,8 @@ public class VariableImpl extends ObjetoJavaScriptImpl implements Variable {
 				return getValor();
 			case AngularjsPackage.VARIABLE__ANOTACION:
 				return getAnotacion();
+			case AngularjsPackage.VARIABLE__NAME:
+				return getName();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -177,6 +195,7 @@ public class VariableImpl extends ObjetoJavaScriptImpl implements Variable {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
@@ -184,7 +203,11 @@ public class VariableImpl extends ObjetoJavaScriptImpl implements Variable {
 				setValor((String)newValue);
 				return;
 			case AngularjsPackage.VARIABLE__ANOTACION:
-				setAnotacion((Anotacion)newValue);
+				getAnotacion().clear();
+				getAnotacion().addAll((Collection<? extends Anotacion>)newValue);
+				return;
+			case AngularjsPackage.VARIABLE__NAME:
+				setName((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -202,7 +225,10 @@ public class VariableImpl extends ObjetoJavaScriptImpl implements Variable {
 				setValor(VALOR_EDEFAULT);
 				return;
 			case AngularjsPackage.VARIABLE__ANOTACION:
-				setAnotacion((Anotacion)null);
+				getAnotacion().clear();
+				return;
+			case AngularjsPackage.VARIABLE__NAME:
+				setName(NAME_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -219,7 +245,9 @@ public class VariableImpl extends ObjetoJavaScriptImpl implements Variable {
 			case AngularjsPackage.VARIABLE__VALOR:
 				return VALOR_EDEFAULT == null ? valor != null : !VALOR_EDEFAULT.equals(valor);
 			case AngularjsPackage.VARIABLE__ANOTACION:
-				return anotacion != null;
+				return anotacion != null && !anotacion.isEmpty();
+			case AngularjsPackage.VARIABLE__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -236,6 +264,8 @@ public class VariableImpl extends ObjetoJavaScriptImpl implements Variable {
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (valor: ");
 		result.append(valor);
+		result.append(", name: ");
+		result.append(name);
 		result.append(')');
 		return result.toString();
 	}

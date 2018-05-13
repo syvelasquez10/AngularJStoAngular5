@@ -4,8 +4,11 @@ package angularjs.impl;
 
 import angularjs.AngularjsPackage;
 import angularjs.AppAngularJS;
+import angularjs.Componente;
+import angularjs.Controller;
 import angularjs.Modelo;
 import angularjs.Modulo;
+import angularjs.Service;
 import angularjs.Template;
 
 import java.util.Collection;
@@ -33,9 +36,11 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </p>
  * <ul>
  *   <li>{@link angularjs.impl.AppAngularJSImpl#getModulos <em>Modulos</em>}</li>
- *   <li>{@link angularjs.impl.AppAngularJSImpl#getTemplate <em>Template</em>}</li>
+ *   <li>{@link angularjs.impl.AppAngularJSImpl#getTemplates <em>Templates</em>}</li>
  *   <li>{@link angularjs.impl.AppAngularJSImpl#getModelos <em>Modelos</em>}</li>
  *   <li>{@link angularjs.impl.AppAngularJSImpl#getName <em>Name</em>}</li>
+ *   <li>{@link angularjs.impl.AppAngularJSImpl#getServices <em>Services</em>}</li>
+ *   <li>{@link angularjs.impl.AppAngularJSImpl#getComponentes <em>Componentes</em>}</li>
  * </ul>
  *
  * @generated
@@ -52,14 +57,14 @@ public class AppAngularJSImpl extends MinimalEObjectImpl.Container implements Ap
 	protected EList<Modulo> modulos;
 
 	/**
-	 * The cached value of the '{@link #getTemplate() <em>Template</em>}' containment reference list.
+	 * The cached value of the '{@link #getTemplates() <em>Templates</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getTemplate()
+	 * @see #getTemplates()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Template> template;
+	protected EList<Template> templates;
 
 	/**
 	 * The cached value of the '{@link #getModelos() <em>Modelos</em>}' containment reference list.
@@ -90,6 +95,26 @@ public class AppAngularJSImpl extends MinimalEObjectImpl.Container implements Ap
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getServices() <em>Services</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getServices()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Service> services;
+
+	/**
+	 * The cached value of the '{@link #getComponentes() <em>Componentes</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getComponentes()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Componente> componentes;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -127,11 +152,11 @@ public class AppAngularJSImpl extends MinimalEObjectImpl.Container implements Ap
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Template> getTemplate() {
-		if (template == null) {
-			template = new EObjectContainmentEList<Template>(Template.class, this, AngularjsPackage.APP_ANGULAR_JS__TEMPLATE);
+	public EList<Template> getTemplates() {
+		if (templates == null) {
+			templates = new EObjectContainmentEList<Template>(Template.class, this, AngularjsPackage.APP_ANGULAR_JS__TEMPLATES);
 		}
-		return template;
+		return templates;
 	}
 
 	/**
@@ -172,15 +197,43 @@ public class AppAngularJSImpl extends MinimalEObjectImpl.Container implements Ap
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<Service> getServices() {
+		if (services == null) {
+			services = new EObjectContainmentEList<Service>(Service.class, this, AngularjsPackage.APP_ANGULAR_JS__SERVICES);
+		}
+		return services;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Componente> getComponentes() {
+		if (componentes == null) {
+			componentes = new EObjectContainmentEList<Componente>(Componente.class, this, AngularjsPackage.APP_ANGULAR_JS__COMPONENTES);
+		}
+		return componentes;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case AngularjsPackage.APP_ANGULAR_JS__MODULOS:
 				return ((InternalEList<?>)getModulos()).basicRemove(otherEnd, msgs);
-			case AngularjsPackage.APP_ANGULAR_JS__TEMPLATE:
-				return ((InternalEList<?>)getTemplate()).basicRemove(otherEnd, msgs);
+			case AngularjsPackage.APP_ANGULAR_JS__TEMPLATES:
+				return ((InternalEList<?>)getTemplates()).basicRemove(otherEnd, msgs);
 			case AngularjsPackage.APP_ANGULAR_JS__MODELOS:
 				return ((InternalEList<?>)getModelos()).basicRemove(otherEnd, msgs);
+			case AngularjsPackage.APP_ANGULAR_JS__SERVICES:
+				return ((InternalEList<?>)getServices()).basicRemove(otherEnd, msgs);
+			case AngularjsPackage.APP_ANGULAR_JS__COMPONENTES:
+				return ((InternalEList<?>)getComponentes()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -195,12 +248,16 @@ public class AppAngularJSImpl extends MinimalEObjectImpl.Container implements Ap
 		switch (featureID) {
 			case AngularjsPackage.APP_ANGULAR_JS__MODULOS:
 				return getModulos();
-			case AngularjsPackage.APP_ANGULAR_JS__TEMPLATE:
-				return getTemplate();
+			case AngularjsPackage.APP_ANGULAR_JS__TEMPLATES:
+				return getTemplates();
 			case AngularjsPackage.APP_ANGULAR_JS__MODELOS:
 				return getModelos();
 			case AngularjsPackage.APP_ANGULAR_JS__NAME:
 				return getName();
+			case AngularjsPackage.APP_ANGULAR_JS__SERVICES:
+				return getServices();
+			case AngularjsPackage.APP_ANGULAR_JS__COMPONENTES:
+				return getComponentes();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -218,9 +275,9 @@ public class AppAngularJSImpl extends MinimalEObjectImpl.Container implements Ap
 				getModulos().clear();
 				getModulos().addAll((Collection<? extends Modulo>)newValue);
 				return;
-			case AngularjsPackage.APP_ANGULAR_JS__TEMPLATE:
-				getTemplate().clear();
-				getTemplate().addAll((Collection<? extends Template>)newValue);
+			case AngularjsPackage.APP_ANGULAR_JS__TEMPLATES:
+				getTemplates().clear();
+				getTemplates().addAll((Collection<? extends Template>)newValue);
 				return;
 			case AngularjsPackage.APP_ANGULAR_JS__MODELOS:
 				getModelos().clear();
@@ -228,6 +285,14 @@ public class AppAngularJSImpl extends MinimalEObjectImpl.Container implements Ap
 				return;
 			case AngularjsPackage.APP_ANGULAR_JS__NAME:
 				setName((String)newValue);
+				return;
+			case AngularjsPackage.APP_ANGULAR_JS__SERVICES:
+				getServices().clear();
+				getServices().addAll((Collection<? extends Service>)newValue);
+				return;
+			case AngularjsPackage.APP_ANGULAR_JS__COMPONENTES:
+				getComponentes().clear();
+				getComponentes().addAll((Collection<? extends Componente>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -244,14 +309,20 @@ public class AppAngularJSImpl extends MinimalEObjectImpl.Container implements Ap
 			case AngularjsPackage.APP_ANGULAR_JS__MODULOS:
 				getModulos().clear();
 				return;
-			case AngularjsPackage.APP_ANGULAR_JS__TEMPLATE:
-				getTemplate().clear();
+			case AngularjsPackage.APP_ANGULAR_JS__TEMPLATES:
+				getTemplates().clear();
 				return;
 			case AngularjsPackage.APP_ANGULAR_JS__MODELOS:
 				getModelos().clear();
 				return;
 			case AngularjsPackage.APP_ANGULAR_JS__NAME:
 				setName(NAME_EDEFAULT);
+				return;
+			case AngularjsPackage.APP_ANGULAR_JS__SERVICES:
+				getServices().clear();
+				return;
+			case AngularjsPackage.APP_ANGULAR_JS__COMPONENTES:
+				getComponentes().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -267,12 +338,16 @@ public class AppAngularJSImpl extends MinimalEObjectImpl.Container implements Ap
 		switch (featureID) {
 			case AngularjsPackage.APP_ANGULAR_JS__MODULOS:
 				return modulos != null && !modulos.isEmpty();
-			case AngularjsPackage.APP_ANGULAR_JS__TEMPLATE:
-				return template != null && !template.isEmpty();
+			case AngularjsPackage.APP_ANGULAR_JS__TEMPLATES:
+				return templates != null && !templates.isEmpty();
 			case AngularjsPackage.APP_ANGULAR_JS__MODELOS:
 				return modelos != null && !modelos.isEmpty();
 			case AngularjsPackage.APP_ANGULAR_JS__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case AngularjsPackage.APP_ANGULAR_JS__SERVICES:
+				return services != null && !services.isEmpty();
+			case AngularjsPackage.APP_ANGULAR_JS__COMPONENTES:
+				return componentes != null && !componentes.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

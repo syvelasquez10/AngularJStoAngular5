@@ -49,14 +49,14 @@ public class CurlyBracesImpl extends MinimalEObjectImpl.Container implements Cur
 	protected Expresion expresion;
 
 	/**
-	 * The cached value of the '{@link #getFiltro() <em>Filtro</em>}' containment reference list.
+	 * The cached value of the '{@link #getFiltro() <em>Filtro</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getFiltro()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Filtro> filtro;
+	protected Filtro filtro;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -125,11 +125,42 @@ public class CurlyBracesImpl extends MinimalEObjectImpl.Container implements Cur
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Filtro> getFiltro() {
-		if (filtro == null) {
-			filtro = new EObjectContainmentEList<Filtro>(Filtro.class, this, AngularjsPackage.CURLY_BRACES__FILTRO);
-		}
+	public Filtro getFiltro() {
 		return filtro;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetFiltro(Filtro newFiltro, NotificationChain msgs) {
+		Filtro oldFiltro = filtro;
+		filtro = newFiltro;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, AngularjsPackage.CURLY_BRACES__FILTRO, oldFiltro, newFiltro);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setFiltro(Filtro newFiltro) {
+		if (newFiltro != filtro) {
+			NotificationChain msgs = null;
+			if (filtro != null)
+				msgs = ((InternalEObject)filtro).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - AngularjsPackage.CURLY_BRACES__FILTRO, null, msgs);
+			if (newFiltro != null)
+				msgs = ((InternalEObject)newFiltro).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - AngularjsPackage.CURLY_BRACES__FILTRO, null, msgs);
+			msgs = basicSetFiltro(newFiltro, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, AngularjsPackage.CURLY_BRACES__FILTRO, newFiltro, newFiltro));
 	}
 
 	/**
@@ -143,7 +174,7 @@ public class CurlyBracesImpl extends MinimalEObjectImpl.Container implements Cur
 			case AngularjsPackage.CURLY_BRACES__EXPRESION:
 				return basicSetExpresion(null, msgs);
 			case AngularjsPackage.CURLY_BRACES__FILTRO:
-				return ((InternalEList<?>)getFiltro()).basicRemove(otherEnd, msgs);
+				return basicSetFiltro(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -177,8 +208,7 @@ public class CurlyBracesImpl extends MinimalEObjectImpl.Container implements Cur
 				setExpresion((Expresion)newValue);
 				return;
 			case AngularjsPackage.CURLY_BRACES__FILTRO:
-				getFiltro().clear();
-				getFiltro().addAll((Collection<? extends Filtro>)newValue);
+				setFiltro((Filtro)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -196,7 +226,7 @@ public class CurlyBracesImpl extends MinimalEObjectImpl.Container implements Cur
 				setExpresion((Expresion)null);
 				return;
 			case AngularjsPackage.CURLY_BRACES__FILTRO:
-				getFiltro().clear();
+				setFiltro((Filtro)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -213,7 +243,7 @@ public class CurlyBracesImpl extends MinimalEObjectImpl.Container implements Cur
 			case AngularjsPackage.CURLY_BRACES__EXPRESION:
 				return expresion != null;
 			case AngularjsPackage.CURLY_BRACES__FILTRO:
-				return filtro != null && !filtro.isEmpty();
+				return filtro != null;
 		}
 		return super.eIsSet(featureID);
 	}

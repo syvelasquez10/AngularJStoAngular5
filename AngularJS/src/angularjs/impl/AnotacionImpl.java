@@ -21,6 +21,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * </p>
  * <ul>
  *   <li>{@link angularjs.impl.AnotacionImpl#getValue <em>Value</em>}</li>
+ *   <li>{@link angularjs.impl.AnotacionImpl#getName <em>Name</em>}</li>
  * </ul>
  *
  * @generated
@@ -45,6 +46,26 @@ public class AnotacionImpl extends MinimalEObjectImpl.Container implements Anota
 	 * @ordered
 	 */
 	protected String value = VALUE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String name = NAME_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -91,11 +112,34 @@ public class AnotacionImpl extends MinimalEObjectImpl.Container implements Anota
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, AngularjsPackage.ANOTACION__NAME, oldName, name));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case AngularjsPackage.ANOTACION__VALUE:
 				return getValue();
+			case AngularjsPackage.ANOTACION__NAME:
+				return getName();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -110,6 +154,9 @@ public class AnotacionImpl extends MinimalEObjectImpl.Container implements Anota
 		switch (featureID) {
 			case AngularjsPackage.ANOTACION__VALUE:
 				setValue((String)newValue);
+				return;
+			case AngularjsPackage.ANOTACION__NAME:
+				setName((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -126,6 +173,9 @@ public class AnotacionImpl extends MinimalEObjectImpl.Container implements Anota
 			case AngularjsPackage.ANOTACION__VALUE:
 				setValue(VALUE_EDEFAULT);
 				return;
+			case AngularjsPackage.ANOTACION__NAME:
+				setName(NAME_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -140,6 +190,8 @@ public class AnotacionImpl extends MinimalEObjectImpl.Container implements Anota
 		switch (featureID) {
 			case AngularjsPackage.ANOTACION__VALUE:
 				return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
+			case AngularjsPackage.ANOTACION__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -156,6 +208,8 @@ public class AnotacionImpl extends MinimalEObjectImpl.Container implements Anota
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (value: ");
 		result.append(value);
+		result.append(", name: ");
+		result.append(name);
 		result.append(')');
 		return result.toString();
 	}

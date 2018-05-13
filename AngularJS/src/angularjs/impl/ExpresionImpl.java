@@ -4,6 +4,7 @@ package angularjs.impl;
 
 import angularjs.AngularjsPackage;
 import angularjs.Expresion;
+import angularjs.ObjetoAngular;
 import angularjs.Referencia;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -51,14 +52,14 @@ public class ExpresionImpl extends MinimalEObjectImpl.Container implements Expre
 	protected String valor = VALOR_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getReferencia() <em>Referencia</em>}' containment reference.
+	 * The cached value of the '{@link #getReferencia() <em>Referencia</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getReferencia()
 	 * @generated
 	 * @ordered
 	 */
-	protected Referencia referencia;
+	protected ObjetoAngular referencia;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -105,7 +106,15 @@ public class ExpresionImpl extends MinimalEObjectImpl.Container implements Expre
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Referencia getReferencia() {
+	public ObjetoAngular getReferencia() {
+		if (referencia != null && referencia.eIsProxy()) {
+			InternalEObject oldReferencia = (InternalEObject)referencia;
+			referencia = (ObjetoAngular)eResolveProxy(oldReferencia);
+			if (referencia != oldReferencia) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, AngularjsPackage.EXPRESION__REFERENCIA, oldReferencia, referencia));
+			}
+		}
 		return referencia;
 	}
 
@@ -114,47 +123,20 @@ public class ExpresionImpl extends MinimalEObjectImpl.Container implements Expre
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetReferencia(Referencia newReferencia, NotificationChain msgs) {
-		Referencia oldReferencia = referencia;
+	public ObjetoAngular basicGetReferencia() {
+		return referencia;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setReferencia(ObjetoAngular newReferencia) {
+		ObjetoAngular oldReferencia = referencia;
 		referencia = newReferencia;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, AngularjsPackage.EXPRESION__REFERENCIA, oldReferencia, newReferencia);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setReferencia(Referencia newReferencia) {
-		if (newReferencia != referencia) {
-			NotificationChain msgs = null;
-			if (referencia != null)
-				msgs = ((InternalEObject)referencia).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - AngularjsPackage.EXPRESION__REFERENCIA, null, msgs);
-			if (newReferencia != null)
-				msgs = ((InternalEObject)newReferencia).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - AngularjsPackage.EXPRESION__REFERENCIA, null, msgs);
-			msgs = basicSetReferencia(newReferencia, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, AngularjsPackage.EXPRESION__REFERENCIA, newReferencia, newReferencia));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case AngularjsPackage.EXPRESION__REFERENCIA:
-				return basicSetReferencia(null, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, AngularjsPackage.EXPRESION__REFERENCIA, oldReferencia, referencia));
 	}
 
 	/**
@@ -168,7 +150,8 @@ public class ExpresionImpl extends MinimalEObjectImpl.Container implements Expre
 			case AngularjsPackage.EXPRESION__VALOR:
 				return getValor();
 			case AngularjsPackage.EXPRESION__REFERENCIA:
-				return getReferencia();
+				if (resolve) return getReferencia();
+				return basicGetReferencia();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -185,7 +168,7 @@ public class ExpresionImpl extends MinimalEObjectImpl.Container implements Expre
 				setValor((String)newValue);
 				return;
 			case AngularjsPackage.EXPRESION__REFERENCIA:
-				setReferencia((Referencia)newValue);
+				setReferencia((ObjetoAngular)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -203,7 +186,7 @@ public class ExpresionImpl extends MinimalEObjectImpl.Container implements Expre
 				setValor(VALOR_EDEFAULT);
 				return;
 			case AngularjsPackage.EXPRESION__REFERENCIA:
-				setReferencia((Referencia)null);
+				setReferencia((ObjetoAngular)null);
 				return;
 		}
 		super.eUnset(featureID);

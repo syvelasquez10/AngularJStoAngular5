@@ -84,24 +84,20 @@ public class AngularjsAdapterFactory extends AdapterFactoryImpl {
 				return createFuncionAdapter();
 			}
 			@Override
-			public Adapter caseParametro(Parametro object) {
-				return createParametroAdapter();
-			}
-			@Override
 			public Adapter caseVariable(Variable object) {
 				return createVariableAdapter();
 			}
 			@Override
-			public Adapter caseController(Controller object) {
-				return createControllerAdapter();
+			public Adapter caseComponente(Componente object) {
+				return createComponenteAdapter();
 			}
 			@Override
 			public Adapter caseService(Service object) {
 				return createServiceAdapter();
 			}
 			@Override
-			public Adapter caseObjetoJavaScript(ObjetoJavaScript object) {
-				return createObjetoJavaScriptAdapter();
+			public Adapter caseObjetoAngular(ObjetoAngular object) {
+				return createObjetoAngularAdapter();
 			}
 			@Override
 			public Adapter caseModelo(Modelo object) {
@@ -112,16 +108,12 @@ public class AngularjsAdapterFactory extends AdapterFactoryImpl {
 				return createTemplateAdapter();
 			}
 			@Override
-			public Adapter caseSetenciaHTML(SetenciaHTML object) {
-				return createSetenciaHTMLAdapter();
+			public Adapter caseSentenciaHTML(SentenciaHTML object) {
+				return createSentenciaHTMLAdapter();
 			}
 			@Override
 			public Adapter casePropiedad(Propiedad object) {
 				return createPropiedadAdapter();
-			}
-			@Override
-			public Adapter caseReferencia(Referencia object) {
-				return createReferenciaAdapter();
 			}
 			@Override
 			public Adapter caseExpresion(Expresion object) {
@@ -216,20 +208,6 @@ public class AngularjsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link angularjs.Parametro <em>Parametro</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see angularjs.Parametro
-	 * @generated
-	 */
-	public Adapter createParametroAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link angularjs.Variable <em>Variable</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -244,16 +222,16 @@ public class AngularjsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link angularjs.Controller <em>Controller</em>}'.
+	 * Creates a new adapter for an object of class '{@link angularjs.Componente <em>Componente</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see angularjs.Controller
+	 * @see angularjs.Componente
 	 * @generated
 	 */
-	public Adapter createControllerAdapter() {
+	public Adapter createComponenteAdapter() {
 		return null;
 	}
 
@@ -272,16 +250,16 @@ public class AngularjsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link angularjs.ObjetoJavaScript <em>Objeto Java Script</em>}'.
+	 * Creates a new adapter for an object of class '{@link angularjs.ObjetoAngular <em>Objeto Angular</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see angularjs.ObjetoJavaScript
+	 * @see angularjs.ObjetoAngular
 	 * @generated
 	 */
-	public Adapter createObjetoJavaScriptAdapter() {
+	public Adapter createObjetoAngularAdapter() {
 		return null;
 	}
 
@@ -314,16 +292,16 @@ public class AngularjsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link angularjs.SetenciaHTML <em>Setencia HTML</em>}'.
+	 * Creates a new adapter for an object of class '{@link angularjs.SentenciaHTML <em>Sentencia HTML</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see angularjs.SetenciaHTML
+	 * @see angularjs.SentenciaHTML
 	 * @generated
 	 */
-	public Adapter createSetenciaHTMLAdapter() {
+	public Adapter createSentenciaHTMLAdapter() {
 		return null;
 	}
 
@@ -338,20 +316,6 @@ public class AngularjsAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createPropiedadAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link angularjs.Referencia <em>Referencia</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see angularjs.Referencia
-	 * @generated
-	 */
-	public Adapter createReferenciaAdapter() {
 		return null;
 	}
 

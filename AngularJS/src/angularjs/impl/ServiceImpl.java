@@ -4,6 +4,7 @@ package angularjs.impl;
 
 import angularjs.AngularjsPackage;
 import angularjs.Funcion;
+import angularjs.ObjetoAngular;
 import angularjs.Parametro;
 import angularjs.Service;
 
@@ -20,6 +21,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
@@ -31,31 +33,31 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </p>
  * <ul>
  *   <li>{@link angularjs.impl.ServiceImpl#getFuncion <em>Funcion</em>}</li>
- *   <li>{@link angularjs.impl.ServiceImpl#getParametro <em>Parametro</em>}</li>
+ *   <li>{@link angularjs.impl.ServiceImpl#getParametros <em>Parametros</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class ServiceImpl extends ObjetoJavaScriptImpl implements Service {
+public class ServiceImpl extends ObjetoAngularImpl implements Service {
 	/**
-	 * The cached value of the '{@link #getFuncion() <em>Funcion</em>}' containment reference list.
+	 * The cached value of the '{@link #getFuncion() <em>Funcion</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getFuncion()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Funcion> funcion;
+	protected Funcion funcion;
 
 	/**
-	 * The cached value of the '{@link #getParametro() <em>Parametro</em>}' reference.
+	 * The cached value of the '{@link #getParametros() <em>Parametros</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getParametro()
+	 * @see #getParametros()
 	 * @generated
 	 * @ordered
 	 */
-	protected Parametro parametro;
+	protected EList<ObjetoAngular> parametros;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -81,10 +83,7 @@ public class ServiceImpl extends ObjetoJavaScriptImpl implements Service {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Funcion> getFuncion() {
-		if (funcion == null) {
-			funcion = new EObjectContainmentEList<Funcion>(Funcion.class, this, AngularjsPackage.SERVICE__FUNCION);
-		}
+	public Funcion getFuncion() {
 		return funcion;
 	}
 
@@ -93,16 +92,14 @@ public class ServiceImpl extends ObjetoJavaScriptImpl implements Service {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Parametro getParametro() {
-		if (parametro != null && parametro.eIsProxy()) {
-			InternalEObject oldParametro = (InternalEObject)parametro;
-			parametro = (Parametro)eResolveProxy(oldParametro);
-			if (parametro != oldParametro) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, AngularjsPackage.SERVICE__PARAMETRO, oldParametro, parametro));
-			}
+	public NotificationChain basicSetFuncion(Funcion newFuncion, NotificationChain msgs) {
+		Funcion oldFuncion = funcion;
+		funcion = newFuncion;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, AngularjsPackage.SERVICE__FUNCION, oldFuncion, newFuncion);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
-		return parametro;
+		return msgs;
 	}
 
 	/**
@@ -110,8 +107,18 @@ public class ServiceImpl extends ObjetoJavaScriptImpl implements Service {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Parametro basicGetParametro() {
-		return parametro;
+	public void setFuncion(Funcion newFuncion) {
+		if (newFuncion != funcion) {
+			NotificationChain msgs = null;
+			if (funcion != null)
+				msgs = ((InternalEObject)funcion).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - AngularjsPackage.SERVICE__FUNCION, null, msgs);
+			if (newFuncion != null)
+				msgs = ((InternalEObject)newFuncion).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - AngularjsPackage.SERVICE__FUNCION, null, msgs);
+			msgs = basicSetFuncion(newFuncion, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, AngularjsPackage.SERVICE__FUNCION, newFuncion, newFuncion));
 	}
 
 	/**
@@ -119,11 +126,11 @@ public class ServiceImpl extends ObjetoJavaScriptImpl implements Service {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setParametro(Parametro newParametro) {
-		Parametro oldParametro = parametro;
-		parametro = newParametro;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, AngularjsPackage.SERVICE__PARAMETRO, oldParametro, parametro));
+	public EList<ObjetoAngular> getParametros() {
+		if (parametros == null) {
+			parametros = new EObjectResolvingEList<ObjetoAngular>(ObjetoAngular.class, this, AngularjsPackage.SERVICE__PARAMETROS);
+		}
+		return parametros;
 	}
 
 	/**
@@ -135,7 +142,7 @@ public class ServiceImpl extends ObjetoJavaScriptImpl implements Service {
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case AngularjsPackage.SERVICE__FUNCION:
-				return ((InternalEList<?>)getFuncion()).basicRemove(otherEnd, msgs);
+				return basicSetFuncion(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -150,9 +157,8 @@ public class ServiceImpl extends ObjetoJavaScriptImpl implements Service {
 		switch (featureID) {
 			case AngularjsPackage.SERVICE__FUNCION:
 				return getFuncion();
-			case AngularjsPackage.SERVICE__PARAMETRO:
-				if (resolve) return getParametro();
-				return basicGetParametro();
+			case AngularjsPackage.SERVICE__PARAMETROS:
+				return getParametros();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -167,11 +173,11 @@ public class ServiceImpl extends ObjetoJavaScriptImpl implements Service {
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case AngularjsPackage.SERVICE__FUNCION:
-				getFuncion().clear();
-				getFuncion().addAll((Collection<? extends Funcion>)newValue);
+				setFuncion((Funcion)newValue);
 				return;
-			case AngularjsPackage.SERVICE__PARAMETRO:
-				setParametro((Parametro)newValue);
+			case AngularjsPackage.SERVICE__PARAMETROS:
+				getParametros().clear();
+				getParametros().addAll((Collection<? extends ObjetoAngular>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -186,10 +192,10 @@ public class ServiceImpl extends ObjetoJavaScriptImpl implements Service {
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case AngularjsPackage.SERVICE__FUNCION:
-				getFuncion().clear();
+				setFuncion((Funcion)null);
 				return;
-			case AngularjsPackage.SERVICE__PARAMETRO:
-				setParametro((Parametro)null);
+			case AngularjsPackage.SERVICE__PARAMETROS:
+				getParametros().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -204,9 +210,9 @@ public class ServiceImpl extends ObjetoJavaScriptImpl implements Service {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case AngularjsPackage.SERVICE__FUNCION:
-				return funcion != null && !funcion.isEmpty();
-			case AngularjsPackage.SERVICE__PARAMETRO:
-				return parametro != null;
+				return funcion != null;
+			case AngularjsPackage.SERVICE__PARAMETROS:
+				return parametros != null && !parametros.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

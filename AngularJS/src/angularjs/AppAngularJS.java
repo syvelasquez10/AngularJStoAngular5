@@ -16,9 +16,11 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link angularjs.AppAngularJS#getModulos <em>Modulos</em>}</li>
- *   <li>{@link angularjs.AppAngularJS#getTemplate <em>Template</em>}</li>
+ *   <li>{@link angularjs.AppAngularJS#getTemplates <em>Templates</em>}</li>
  *   <li>{@link angularjs.AppAngularJS#getModelos <em>Modelos</em>}</li>
  *   <li>{@link angularjs.AppAngularJS#getName <em>Name</em>}</li>
+ *   <li>{@link angularjs.AppAngularJS#getServices <em>Services</em>}</li>
+ *   <li>{@link angularjs.AppAngularJS#getComponentes <em>Componentes</em>}</li>
  * </ul>
  *
  * @see angularjs.AngularjsPackage#getAppAngularJS()
@@ -43,20 +45,20 @@ public interface AppAngularJS extends EObject {
 	EList<Modulo> getModulos();
 
 	/**
-	 * Returns the value of the '<em><b>Template</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Templates</b></em>' containment reference list.
 	 * The list contents are of type {@link angularjs.Template}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Template</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Templates</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Template</em>' containment reference list.
-	 * @see angularjs.AngularjsPackage#getAppAngularJS_Template()
+	 * @return the value of the '<em>Templates</em>' containment reference list.
+	 * @see angularjs.AngularjsPackage#getAppAngularJS_Templates()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Template> getTemplate();
+	EList<Template> getTemplates();
 
 	/**
 	 * Returns the value of the '<em><b>Modelos</b></em>' containment reference list.
@@ -99,5 +101,37 @@ public interface AppAngularJS extends EObject {
 	 * @generated
 	 */
 	void setName(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Services</b></em>' containment reference list.
+	 * The list contents are of type {@link angularjs.Service}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Services</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Services</em>' containment reference list.
+	 * @see angularjs.AngularjsPackage#getAppAngularJS_Services()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Service> getServices();
+
+	/**
+	 * Returns the value of the '<em><b>Componentes</b></em>' containment reference list.
+	 * The list contents are of type {@link angularjs.Componente}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Componentes</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Componentes</em>' containment reference list.
+	 * @see angularjs.AngularjsPackage#getAppAngularJS_Componentes()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Componente> getComponentes();
 
 } // AppAngularJS

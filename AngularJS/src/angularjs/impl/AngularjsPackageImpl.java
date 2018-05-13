@@ -6,6 +6,7 @@ import angularjs.AngularjsFactory;
 import angularjs.AngularjsPackage;
 import angularjs.Anotacion;
 import angularjs.AppAngularJS;
+import angularjs.Componente;
 import angularjs.Controller;
 import angularjs.CurlyBraces;
 import angularjs.Directiva;
@@ -14,10 +15,12 @@ import angularjs.Filtro;
 import angularjs.Funcion;
 import angularjs.Modelo;
 import angularjs.Modulo;
+import angularjs.ObjetoAngular;
 import angularjs.ObjetoJavaScript;
 import angularjs.Parametro;
 import angularjs.Propiedad;
 import angularjs.Referencia;
+import angularjs.SentenciaHTML;
 import angularjs.Service;
 import angularjs.SetenciaHTML;
 import angularjs.Template;
@@ -70,13 +73,6 @@ public class AngularjsPackageImpl extends EPackageImpl implements AngularjsPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass parametroEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass variableEClass = null;
 
 	/**
@@ -84,7 +80,7 @@ public class AngularjsPackageImpl extends EPackageImpl implements AngularjsPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass controllerEClass = null;
+	private EClass componenteEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -98,7 +94,7 @@ public class AngularjsPackageImpl extends EPackageImpl implements AngularjsPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass objetoJavaScriptEClass = null;
+	private EClass objetoAngularEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -119,7 +115,7 @@ public class AngularjsPackageImpl extends EPackageImpl implements AngularjsPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass setenciaHTMLEClass = null;
+	private EClass sentenciaHTMLEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -127,13 +123,6 @@ public class AngularjsPackageImpl extends EPackageImpl implements AngularjsPacka
 	 * @generated
 	 */
 	private EClass propiedadEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass referenciaEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -247,7 +236,7 @@ public class AngularjsPackageImpl extends EPackageImpl implements AngularjsPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getAppAngularJS_Template() {
+	public EReference getAppAngularJS_Templates() {
 		return (EReference)appAngularJSEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -274,6 +263,24 @@ public class AngularjsPackageImpl extends EPackageImpl implements AngularjsPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getAppAngularJS_Services() {
+		return (EReference)appAngularJSEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getAppAngularJS_Componentes() {
+		return (EReference)appAngularJSEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getModulo() {
 		return moduloEClass;
 	}
@@ -285,33 +292,6 @@ public class AngularjsPackageImpl extends EPackageImpl implements AngularjsPacka
 	 */
 	public EReference getModulo_Parametros() {
 		return (EReference)moduloEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getModulo_Services() {
-		return (EReference)moduloEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getModulo_Controller() {
-		return (EReference)moduloEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getModulo_Modulos() {
-		return (EReference)moduloEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -337,6 +317,15 @@ public class AngularjsPackageImpl extends EPackageImpl implements AngularjsPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getAnotacion_Name() {
+		return (EAttribute)anotacionEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getFuncion() {
 		return funcionEClass;
 	}
@@ -346,8 +335,8 @@ public class AngularjsPackageImpl extends EPackageImpl implements AngularjsPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getFuncion_Funcion() {
-		return (EReference)funcionEClass.getEStructuralFeatures().get(0);
+	public EAttribute getFuncion_Name() {
+		return (EAttribute)funcionEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -355,8 +344,8 @@ public class AngularjsPackageImpl extends EPackageImpl implements AngularjsPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getFuncion_TieneRetorno() {
-		return (EAttribute)funcionEClass.getEStructuralFeatures().get(1);
+	public EAttribute getFuncion_Parametros() {
+		return (EAttribute)funcionEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -364,8 +353,8 @@ public class AngularjsPackageImpl extends EPackageImpl implements AngularjsPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getFuncion_Parametros() {
-		return (EReference)funcionEClass.getEStructuralFeatures().get(2);
+	public EReference getFuncion_Variables() {
+		return (EReference)funcionEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -374,34 +363,7 @@ public class AngularjsPackageImpl extends EPackageImpl implements AngularjsPacka
 	 * @generated
 	 */
 	public EAttribute getFuncion_Body() {
-		return (EAttribute)funcionEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getParametro() {
-		return parametroEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getParametro_Name() {
-		return (EAttribute)parametroEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getParametro_Services() {
-		return (EReference)parametroEClass.getEStructuralFeatures().get(1);
+		return (EAttribute)funcionEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -436,8 +398,8 @@ public class AngularjsPackageImpl extends EPackageImpl implements AngularjsPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getController() {
-		return controllerEClass;
+	public EAttribute getVariable_Name() {
+		return (EAttribute)variableEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -445,8 +407,8 @@ public class AngularjsPackageImpl extends EPackageImpl implements AngularjsPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getController_Services() {
-		return (EReference)controllerEClass.getEStructuralFeatures().get(0);
+	public EClass getComponente() {
+		return componenteEClass;
 	}
 
 	/**
@@ -454,8 +416,8 @@ public class AngularjsPackageImpl extends EPackageImpl implements AngularjsPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getController_Funcion() {
-		return (EReference)controllerEClass.getEStructuralFeatures().get(1);
+	public EReference getComponente_Funcion() {
+		return (EReference)componenteEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -463,8 +425,8 @@ public class AngularjsPackageImpl extends EPackageImpl implements AngularjsPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getController_Variable() {
-		return (EReference)controllerEClass.getEStructuralFeatures().get(2);
+	public EReference getComponente_Template() {
+		return (EReference)componenteEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -472,8 +434,8 @@ public class AngularjsPackageImpl extends EPackageImpl implements AngularjsPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getController_Parametros() {
-		return (EReference)controllerEClass.getEStructuralFeatures().get(3);
+	public EReference getComponente_Modelo() {
+		return (EReference)componenteEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -481,8 +443,8 @@ public class AngularjsPackageImpl extends EPackageImpl implements AngularjsPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getController_Body() {
-		return (EAttribute)controllerEClass.getEStructuralFeatures().get(4);
+	public EReference getComponente_Parametros() {
+		return (EReference)componenteEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -490,17 +452,8 @@ public class AngularjsPackageImpl extends EPackageImpl implements AngularjsPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getController_Template() {
-		return (EReference)controllerEClass.getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getController_Modelo() {
-		return (EReference)controllerEClass.getEStructuralFeatures().get(6);
+	public EReference getComponente_Modulo() {
+		return (EReference)componenteEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -526,7 +479,7 @@ public class AngularjsPackageImpl extends EPackageImpl implements AngularjsPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getService_Parametro() {
+	public EReference getService_Parametros() {
 		return (EReference)serviceEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -535,8 +488,8 @@ public class AngularjsPackageImpl extends EPackageImpl implements AngularjsPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getObjetoJavaScript() {
-		return objetoJavaScriptEClass;
+	public EClass getObjetoAngular() {
+		return objetoAngularEClass;
 	}
 
 	/**
@@ -544,8 +497,8 @@ public class AngularjsPackageImpl extends EPackageImpl implements AngularjsPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getObjetoJavaScript_Name() {
-		return (EAttribute)objetoJavaScriptEClass.getEStructuralFeatures().get(0);
+	public EAttribute getObjetoAngular_Name() {
+		return (EAttribute)objetoAngularEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -571,7 +524,7 @@ public class AngularjsPackageImpl extends EPackageImpl implements AngularjsPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getTemplate_Setenciahtml() {
+	public EReference getTemplate_Sentenciashtml() {
 		return (EReference)templateEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -589,26 +542,8 @@ public class AngularjsPackageImpl extends EPackageImpl implements AngularjsPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getTemplate_RutaArchivo() {
-		return (EAttribute)templateEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getTemplate_Directiva() {
-		return (EReference)templateEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getTemplate_Controller() {
-		return (EReference)templateEClass.getEStructuralFeatures().get(4);
+		return (EReference)templateEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -616,8 +551,8 @@ public class AngularjsPackageImpl extends EPackageImpl implements AngularjsPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getSetenciaHTML() {
-		return setenciaHTMLEClass;
+	public EClass getSentenciaHTML() {
+		return sentenciaHTMLEClass;
 	}
 
 	/**
@@ -625,8 +560,8 @@ public class AngularjsPackageImpl extends EPackageImpl implements AngularjsPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getSetenciaHTML_Setenciahtml() {
-		return (EReference)setenciaHTMLEClass.getEStructuralFeatures().get(0);
+	public EReference getSentenciaHTML_Sentenciashtml() {
+		return (EReference)sentenciaHTMLEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -634,8 +569,8 @@ public class AngularjsPackageImpl extends EPackageImpl implements AngularjsPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getSetenciaHTML_Name() {
-		return (EAttribute)setenciaHTMLEClass.getEStructuralFeatures().get(1);
+	public EAttribute getSentenciaHTML_Name() {
+		return (EAttribute)sentenciaHTMLEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -643,8 +578,8 @@ public class AngularjsPackageImpl extends EPackageImpl implements AngularjsPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getSetenciaHTML_Propiedades() {
-		return (EReference)setenciaHTMLEClass.getEStructuralFeatures().get(2);
+	public EReference getSentenciaHTML_Propiedades() {
+		return (EReference)sentenciaHTMLEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -652,8 +587,8 @@ public class AngularjsPackageImpl extends EPackageImpl implements AngularjsPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getSetenciaHTML_SelfClosing() {
-		return (EAttribute)setenciaHTMLEClass.getEStructuralFeatures().get(3);
+	public EReference getSentenciaHTML_Directivas() {
+		return (EReference)sentenciaHTMLEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -661,17 +596,8 @@ public class AngularjsPackageImpl extends EPackageImpl implements AngularjsPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getSetenciaHTML_Directivas() {
-		return (EReference)setenciaHTMLEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getSetenciaHTML_Curlybraces() {
-		return (EReference)setenciaHTMLEClass.getEStructuralFeatures().get(5);
+	public EReference getSentenciaHTML_Curlybraces() {
+		return (EReference)sentenciaHTMLEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -699,33 +625,6 @@ public class AngularjsPackageImpl extends EPackageImpl implements AngularjsPacka
 	 */
 	public EAttribute getPropiedad_Valor() {
 		return (EAttribute)propiedadEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getReferencia() {
-		return referenciaEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getReferencia_Objeto() {
-		return (EReference)referenciaEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getReferencia_Name() {
-		return (EAttribute)referenciaEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -796,8 +695,8 @@ public class AngularjsPackageImpl extends EPackageImpl implements AngularjsPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getDirectiva_Referencia() {
-		return (EReference)directivaEClass.getEStructuralFeatures().get(0);
+	public EAttribute getDirectiva_Name() {
+		return (EAttribute)directivaEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -805,8 +704,17 @@ public class AngularjsPackageImpl extends EPackageImpl implements AngularjsPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getDirectiva_Name() {
-		return (EAttribute)directivaEClass.getEStructuralFeatures().get(1);
+	public EReference getDirectiva_Curlybraces() {
+		return (EReference)directivaEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getDirectiva_Referencia() {
+		return (EReference)directivaEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -866,73 +774,61 @@ public class AngularjsPackageImpl extends EPackageImpl implements AngularjsPacka
 		// Create classes and their features
 		appAngularJSEClass = createEClass(APP_ANGULAR_JS);
 		createEReference(appAngularJSEClass, APP_ANGULAR_JS__MODULOS);
-		createEReference(appAngularJSEClass, APP_ANGULAR_JS__TEMPLATE);
+		createEReference(appAngularJSEClass, APP_ANGULAR_JS__TEMPLATES);
 		createEReference(appAngularJSEClass, APP_ANGULAR_JS__MODELOS);
 		createEAttribute(appAngularJSEClass, APP_ANGULAR_JS__NAME);
+		createEReference(appAngularJSEClass, APP_ANGULAR_JS__SERVICES);
+		createEReference(appAngularJSEClass, APP_ANGULAR_JS__COMPONENTES);
 
 		moduloEClass = createEClass(MODULO);
 		createEReference(moduloEClass, MODULO__PARAMETROS);
-		createEReference(moduloEClass, MODULO__SERVICES);
-		createEReference(moduloEClass, MODULO__CONTROLLER);
-		createEReference(moduloEClass, MODULO__MODULOS);
 
 		anotacionEClass = createEClass(ANOTACION);
 		createEAttribute(anotacionEClass, ANOTACION__VALUE);
+		createEAttribute(anotacionEClass, ANOTACION__NAME);
 
 		funcionEClass = createEClass(FUNCION);
-		createEReference(funcionEClass, FUNCION__FUNCION);
-		createEAttribute(funcionEClass, FUNCION__TIENE_RETORNO);
-		createEReference(funcionEClass, FUNCION__PARAMETROS);
+		createEAttribute(funcionEClass, FUNCION__NAME);
 		createEAttribute(funcionEClass, FUNCION__BODY);
-
-		parametroEClass = createEClass(PARAMETRO);
-		createEAttribute(parametroEClass, PARAMETRO__NAME);
-		createEReference(parametroEClass, PARAMETRO__SERVICES);
+		createEAttribute(funcionEClass, FUNCION__PARAMETROS);
+		createEReference(funcionEClass, FUNCION__VARIABLES);
 
 		variableEClass = createEClass(VARIABLE);
 		createEAttribute(variableEClass, VARIABLE__VALOR);
 		createEReference(variableEClass, VARIABLE__ANOTACION);
+		createEAttribute(variableEClass, VARIABLE__NAME);
 
-		controllerEClass = createEClass(CONTROLLER);
-		createEReference(controllerEClass, CONTROLLER__SERVICES);
-		createEReference(controllerEClass, CONTROLLER__FUNCION);
-		createEReference(controllerEClass, CONTROLLER__VARIABLE);
-		createEReference(controllerEClass, CONTROLLER__PARAMETROS);
-		createEAttribute(controllerEClass, CONTROLLER__BODY);
-		createEReference(controllerEClass, CONTROLLER__TEMPLATE);
-		createEReference(controllerEClass, CONTROLLER__MODELO);
+		componenteEClass = createEClass(COMPONENTE);
+		createEReference(componenteEClass, COMPONENTE__FUNCION);
+		createEReference(componenteEClass, COMPONENTE__TEMPLATE);
+		createEReference(componenteEClass, COMPONENTE__MODELO);
+		createEReference(componenteEClass, COMPONENTE__PARAMETROS);
+		createEReference(componenteEClass, COMPONENTE__MODULO);
 
 		serviceEClass = createEClass(SERVICE);
 		createEReference(serviceEClass, SERVICE__FUNCION);
-		createEReference(serviceEClass, SERVICE__PARAMETRO);
+		createEReference(serviceEClass, SERVICE__PARAMETROS);
 
-		objetoJavaScriptEClass = createEClass(OBJETO_JAVA_SCRIPT);
-		createEAttribute(objetoJavaScriptEClass, OBJETO_JAVA_SCRIPT__NAME);
+		objetoAngularEClass = createEClass(OBJETO_ANGULAR);
+		createEAttribute(objetoAngularEClass, OBJETO_ANGULAR__NAME);
 
 		modeloEClass = createEClass(MODELO);
 
 		templateEClass = createEClass(TEMPLATE);
-		createEReference(templateEClass, TEMPLATE__SETENCIAHTML);
+		createEReference(templateEClass, TEMPLATE__SENTENCIASHTML);
 		createEAttribute(templateEClass, TEMPLATE__NAME);
-		createEAttribute(templateEClass, TEMPLATE__RUTA_ARCHIVO);
-		createEReference(templateEClass, TEMPLATE__DIRECTIVA);
 		createEReference(templateEClass, TEMPLATE__CONTROLLER);
 
-		setenciaHTMLEClass = createEClass(SETENCIA_HTML);
-		createEReference(setenciaHTMLEClass, SETENCIA_HTML__SETENCIAHTML);
-		createEAttribute(setenciaHTMLEClass, SETENCIA_HTML__NAME);
-		createEReference(setenciaHTMLEClass, SETENCIA_HTML__PROPIEDADES);
-		createEAttribute(setenciaHTMLEClass, SETENCIA_HTML__SELF_CLOSING);
-		createEReference(setenciaHTMLEClass, SETENCIA_HTML__DIRECTIVAS);
-		createEReference(setenciaHTMLEClass, SETENCIA_HTML__CURLYBRACES);
+		sentenciaHTMLEClass = createEClass(SENTENCIA_HTML);
+		createEReference(sentenciaHTMLEClass, SENTENCIA_HTML__SENTENCIASHTML);
+		createEAttribute(sentenciaHTMLEClass, SENTENCIA_HTML__NAME);
+		createEReference(sentenciaHTMLEClass, SENTENCIA_HTML__PROPIEDADES);
+		createEReference(sentenciaHTMLEClass, SENTENCIA_HTML__CURLYBRACES);
+		createEReference(sentenciaHTMLEClass, SENTENCIA_HTML__DIRECTIVAS);
 
 		propiedadEClass = createEClass(PROPIEDAD);
 		createEAttribute(propiedadEClass, PROPIEDAD__NAME);
 		createEAttribute(propiedadEClass, PROPIEDAD__VALOR);
-
-		referenciaEClass = createEClass(REFERENCIA);
-		createEReference(referenciaEClass, REFERENCIA__OBJETO);
-		createEAttribute(referenciaEClass, REFERENCIA__NAME);
 
 		expresionEClass = createEClass(EXPRESION);
 		createEAttribute(expresionEClass, EXPRESION__VALOR);
@@ -943,8 +839,9 @@ public class AngularjsPackageImpl extends EPackageImpl implements AngularjsPacka
 		createEAttribute(filtroEClass, FILTRO__PARAMETROS);
 
 		directivaEClass = createEClass(DIRECTIVA);
-		createEReference(directivaEClass, DIRECTIVA__REFERENCIA);
 		createEAttribute(directivaEClass, DIRECTIVA__NAME);
+		createEReference(directivaEClass, DIRECTIVA__CURLYBRACES);
+		createEReference(directivaEClass, DIRECTIVA__REFERENCIA);
 
 		curlyBracesEClass = createEClass(CURLY_BRACES);
 		createEReference(curlyBracesEClass, CURLY_BRACES__EXPRESION);
@@ -979,98 +876,85 @@ public class AngularjsPackageImpl extends EPackageImpl implements AngularjsPacka
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		moduloEClass.getESuperTypes().add(this.getObjetoJavaScript());
-		funcionEClass.getESuperTypes().add(this.getObjetoJavaScript());
-		variableEClass.getESuperTypes().add(this.getObjetoJavaScript());
-		controllerEClass.getESuperTypes().add(this.getObjetoJavaScript());
-		serviceEClass.getESuperTypes().add(this.getObjetoJavaScript());
+		moduloEClass.getESuperTypes().add(this.getObjetoAngular());
+		componenteEClass.getESuperTypes().add(this.getObjetoAngular());
+		serviceEClass.getESuperTypes().add(this.getObjetoAngular());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(appAngularJSEClass, AppAngularJS.class, "AppAngularJS", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getAppAngularJS_Modulos(), this.getModulo(), null, "modulos", null, 1, -1, AppAngularJS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getAppAngularJS_Template(), this.getTemplate(), null, "template", null, 0, -1, AppAngularJS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAppAngularJS_Templates(), this.getTemplate(), null, "templates", null, 0, -1, AppAngularJS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getAppAngularJS_Modelos(), this.getModelo(), null, "modelos", null, 0, -1, AppAngularJS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAppAngularJS_Name(), ecorePackage.getEString(), "name", null, 0, 1, AppAngularJS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAppAngularJS_Services(), this.getService(), null, "services", null, 0, -1, AppAngularJS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAppAngularJS_Componentes(), this.getComponente(), null, "componentes", null, 0, -1, AppAngularJS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(moduloEClass, Modulo.class, "Modulo", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getModulo_Parametros(), this.getParametro(), null, "parametros", null, 0, -1, Modulo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getModulo_Services(), this.getService(), null, "services", null, 0, -1, Modulo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getModulo_Controller(), this.getController(), null, "controller", null, 0, -1, Modulo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getModulo_Modulos(), this.getModulo(), null, "modulos", null, 0, -1, Modulo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getModulo_Parametros(), this.getObjetoAngular(), null, "parametros", null, 0, -1, Modulo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(anotacionEClass, Anotacion.class, "Anotacion", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getAnotacion_Value(), ecorePackage.getEString(), "value", null, 0, 1, Anotacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAnotacion_Name(), ecorePackage.getEString(), "name", null, 0, 1, Anotacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(funcionEClass, Funcion.class, "Funcion", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getFuncion_Funcion(), this.getFuncion(), null, "funcion", null, 0, -1, Funcion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getFuncion_TieneRetorno(), ecorePackage.getEBoolean(), "tieneRetorno", null, 0, 1, Funcion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getFuncion_Parametros(), this.getParametro(), null, "parametros", null, 0, -1, Funcion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getFuncion_Name(), ecorePackage.getEString(), "name", null, 0, 1, Funcion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getFuncion_Body(), ecorePackage.getEString(), "body", null, 0, 1, Funcion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(parametroEClass, Parametro.class, "Parametro", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getParametro_Name(), ecorePackage.getEString(), "name", null, 0, 1, Parametro.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getParametro_Services(), this.getService(), null, "services", null, 0, 1, Parametro.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getFuncion_Parametros(), ecorePackage.getEString(), "parametros", null, 0, 1, Funcion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getFuncion_Variables(), this.getVariable(), null, "variables", null, 0, -1, Funcion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(variableEClass, Variable.class, "Variable", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getVariable_Valor(), ecorePackage.getEString(), "valor", null, 0, 1, Variable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getVariable_Anotacion(), this.getAnotacion(), null, "anotacion", null, 0, 1, Variable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVariable_Anotacion(), this.getAnotacion(), null, "anotacion", null, 0, -1, Variable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getVariable_Name(), ecorePackage.getEString(), "name", null, 0, 1, Variable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(controllerEClass, Controller.class, "Controller", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getController_Services(), this.getService(), null, "services", null, 0, -1, Controller.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getController_Funcion(), this.getFuncion(), null, "funcion", null, 0, -1, Controller.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getController_Variable(), this.getVariable(), null, "variable", null, 0, -1, Controller.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getController_Parametros(), this.getParametro(), null, "parametros", null, 0, -1, Controller.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getController_Body(), ecorePackage.getEString(), "body", null, 0, 1, Controller.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getController_Template(), this.getTemplate(), null, "template", null, 1, 1, Controller.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getController_Modelo(), this.getModelo(), null, "modelo", null, 0, -1, Controller.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(componenteEClass, Componente.class, "Componente", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getComponente_Funcion(), this.getFuncion(), null, "funcion", null, 1, 1, Componente.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getComponente_Template(), this.getTemplate(), null, "template", null, 1, 1, Componente.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getComponente_Modelo(), this.getModelo(), null, "modelo", null, 0, -1, Componente.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getComponente_Parametros(), this.getObjetoAngular(), null, "parametros", null, 0, -1, Componente.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getComponente_Modulo(), this.getModulo(), null, "modulo", null, 1, 1, Componente.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(serviceEClass, Service.class, "Service", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getService_Funcion(), this.getFuncion(), null, "funcion", null, 0, -1, Service.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getService_Parametro(), this.getParametro(), null, "parametro", null, 1, 1, Service.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getService_Funcion(), this.getFuncion(), null, "funcion", null, 1, 1, Service.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getService_Parametros(), this.getObjetoAngular(), null, "parametros", null, 0, -1, Service.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(objetoJavaScriptEClass, ObjetoJavaScript.class, "ObjetoJavaScript", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getObjetoJavaScript_Name(), ecorePackage.getEString(), "name", null, 0, 1, ObjetoJavaScript.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(objetoAngularEClass, ObjetoAngular.class, "ObjetoAngular", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getObjetoAngular_Name(), ecorePackage.getEString(), "name", null, 0, 1, ObjetoAngular.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(modeloEClass, Modelo.class, "Modelo", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(templateEClass, Template.class, "Template", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getTemplate_Setenciahtml(), this.getSetenciaHTML(), null, "setenciahtml", null, 0, -1, Template.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTemplate_Sentenciashtml(), this.getSentenciaHTML(), null, "sentenciashtml", null, 0, -1, Template.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTemplate_Name(), ecorePackage.getEString(), "name", null, 0, 1, Template.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getTemplate_RutaArchivo(), ecorePackage.getEString(), "rutaArchivo", null, 0, 1, Template.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTemplate_Directiva(), this.getDirectiva(), null, "directiva", null, 0, -1, Template.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTemplate_Controller(), this.getController(), null, "controller", null, 0, 1, Template.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTemplate_Controller(), this.getComponente(), null, "controller", null, 0, 1, Template.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(setenciaHTMLEClass, SetenciaHTML.class, "SetenciaHTML", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getSetenciaHTML_Setenciahtml(), this.getSetenciaHTML(), null, "setenciahtml", null, 0, -1, SetenciaHTML.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getSetenciaHTML_Name(), ecorePackage.getEString(), "name", null, 0, 1, SetenciaHTML.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSetenciaHTML_Propiedades(), this.getPropiedad(), null, "propiedades", null, 0, -1, SetenciaHTML.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getSetenciaHTML_SelfClosing(), ecorePackage.getEBoolean(), "selfClosing", null, 0, 1, SetenciaHTML.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSetenciaHTML_Directivas(), this.getDirectiva(), null, "directivas", null, 0, -1, SetenciaHTML.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSetenciaHTML_Curlybraces(), this.getCurlyBraces(), null, "curlybraces", null, 0, -1, SetenciaHTML.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(sentenciaHTMLEClass, SentenciaHTML.class, "SentenciaHTML", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getSentenciaHTML_Sentenciashtml(), this.getSentenciaHTML(), null, "sentenciashtml", null, 0, -1, SentenciaHTML.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getSentenciaHTML_Name(), ecorePackage.getEString(), "name", null, 0, 1, SentenciaHTML.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSentenciaHTML_Propiedades(), this.getPropiedad(), null, "propiedades", null, 0, -1, SentenciaHTML.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSentenciaHTML_Curlybraces(), this.getCurlyBraces(), null, "curlybraces", null, 0, -1, SentenciaHTML.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSentenciaHTML_Directivas(), this.getDirectiva(), null, "directivas", null, 0, -1, SentenciaHTML.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(propiedadEClass, Propiedad.class, "Propiedad", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getPropiedad_Name(), ecorePackage.getEString(), "name", null, 0, 1, Propiedad.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPropiedad_Valor(), ecorePackage.getEString(), "valor", null, 0, 1, Propiedad.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(referenciaEClass, Referencia.class, "Referencia", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getReferencia_Objeto(), this.getObjetoJavaScript(), null, "objeto", null, 1, 1, Referencia.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getReferencia_Name(), ecorePackage.getEString(), "name", null, 0, 1, Referencia.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
 		initEClass(expresionEClass, Expresion.class, "Expresion", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getExpresion_Valor(), ecorePackage.getEString(), "valor", null, 0, 1, Expresion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getExpresion_Referencia(), this.getReferencia(), null, "referencia", null, 0, 1, Expresion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getExpresion_Referencia(), this.getObjetoAngular(), null, "referencia", null, 0, 1, Expresion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(filtroEClass, Filtro.class, "Filtro", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getFiltro_Name(), ecorePackage.getEString(), "name", null, 0, 1, Filtro.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getFiltro_Parametros(), ecorePackage.getEString(), "parametros", null, 0, 1, Filtro.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(directivaEClass, Directiva.class, "Directiva", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getDirectiva_Referencia(), this.getReferencia(), null, "referencia", null, 1, 1, Directiva.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getDirectiva_Name(), ecorePackage.getEString(), "name", null, 0, 1, Directiva.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDirectiva_Curlybraces(), this.getCurlyBraces(), null, "curlybraces", null, 0, 1, Directiva.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDirectiva_Referencia(), this.getObjetoAngular(), null, "referencia", null, 0, 1, Directiva.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(curlyBracesEClass, CurlyBraces.class, "CurlyBraces", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getCurlyBraces_Expresion(), this.getExpresion(), null, "expresion", null, 1, 1, CurlyBraces.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getCurlyBraces_Filtro(), this.getFiltro(), null, "filtro", null, 0, -1, CurlyBraces.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCurlyBraces_Filtro(), this.getFiltro(), null, "filtro", null, 0, 1, CurlyBraces.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

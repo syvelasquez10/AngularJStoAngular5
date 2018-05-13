@@ -3,6 +3,7 @@
 package angularjs;
 
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -13,74 +14,84 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link angularjs.Funcion#getFuncion <em>Funcion</em>}</li>
- *   <li>{@link angularjs.Funcion#isTieneRetorno <em>Tiene Retorno</em>}</li>
- *   <li>{@link angularjs.Funcion#getParametros <em>Parametros</em>}</li>
+ *   <li>{@link angularjs.Funcion#getName <em>Name</em>}</li>
  *   <li>{@link angularjs.Funcion#getBody <em>Body</em>}</li>
+ *   <li>{@link angularjs.Funcion#getParametros <em>Parametros</em>}</li>
+ *   <li>{@link angularjs.Funcion#getVariables <em>Variables</em>}</li>
  * </ul>
  *
  * @see angularjs.AngularjsPackage#getFuncion()
  * @model
  * @generated
  */
-public interface Funcion extends ObjetoJavaScript {
+public interface Funcion extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Funcion</b></em>' reference list.
-	 * The list contents are of type {@link angularjs.Funcion}.
+	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Funcion</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Funcion</em>' reference list.
-	 * @see angularjs.AngularjsPackage#getFuncion_Funcion()
+	 * @return the value of the '<em>Name</em>' attribute.
+	 * @see #setName(String)
+	 * @see angularjs.AngularjsPackage#getFuncion_Name()
 	 * @model
 	 * @generated
 	 */
-	EList<Funcion> getFuncion();
+	String getName();
 
 	/**
-	 * Returns the value of the '<em><b>Tiene Retorno</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Tiene Retorno</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Tiene Retorno</em>' attribute.
-	 * @see #setTieneRetorno(boolean)
-	 * @see angularjs.AngularjsPackage#getFuncion_TieneRetorno()
-	 * @model
-	 * @generated
-	 */
-	boolean isTieneRetorno();
-
-	/**
-	 * Sets the value of the '{@link angularjs.Funcion#isTieneRetorno <em>Tiene Retorno</em>}' attribute.
+	 * Sets the value of the '{@link angularjs.Funcion#getName <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Tiene Retorno</em>' attribute.
-	 * @see #isTieneRetorno()
+	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @see #getName()
 	 * @generated
 	 */
-	void setTieneRetorno(boolean value);
+	void setName(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Parametros</b></em>' containment reference list.
-	 * The list contents are of type {@link angularjs.Parametro}.
+	 * Returns the value of the '<em><b>Parametros</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Parametros</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Parametros</em>' containment reference list.
+	 * @return the value of the '<em>Parametros</em>' attribute.
+	 * @see #setParametros(String)
 	 * @see angularjs.AngularjsPackage#getFuncion_Parametros()
+	 * @model
+	 * @generated
+	 */
+	String getParametros();
+
+	/**
+	 * Sets the value of the '{@link angularjs.Funcion#getParametros <em>Parametros</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Parametros</em>' attribute.
+	 * @see #getParametros()
+	 * @generated
+	 */
+	void setParametros(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Variables</b></em>' containment reference list.
+	 * The list contents are of type {@link angularjs.Variable}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Variables</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Variables</em>' containment reference list.
+	 * @see angularjs.AngularjsPackage#getFuncion_Variables()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Parametro> getParametros();
+	EList<Variable> getVariables();
 
 	/**
 	 * Returns the value of the '<em><b>Body</b></em>' attribute.

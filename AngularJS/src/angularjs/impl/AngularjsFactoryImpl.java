@@ -60,15 +60,13 @@ public class AngularjsFactoryImpl extends EFactoryImpl implements AngularjsFacto
 			case AngularjsPackage.MODULO: return createModulo();
 			case AngularjsPackage.ANOTACION: return createAnotacion();
 			case AngularjsPackage.FUNCION: return createFuncion();
-			case AngularjsPackage.PARAMETRO: return createParametro();
 			case AngularjsPackage.VARIABLE: return createVariable();
-			case AngularjsPackage.CONTROLLER: return createController();
+			case AngularjsPackage.COMPONENTE: return createComponente();
 			case AngularjsPackage.SERVICE: return createService();
 			case AngularjsPackage.MODELO: return createModelo();
 			case AngularjsPackage.TEMPLATE: return createTemplate();
-			case AngularjsPackage.SETENCIA_HTML: return createSetenciaHTML();
+			case AngularjsPackage.SENTENCIA_HTML: return createSentenciaHTML();
 			case AngularjsPackage.PROPIEDAD: return createPropiedad();
-			case AngularjsPackage.REFERENCIA: return createReferencia();
 			case AngularjsPackage.EXPRESION: return createExpresion();
 			case AngularjsPackage.FILTRO: return createFiltro();
 			case AngularjsPackage.DIRECTIVA: return createDirectiva();
@@ -123,16 +121,6 @@ public class AngularjsFactoryImpl extends EFactoryImpl implements AngularjsFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Parametro createParametro() {
-		ParametroImpl parametro = new ParametroImpl();
-		return parametro;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public Variable createVariable() {
 		VariableImpl variable = new VariableImpl();
 		return variable;
@@ -143,9 +131,9 @@ public class AngularjsFactoryImpl extends EFactoryImpl implements AngularjsFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Controller createController() {
-		ControllerImpl controller = new ControllerImpl();
-		return controller;
+	public Componente createComponente() {
+		ComponenteImpl componente = new ComponenteImpl();
+		return componente;
 	}
 
 	/**
@@ -183,9 +171,9 @@ public class AngularjsFactoryImpl extends EFactoryImpl implements AngularjsFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public SetenciaHTML createSetenciaHTML() {
-		SetenciaHTMLImpl setenciaHTML = new SetenciaHTMLImpl();
-		return setenciaHTML;
+	public SentenciaHTML createSentenciaHTML() {
+		SentenciaHTMLImpl sentenciaHTML = new SentenciaHTMLImpl();
+		return sentenciaHTML;
 	}
 
 	/**
@@ -196,16 +184,6 @@ public class AngularjsFactoryImpl extends EFactoryImpl implements AngularjsFacto
 	public Propiedad createPropiedad() {
 		PropiedadImpl propiedad = new PropiedadImpl();
 		return propiedad;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Referencia createReferencia() {
-		ReferenciaImpl referencia = new ReferenciaImpl();
-		return referencia;
 	}
 
 	/**

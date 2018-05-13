@@ -76,13 +76,13 @@ public interface AngularjsPackage extends EPackage {
 	int APP_ANGULAR_JS__MODULOS = 0;
 
 	/**
-	 * The feature id for the '<em><b>Template</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Templates</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int APP_ANGULAR_JS__TEMPLATE = 1;
+	int APP_ANGULAR_JS__TEMPLATES = 1;
 
 	/**
 	 * The feature id for the '<em><b>Modelos</b></em>' containment reference list.
@@ -103,13 +103,31 @@ public interface AngularjsPackage extends EPackage {
 	int APP_ANGULAR_JS__NAME = 3;
 
 	/**
+	 * The feature id for the '<em><b>Services</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APP_ANGULAR_JS__SERVICES = 4;
+
+	/**
+	 * The feature id for the '<em><b>Componentes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APP_ANGULAR_JS__COMPONENTES = 5;
+
+	/**
 	 * The number of structural features of the '<em>App Angular JS</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int APP_ANGULAR_JS_FEATURE_COUNT = 4;
+	int APP_ANGULAR_JS_FEATURE_COUNT = 6;
 
 	/**
 	 * The number of operations of the '<em>App Angular JS</em>' class.
@@ -119,6 +137,43 @@ public interface AngularjsPackage extends EPackage {
 	 * @ordered
 	 */
 	int APP_ANGULAR_JS_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link angularjs.impl.ObjetoAngularImpl <em>Objeto Angular</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see angularjs.impl.ObjetoAngularImpl
+	 * @see angularjs.impl.AngularjsPackageImpl#getObjetoAngular()
+	 * @generated
+	 */
+	int OBJETO_ANGULAR = 7;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OBJETO_ANGULAR__NAME = 0;
+
+	/**
+	 * The number of structural features of the '<em>Objeto Angular</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OBJETO_ANGULAR_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Objeto Angular</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OBJETO_ANGULAR_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link angularjs.impl.ModuloImpl <em>Modulo</em>}' class.
@@ -141,86 +196,22 @@ public interface AngularjsPackage extends EPackage {
 	int ANOTACION = 2;
 
 	/**
-	 * The meta object id for the '{@link angularjs.impl.ObjetoJavaScriptImpl <em>Objeto Java Script</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see angularjs.impl.ObjetoJavaScriptImpl
-	 * @see angularjs.impl.AngularjsPackageImpl#getObjetoJavaScript()
-	 * @generated
-	 */
-	int OBJETO_JAVA_SCRIPT = 8;
-
-	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int OBJETO_JAVA_SCRIPT__NAME = 0;
+	int MODULO__NAME = OBJETO_ANGULAR__NAME;
 
 	/**
-	 * The number of structural features of the '<em>Objeto Java Script</em>' class.
+	 * The feature id for the '<em><b>Parametros</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int OBJETO_JAVA_SCRIPT_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>Objeto Java Script</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OBJETO_JAVA_SCRIPT_OPERATION_COUNT = 0;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MODULO__NAME = OBJETO_JAVA_SCRIPT__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Parametros</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MODULO__PARAMETROS = OBJETO_JAVA_SCRIPT_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Services</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MODULO__SERVICES = OBJETO_JAVA_SCRIPT_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Controller</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MODULO__CONTROLLER = OBJETO_JAVA_SCRIPT_FEATURE_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>Modulos</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MODULO__MODULOS = OBJETO_JAVA_SCRIPT_FEATURE_COUNT + 3;
+	int MODULO__PARAMETROS = OBJETO_ANGULAR_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Modulo</em>' class.
@@ -229,7 +220,7 @@ public interface AngularjsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULO_FEATURE_COUNT = OBJETO_JAVA_SCRIPT_FEATURE_COUNT + 4;
+	int MODULO_FEATURE_COUNT = OBJETO_ANGULAR_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Modulo</em>' class.
@@ -238,7 +229,7 @@ public interface AngularjsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULO_OPERATION_COUNT = OBJETO_JAVA_SCRIPT_OPERATION_COUNT + 0;
+	int MODULO_OPERATION_COUNT = OBJETO_ANGULAR_OPERATION_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -250,13 +241,22 @@ public interface AngularjsPackage extends EPackage {
 	int ANOTACION__VALUE = 0;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ANOTACION__NAME = 1;
+
+	/**
 	 * The number of structural features of the '<em>Anotacion</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ANOTACION_FEATURE_COUNT = 1;
+	int ANOTACION_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>Anotacion</em>' class.
@@ -284,34 +284,7 @@ public interface AngularjsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCION__NAME = OBJETO_JAVA_SCRIPT__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Funcion</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FUNCION__FUNCION = OBJETO_JAVA_SCRIPT_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Tiene Retorno</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FUNCION__TIENE_RETORNO = OBJETO_JAVA_SCRIPT_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Parametros</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FUNCION__PARAMETROS = OBJETO_JAVA_SCRIPT_FEATURE_COUNT + 2;
+	int FUNCION__NAME = 0;
 
 	/**
 	 * The feature id for the '<em><b>Body</b></em>' attribute.
@@ -320,7 +293,25 @@ public interface AngularjsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCION__BODY = OBJETO_JAVA_SCRIPT_FEATURE_COUNT + 3;
+	int FUNCION__BODY = 1;
+
+	/**
+	 * The feature id for the '<em><b>Parametros</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCION__PARAMETROS = 2;
+
+	/**
+	 * The feature id for the '<em><b>Variables</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCION__VARIABLES = 3;
 
 	/**
 	 * The number of structural features of the '<em>Funcion</em>' class.
@@ -329,7 +320,7 @@ public interface AngularjsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCION_FEATURE_COUNT = OBJETO_JAVA_SCRIPT_FEATURE_COUNT + 4;
+	int FUNCION_FEATURE_COUNT = 4;
 
 	/**
 	 * The number of operations of the '<em>Funcion</em>' class.
@@ -338,53 +329,7 @@ public interface AngularjsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCION_OPERATION_COUNT = OBJETO_JAVA_SCRIPT_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link angularjs.impl.ParametroImpl <em>Parametro</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see angularjs.impl.ParametroImpl
-	 * @see angularjs.impl.AngularjsPackageImpl#getParametro()
-	 * @generated
-	 */
-	int PARAMETRO = 4;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PARAMETRO__NAME = 0;
-
-	/**
-	 * The feature id for the '<em><b>Services</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PARAMETRO__SERVICES = 1;
-
-	/**
-	 * The number of structural features of the '<em>Parametro</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PARAMETRO_FEATURE_COUNT = 2;
-
-	/**
-	 * The number of operations of the '<em>Parametro</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PARAMETRO_OPERATION_COUNT = 0;
+	int FUNCION_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link angularjs.impl.VariableImpl <em>Variable</em>}' class.
@@ -394,16 +339,7 @@ public interface AngularjsPackage extends EPackage {
 	 * @see angularjs.impl.AngularjsPackageImpl#getVariable()
 	 * @generated
 	 */
-	int VARIABLE = 5;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VARIABLE__NAME = OBJETO_JAVA_SCRIPT__NAME;
+	int VARIABLE = 4;
 
 	/**
 	 * The feature id for the '<em><b>Valor</b></em>' attribute.
@@ -412,44 +348,16 @@ public interface AngularjsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VARIABLE__VALOR = OBJETO_JAVA_SCRIPT_FEATURE_COUNT + 0;
+	int VARIABLE__VALOR = 0;
 
 	/**
-	 * The feature id for the '<em><b>Anotacion</b></em>' containment reference.
+	 * The feature id for the '<em><b>Anotacion</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VARIABLE__ANOTACION = OBJETO_JAVA_SCRIPT_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of structural features of the '<em>Variable</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VARIABLE_FEATURE_COUNT = OBJETO_JAVA_SCRIPT_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of operations of the '<em>Variable</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VARIABLE_OPERATION_COUNT = OBJETO_JAVA_SCRIPT_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link angularjs.impl.ControllerImpl <em>Controller</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see angularjs.impl.ControllerImpl
-	 * @see angularjs.impl.AngularjsPackageImpl#getController()
-	 * @generated
-	 */
-	int CONTROLLER = 6;
+	int VARIABLE__ANOTACION = 1;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -458,52 +366,53 @@ public interface AngularjsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROLLER__NAME = OBJETO_JAVA_SCRIPT__NAME;
+	int VARIABLE__NAME = 2;
 
 	/**
-	 * The feature id for the '<em><b>Services</b></em>' reference list.
+	 * The number of structural features of the '<em>Variable</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROLLER__SERVICES = OBJETO_JAVA_SCRIPT_FEATURE_COUNT + 0;
+	int VARIABLE_FEATURE_COUNT = 3;
 
 	/**
-	 * The feature id for the '<em><b>Funcion</b></em>' containment reference list.
+	 * The number of operations of the '<em>Variable</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROLLER__FUNCION = OBJETO_JAVA_SCRIPT_FEATURE_COUNT + 1;
+	int VARIABLE_OPERATION_COUNT = 0;
 
 	/**
-	 * The feature id for the '<em><b>Variable</b></em>' containment reference list.
+	 * The meta object id for the '{@link angularjs.impl.ComponenteImpl <em>Componente</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see angularjs.impl.ComponenteImpl
+	 * @see angularjs.impl.AngularjsPackageImpl#getComponente()
+	 * @generated
+	 */
+	int COMPONENTE = 5;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROLLER__VARIABLE = OBJETO_JAVA_SCRIPT_FEATURE_COUNT + 2;
+	int COMPONENTE__NAME = OBJETO_ANGULAR__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Parametros</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Funcion</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROLLER__PARAMETROS = OBJETO_JAVA_SCRIPT_FEATURE_COUNT + 3;
-
-	/**
-	 * The feature id for the '<em><b>Body</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONTROLLER__BODY = OBJETO_JAVA_SCRIPT_FEATURE_COUNT + 4;
+	int COMPONENTE__FUNCION = OBJETO_ANGULAR_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Template</b></em>' reference.
@@ -512,7 +421,7 @@ public interface AngularjsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROLLER__TEMPLATE = OBJETO_JAVA_SCRIPT_FEATURE_COUNT + 5;
+	int COMPONENTE__TEMPLATE = OBJETO_ANGULAR_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Modelo</b></em>' reference list.
@@ -521,25 +430,43 @@ public interface AngularjsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROLLER__MODELO = OBJETO_JAVA_SCRIPT_FEATURE_COUNT + 6;
+	int COMPONENTE__MODELO = OBJETO_ANGULAR_FEATURE_COUNT + 2;
 
 	/**
-	 * The number of structural features of the '<em>Controller</em>' class.
+	 * The feature id for the '<em><b>Parametros</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROLLER_FEATURE_COUNT = OBJETO_JAVA_SCRIPT_FEATURE_COUNT + 7;
+	int COMPONENTE__PARAMETROS = OBJETO_ANGULAR_FEATURE_COUNT + 3;
 
 	/**
-	 * The number of operations of the '<em>Controller</em>' class.
+	 * The feature id for the '<em><b>Modulo</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROLLER_OPERATION_COUNT = OBJETO_JAVA_SCRIPT_OPERATION_COUNT + 0;
+	int COMPONENTE__MODULO = OBJETO_ANGULAR_FEATURE_COUNT + 4;
+
+	/**
+	 * The number of structural features of the '<em>Componente</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPONENTE_FEATURE_COUNT = OBJETO_ANGULAR_FEATURE_COUNT + 5;
+
+	/**
+	 * The number of operations of the '<em>Componente</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPONENTE_OPERATION_COUNT = OBJETO_ANGULAR_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link angularjs.impl.ServiceImpl <em>Service</em>}' class.
@@ -549,7 +476,7 @@ public interface AngularjsPackage extends EPackage {
 	 * @see angularjs.impl.AngularjsPackageImpl#getService()
 	 * @generated
 	 */
-	int SERVICE = 7;
+	int SERVICE = 6;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -558,25 +485,25 @@ public interface AngularjsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SERVICE__NAME = OBJETO_JAVA_SCRIPT__NAME;
+	int SERVICE__NAME = OBJETO_ANGULAR__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Funcion</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Funcion</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SERVICE__FUNCION = OBJETO_JAVA_SCRIPT_FEATURE_COUNT + 0;
+	int SERVICE__FUNCION = OBJETO_ANGULAR_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Parametro</b></em>' reference.
+	 * The feature id for the '<em><b>Parametros</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SERVICE__PARAMETRO = OBJETO_JAVA_SCRIPT_FEATURE_COUNT + 1;
+	int SERVICE__PARAMETROS = OBJETO_ANGULAR_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Service</em>' class.
@@ -585,7 +512,7 @@ public interface AngularjsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SERVICE_FEATURE_COUNT = OBJETO_JAVA_SCRIPT_FEATURE_COUNT + 2;
+	int SERVICE_FEATURE_COUNT = OBJETO_ANGULAR_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Service</em>' class.
@@ -594,7 +521,7 @@ public interface AngularjsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SERVICE_OPERATION_COUNT = OBJETO_JAVA_SCRIPT_OPERATION_COUNT + 0;
+	int SERVICE_OPERATION_COUNT = OBJETO_ANGULAR_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link angularjs.impl.ModeloImpl <em>Modelo</em>}' class.
@@ -604,7 +531,7 @@ public interface AngularjsPackage extends EPackage {
 	 * @see angularjs.impl.AngularjsPackageImpl#getModelo()
 	 * @generated
 	 */
-	int MODELO = 9;
+	int MODELO = 8;
 
 	/**
 	 * The number of structural features of the '<em>Modelo</em>' class.
@@ -632,16 +559,16 @@ public interface AngularjsPackage extends EPackage {
 	 * @see angularjs.impl.AngularjsPackageImpl#getTemplate()
 	 * @generated
 	 */
-	int TEMPLATE = 10;
+	int TEMPLATE = 9;
 
 	/**
-	 * The feature id for the '<em><b>Setenciahtml</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Sentenciashtml</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TEMPLATE__SETENCIAHTML = 0;
+	int TEMPLATE__SENTENCIASHTML = 0;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -653,31 +580,13 @@ public interface AngularjsPackage extends EPackage {
 	int TEMPLATE__NAME = 1;
 
 	/**
-	 * The feature id for the '<em><b>Ruta Archivo</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TEMPLATE__RUTA_ARCHIVO = 2;
-
-	/**
-	 * The feature id for the '<em><b>Directiva</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TEMPLATE__DIRECTIVA = 3;
-
-	/**
 	 * The feature id for the '<em><b>Controller</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TEMPLATE__CONTROLLER = 4;
+	int TEMPLATE__CONTROLLER = 2;
 
 	/**
 	 * The number of structural features of the '<em>Template</em>' class.
@@ -686,7 +595,7 @@ public interface AngularjsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEMPLATE_FEATURE_COUNT = 5;
+	int TEMPLATE_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Template</em>' class.
@@ -698,23 +607,23 @@ public interface AngularjsPackage extends EPackage {
 	int TEMPLATE_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link angularjs.impl.SetenciaHTMLImpl <em>Setencia HTML</em>}' class.
+	 * The meta object id for the '{@link angularjs.impl.SentenciaHTMLImpl <em>Sentencia HTML</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see angularjs.impl.SetenciaHTMLImpl
-	 * @see angularjs.impl.AngularjsPackageImpl#getSetenciaHTML()
+	 * @see angularjs.impl.SentenciaHTMLImpl
+	 * @see angularjs.impl.AngularjsPackageImpl#getSentenciaHTML()
 	 * @generated
 	 */
-	int SETENCIA_HTML = 11;
+	int SENTENCIA_HTML = 10;
 
 	/**
-	 * The feature id for the '<em><b>Setenciahtml</b></em>' reference list.
+	 * The feature id for the '<em><b>Sentenciashtml</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SETENCIA_HTML__SETENCIAHTML = 0;
+	int SENTENCIA_HTML__SENTENCIASHTML = 0;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -723,7 +632,7 @@ public interface AngularjsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SETENCIA_HTML__NAME = 1;
+	int SENTENCIA_HTML__NAME = 1;
 
 	/**
 	 * The feature id for the '<em><b>Propiedades</b></em>' containment reference list.
@@ -732,25 +641,7 @@ public interface AngularjsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SETENCIA_HTML__PROPIEDADES = 2;
-
-	/**
-	 * The feature id for the '<em><b>Self Closing</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SETENCIA_HTML__SELF_CLOSING = 3;
-
-	/**
-	 * The feature id for the '<em><b>Directivas</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SETENCIA_HTML__DIRECTIVAS = 4;
+	int SENTENCIA_HTML__PROPIEDADES = 2;
 
 	/**
 	 * The feature id for the '<em><b>Curlybraces</b></em>' containment reference list.
@@ -759,25 +650,34 @@ public interface AngularjsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SETENCIA_HTML__CURLYBRACES = 5;
+	int SENTENCIA_HTML__CURLYBRACES = 3;
 
 	/**
-	 * The number of structural features of the '<em>Setencia HTML</em>' class.
+	 * The feature id for the '<em><b>Directivas</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SETENCIA_HTML_FEATURE_COUNT = 6;
+	int SENTENCIA_HTML__DIRECTIVAS = 4;
 
 	/**
-	 * The number of operations of the '<em>Setencia HTML</em>' class.
+	 * The number of structural features of the '<em>Sentencia HTML</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SETENCIA_HTML_OPERATION_COUNT = 0;
+	int SENTENCIA_HTML_FEATURE_COUNT = 5;
+
+	/**
+	 * The number of operations of the '<em>Sentencia HTML</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SENTENCIA_HTML_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link angularjs.impl.PropiedadImpl <em>Propiedad</em>}' class.
@@ -787,7 +687,7 @@ public interface AngularjsPackage extends EPackage {
 	 * @see angularjs.impl.AngularjsPackageImpl#getPropiedad()
 	 * @generated
 	 */
-	int PROPIEDAD = 12;
+	int PROPIEDAD = 11;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -826,52 +726,6 @@ public interface AngularjsPackage extends EPackage {
 	int PROPIEDAD_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link angularjs.impl.ReferenciaImpl <em>Referencia</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see angularjs.impl.ReferenciaImpl
-	 * @see angularjs.impl.AngularjsPackageImpl#getReferencia()
-	 * @generated
-	 */
-	int REFERENCIA = 13;
-
-	/**
-	 * The feature id for the '<em><b>Objeto</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REFERENCIA__OBJETO = 0;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REFERENCIA__NAME = 1;
-
-	/**
-	 * The number of structural features of the '<em>Referencia</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REFERENCIA_FEATURE_COUNT = 2;
-
-	/**
-	 * The number of operations of the '<em>Referencia</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REFERENCIA_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link angularjs.impl.ExpresionImpl <em>Expresion</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -879,7 +733,7 @@ public interface AngularjsPackage extends EPackage {
 	 * @see angularjs.impl.AngularjsPackageImpl#getExpresion()
 	 * @generated
 	 */
-	int EXPRESION = 14;
+	int EXPRESION = 12;
 
 	/**
 	 * The feature id for the '<em><b>Valor</b></em>' attribute.
@@ -891,7 +745,7 @@ public interface AngularjsPackage extends EPackage {
 	int EXPRESION__VALOR = 0;
 
 	/**
-	 * The feature id for the '<em><b>Referencia</b></em>' containment reference.
+	 * The feature id for the '<em><b>Referencia</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -925,7 +779,7 @@ public interface AngularjsPackage extends EPackage {
 	 * @see angularjs.impl.AngularjsPackageImpl#getFiltro()
 	 * @generated
 	 */
-	int FILTRO = 15;
+	int FILTRO = 13;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -971,16 +825,7 @@ public interface AngularjsPackage extends EPackage {
 	 * @see angularjs.impl.AngularjsPackageImpl#getDirectiva()
 	 * @generated
 	 */
-	int DIRECTIVA = 16;
-
-	/**
-	 * The feature id for the '<em><b>Referencia</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DIRECTIVA__REFERENCIA = 0;
+	int DIRECTIVA = 14;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -989,7 +834,25 @@ public interface AngularjsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DIRECTIVA__NAME = 1;
+	int DIRECTIVA__NAME = 0;
+
+	/**
+	 * The feature id for the '<em><b>Curlybraces</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DIRECTIVA__CURLYBRACES = 1;
+
+	/**
+	 * The feature id for the '<em><b>Referencia</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DIRECTIVA__REFERENCIA = 2;
 
 	/**
 	 * The number of structural features of the '<em>Directiva</em>' class.
@@ -998,7 +861,7 @@ public interface AngularjsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DIRECTIVA_FEATURE_COUNT = 2;
+	int DIRECTIVA_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Directiva</em>' class.
@@ -1017,7 +880,7 @@ public interface AngularjsPackage extends EPackage {
 	 * @see angularjs.impl.AngularjsPackageImpl#getCurlyBraces()
 	 * @generated
 	 */
-	int CURLY_BRACES = 17;
+	int CURLY_BRACES = 15;
 
 	/**
 	 * The feature id for the '<em><b>Expresion</b></em>' containment reference.
@@ -1029,7 +892,7 @@ public interface AngularjsPackage extends EPackage {
 	int CURLY_BRACES__EXPRESION = 0;
 
 	/**
-	 * The feature id for the '<em><b>Filtro</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Filtro</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1078,15 +941,15 @@ public interface AngularjsPackage extends EPackage {
 	EReference getAppAngularJS_Modulos();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link angularjs.AppAngularJS#getTemplate <em>Template</em>}'.
+	 * Returns the meta object for the containment reference list '{@link angularjs.AppAngularJS#getTemplates <em>Templates</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Template</em>'.
-	 * @see angularjs.AppAngularJS#getTemplate()
+	 * @return the meta object for the containment reference list '<em>Templates</em>'.
+	 * @see angularjs.AppAngularJS#getTemplates()
 	 * @see #getAppAngularJS()
 	 * @generated
 	 */
-	EReference getAppAngularJS_Template();
+	EReference getAppAngularJS_Templates();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link angularjs.AppAngularJS#getModelos <em>Modelos</em>}'.
@@ -1111,6 +974,28 @@ public interface AngularjsPackage extends EPackage {
 	EAttribute getAppAngularJS_Name();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link angularjs.AppAngularJS#getServices <em>Services</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Services</em>'.
+	 * @see angularjs.AppAngularJS#getServices()
+	 * @see #getAppAngularJS()
+	 * @generated
+	 */
+	EReference getAppAngularJS_Services();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link angularjs.AppAngularJS#getComponentes <em>Componentes</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Componentes</em>'.
+	 * @see angularjs.AppAngularJS#getComponentes()
+	 * @see #getAppAngularJS()
+	 * @generated
+	 */
+	EReference getAppAngularJS_Componentes();
+
+	/**
 	 * Returns the meta object for class '{@link angularjs.Modulo <em>Modulo</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1121,48 +1006,15 @@ public interface AngularjsPackage extends EPackage {
 	EClass getModulo();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link angularjs.Modulo#getParametros <em>Parametros</em>}'.
+	 * Returns the meta object for the reference list '{@link angularjs.Modulo#getParametros <em>Parametros</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Parametros</em>'.
+	 * @return the meta object for the reference list '<em>Parametros</em>'.
 	 * @see angularjs.Modulo#getParametros()
 	 * @see #getModulo()
 	 * @generated
 	 */
 	EReference getModulo_Parametros();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link angularjs.Modulo#getServices <em>Services</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Services</em>'.
-	 * @see angularjs.Modulo#getServices()
-	 * @see #getModulo()
-	 * @generated
-	 */
-	EReference getModulo_Services();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link angularjs.Modulo#getController <em>Controller</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Controller</em>'.
-	 * @see angularjs.Modulo#getController()
-	 * @see #getModulo()
-	 * @generated
-	 */
-	EReference getModulo_Controller();
-
-	/**
-	 * Returns the meta object for the reference list '{@link angularjs.Modulo#getModulos <em>Modulos</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Modulos</em>'.
-	 * @see angularjs.Modulo#getModulos()
-	 * @see #getModulo()
-	 * @generated
-	 */
-	EReference getModulo_Modulos();
 
 	/**
 	 * Returns the meta object for class '{@link angularjs.Anotacion <em>Anotacion</em>}'.
@@ -1186,6 +1038,17 @@ public interface AngularjsPackage extends EPackage {
 	EAttribute getAnotacion_Value();
 
 	/**
+	 * Returns the meta object for the attribute '{@link angularjs.Anotacion#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see angularjs.Anotacion#getName()
+	 * @see #getAnotacion()
+	 * @generated
+	 */
+	EAttribute getAnotacion_Name();
+
+	/**
 	 * Returns the meta object for class '{@link angularjs.Funcion <em>Funcion</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1196,37 +1059,37 @@ public interface AngularjsPackage extends EPackage {
 	EClass getFuncion();
 
 	/**
-	 * Returns the meta object for the reference list '{@link angularjs.Funcion#getFuncion <em>Funcion</em>}'.
+	 * Returns the meta object for the attribute '{@link angularjs.Funcion#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Funcion</em>'.
-	 * @see angularjs.Funcion#getFuncion()
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see angularjs.Funcion#getName()
 	 * @see #getFuncion()
 	 * @generated
 	 */
-	EReference getFuncion_Funcion();
+	EAttribute getFuncion_Name();
 
 	/**
-	 * Returns the meta object for the attribute '{@link angularjs.Funcion#isTieneRetorno <em>Tiene Retorno</em>}'.
+	 * Returns the meta object for the attribute '{@link angularjs.Funcion#getParametros <em>Parametros</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Tiene Retorno</em>'.
-	 * @see angularjs.Funcion#isTieneRetorno()
-	 * @see #getFuncion()
-	 * @generated
-	 */
-	EAttribute getFuncion_TieneRetorno();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link angularjs.Funcion#getParametros <em>Parametros</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Parametros</em>'.
+	 * @return the meta object for the attribute '<em>Parametros</em>'.
 	 * @see angularjs.Funcion#getParametros()
 	 * @see #getFuncion()
 	 * @generated
 	 */
-	EReference getFuncion_Parametros();
+	EAttribute getFuncion_Parametros();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link angularjs.Funcion#getVariables <em>Variables</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Variables</em>'.
+	 * @see angularjs.Funcion#getVariables()
+	 * @see #getFuncion()
+	 * @generated
+	 */
+	EReference getFuncion_Variables();
 
 	/**
 	 * Returns the meta object for the attribute '{@link angularjs.Funcion#getBody <em>Body</em>}'.
@@ -1238,38 +1101,6 @@ public interface AngularjsPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getFuncion_Body();
-
-	/**
-	 * Returns the meta object for class '{@link angularjs.Parametro <em>Parametro</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Parametro</em>'.
-	 * @see angularjs.Parametro
-	 * @generated
-	 */
-	EClass getParametro();
-
-	/**
-	 * Returns the meta object for the attribute '{@link angularjs.Parametro#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see angularjs.Parametro#getName()
-	 * @see #getParametro()
-	 * @generated
-	 */
-	EAttribute getParametro_Name();
-
-	/**
-	 * Returns the meta object for the reference '{@link angularjs.Parametro#getServices <em>Services</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Services</em>'.
-	 * @see angularjs.Parametro#getServices()
-	 * @see #getParametro()
-	 * @generated
-	 */
-	EReference getParametro_Services();
 
 	/**
 	 * Returns the meta object for class '{@link angularjs.Variable <em>Variable</em>}'.
@@ -1293,10 +1124,10 @@ public interface AngularjsPackage extends EPackage {
 	EAttribute getVariable_Valor();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link angularjs.Variable#getAnotacion <em>Anotacion</em>}'.
+	 * Returns the meta object for the containment reference list '{@link angularjs.Variable#getAnotacion <em>Anotacion</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Anotacion</em>'.
+	 * @return the meta object for the containment reference list '<em>Anotacion</em>'.
 	 * @see angularjs.Variable#getAnotacion()
 	 * @see #getVariable()
 	 * @generated
@@ -1304,91 +1135,80 @@ public interface AngularjsPackage extends EPackage {
 	EReference getVariable_Anotacion();
 
 	/**
-	 * Returns the meta object for class '{@link angularjs.Controller <em>Controller</em>}'.
+	 * Returns the meta object for the attribute '{@link angularjs.Variable#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Controller</em>'.
-	 * @see angularjs.Controller
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see angularjs.Variable#getName()
+	 * @see #getVariable()
 	 * @generated
 	 */
-	EClass getController();
+	EAttribute getVariable_Name();
 
 	/**
-	 * Returns the meta object for the reference list '{@link angularjs.Controller#getServices <em>Services</em>}'.
+	 * Returns the meta object for class '{@link angularjs.Componente <em>Componente</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Services</em>'.
-	 * @see angularjs.Controller#getServices()
-	 * @see #getController()
+	 * @return the meta object for class '<em>Componente</em>'.
+	 * @see angularjs.Componente
 	 * @generated
 	 */
-	EReference getController_Services();
+	EClass getComponente();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link angularjs.Controller#getFuncion <em>Funcion</em>}'.
+	 * Returns the meta object for the containment reference '{@link angularjs.Componente#getFuncion <em>Funcion</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Funcion</em>'.
-	 * @see angularjs.Controller#getFuncion()
-	 * @see #getController()
+	 * @return the meta object for the containment reference '<em>Funcion</em>'.
+	 * @see angularjs.Componente#getFuncion()
+	 * @see #getComponente()
 	 * @generated
 	 */
-	EReference getController_Funcion();
+	EReference getComponente_Funcion();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link angularjs.Controller#getVariable <em>Variable</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Variable</em>'.
-	 * @see angularjs.Controller#getVariable()
-	 * @see #getController()
-	 * @generated
-	 */
-	EReference getController_Variable();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link angularjs.Controller#getParametros <em>Parametros</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Parametros</em>'.
-	 * @see angularjs.Controller#getParametros()
-	 * @see #getController()
-	 * @generated
-	 */
-	EReference getController_Parametros();
-
-	/**
-	 * Returns the meta object for the attribute '{@link angularjs.Controller#getBody <em>Body</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Body</em>'.
-	 * @see angularjs.Controller#getBody()
-	 * @see #getController()
-	 * @generated
-	 */
-	EAttribute getController_Body();
-
-	/**
-	 * Returns the meta object for the reference '{@link angularjs.Controller#getTemplate <em>Template</em>}'.
+	 * Returns the meta object for the reference '{@link angularjs.Componente#getTemplate <em>Template</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Template</em>'.
-	 * @see angularjs.Controller#getTemplate()
-	 * @see #getController()
+	 * @see angularjs.Componente#getTemplate()
+	 * @see #getComponente()
 	 * @generated
 	 */
-	EReference getController_Template();
+	EReference getComponente_Template();
 
 	/**
-	 * Returns the meta object for the reference list '{@link angularjs.Controller#getModelo <em>Modelo</em>}'.
+	 * Returns the meta object for the reference list '{@link angularjs.Componente#getModelo <em>Modelo</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference list '<em>Modelo</em>'.
-	 * @see angularjs.Controller#getModelo()
-	 * @see #getController()
+	 * @see angularjs.Componente#getModelo()
+	 * @see #getComponente()
 	 * @generated
 	 */
-	EReference getController_Modelo();
+	EReference getComponente_Modelo();
+
+	/**
+	 * Returns the meta object for the reference list '{@link angularjs.Componente#getParametros <em>Parametros</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Parametros</em>'.
+	 * @see angularjs.Componente#getParametros()
+	 * @see #getComponente()
+	 * @generated
+	 */
+	EReference getComponente_Parametros();
+
+	/**
+	 * Returns the meta object for the reference '{@link angularjs.Componente#getModulo <em>Modulo</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Modulo</em>'.
+	 * @see angularjs.Componente#getModulo()
+	 * @see #getComponente()
+	 * @generated
+	 */
+	EReference getComponente_Modulo();
 
 	/**
 	 * Returns the meta object for class '{@link angularjs.Service <em>Service</em>}'.
@@ -1401,10 +1221,10 @@ public interface AngularjsPackage extends EPackage {
 	EClass getService();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link angularjs.Service#getFuncion <em>Funcion</em>}'.
+	 * Returns the meta object for the containment reference '{@link angularjs.Service#getFuncion <em>Funcion</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Funcion</em>'.
+	 * @return the meta object for the containment reference '<em>Funcion</em>'.
 	 * @see angularjs.Service#getFuncion()
 	 * @see #getService()
 	 * @generated
@@ -1412,36 +1232,36 @@ public interface AngularjsPackage extends EPackage {
 	EReference getService_Funcion();
 
 	/**
-	 * Returns the meta object for the reference '{@link angularjs.Service#getParametro <em>Parametro</em>}'.
+	 * Returns the meta object for the reference list '{@link angularjs.Service#getParametros <em>Parametros</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Parametro</em>'.
-	 * @see angularjs.Service#getParametro()
+	 * @return the meta object for the reference list '<em>Parametros</em>'.
+	 * @see angularjs.Service#getParametros()
 	 * @see #getService()
 	 * @generated
 	 */
-	EReference getService_Parametro();
+	EReference getService_Parametros();
 
 	/**
-	 * Returns the meta object for class '{@link angularjs.ObjetoJavaScript <em>Objeto Java Script</em>}'.
+	 * Returns the meta object for class '{@link angularjs.ObjetoAngular <em>Objeto Angular</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Objeto Java Script</em>'.
-	 * @see angularjs.ObjetoJavaScript
+	 * @return the meta object for class '<em>Objeto Angular</em>'.
+	 * @see angularjs.ObjetoAngular
 	 * @generated
 	 */
-	EClass getObjetoJavaScript();
+	EClass getObjetoAngular();
 
 	/**
-	 * Returns the meta object for the attribute '{@link angularjs.ObjetoJavaScript#getName <em>Name</em>}'.
+	 * Returns the meta object for the attribute '{@link angularjs.ObjetoAngular#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see angularjs.ObjetoJavaScript#getName()
-	 * @see #getObjetoJavaScript()
+	 * @see angularjs.ObjetoAngular#getName()
+	 * @see #getObjetoAngular()
 	 * @generated
 	 */
-	EAttribute getObjetoJavaScript_Name();
+	EAttribute getObjetoAngular_Name();
 
 	/**
 	 * Returns the meta object for class '{@link angularjs.Modelo <em>Modelo</em>}'.
@@ -1464,15 +1284,15 @@ public interface AngularjsPackage extends EPackage {
 	EClass getTemplate();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link angularjs.Template#getSetenciahtml <em>Setenciahtml</em>}'.
+	 * Returns the meta object for the containment reference list '{@link angularjs.Template#getSentenciashtml <em>Sentenciashtml</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Setenciahtml</em>'.
-	 * @see angularjs.Template#getSetenciahtml()
+	 * @return the meta object for the containment reference list '<em>Sentenciashtml</em>'.
+	 * @see angularjs.Template#getSentenciashtml()
 	 * @see #getTemplate()
 	 * @generated
 	 */
-	EReference getTemplate_Setenciahtml();
+	EReference getTemplate_Sentenciashtml();
 
 	/**
 	 * Returns the meta object for the attribute '{@link angularjs.Template#getName <em>Name</em>}'.
@@ -1486,28 +1306,6 @@ public interface AngularjsPackage extends EPackage {
 	EAttribute getTemplate_Name();
 
 	/**
-	 * Returns the meta object for the attribute '{@link angularjs.Template#getRutaArchivo <em>Ruta Archivo</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Ruta Archivo</em>'.
-	 * @see angularjs.Template#getRutaArchivo()
-	 * @see #getTemplate()
-	 * @generated
-	 */
-	EAttribute getTemplate_RutaArchivo();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link angularjs.Template#getDirectiva <em>Directiva</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Directiva</em>'.
-	 * @see angularjs.Template#getDirectiva()
-	 * @see #getTemplate()
-	 * @generated
-	 */
-	EReference getTemplate_Directiva();
-
-	/**
 	 * Returns the meta object for the reference '{@link angularjs.Template#getController <em>Controller</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1519,80 +1317,69 @@ public interface AngularjsPackage extends EPackage {
 	EReference getTemplate_Controller();
 
 	/**
-	 * Returns the meta object for class '{@link angularjs.SetenciaHTML <em>Setencia HTML</em>}'.
+	 * Returns the meta object for class '{@link angularjs.SentenciaHTML <em>Sentencia HTML</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Setencia HTML</em>'.
-	 * @see angularjs.SetenciaHTML
+	 * @return the meta object for class '<em>Sentencia HTML</em>'.
+	 * @see angularjs.SentenciaHTML
 	 * @generated
 	 */
-	EClass getSetenciaHTML();
+	EClass getSentenciaHTML();
 
 	/**
-	 * Returns the meta object for the reference list '{@link angularjs.SetenciaHTML#getSetenciahtml <em>Setenciahtml</em>}'.
+	 * Returns the meta object for the reference list '{@link angularjs.SentenciaHTML#getSentenciashtml <em>Sentenciashtml</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Setenciahtml</em>'.
-	 * @see angularjs.SetenciaHTML#getSetenciahtml()
-	 * @see #getSetenciaHTML()
+	 * @return the meta object for the reference list '<em>Sentenciashtml</em>'.
+	 * @see angularjs.SentenciaHTML#getSentenciashtml()
+	 * @see #getSentenciaHTML()
 	 * @generated
 	 */
-	EReference getSetenciaHTML_Setenciahtml();
+	EReference getSentenciaHTML_Sentenciashtml();
 
 	/**
-	 * Returns the meta object for the attribute '{@link angularjs.SetenciaHTML#getName <em>Name</em>}'.
+	 * Returns the meta object for the attribute '{@link angularjs.SentenciaHTML#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see angularjs.SetenciaHTML#getName()
-	 * @see #getSetenciaHTML()
+	 * @see angularjs.SentenciaHTML#getName()
+	 * @see #getSentenciaHTML()
 	 * @generated
 	 */
-	EAttribute getSetenciaHTML_Name();
+	EAttribute getSentenciaHTML_Name();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link angularjs.SetenciaHTML#getPropiedades <em>Propiedades</em>}'.
+	 * Returns the meta object for the containment reference list '{@link angularjs.SentenciaHTML#getPropiedades <em>Propiedades</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Propiedades</em>'.
-	 * @see angularjs.SetenciaHTML#getPropiedades()
-	 * @see #getSetenciaHTML()
+	 * @see angularjs.SentenciaHTML#getPropiedades()
+	 * @see #getSentenciaHTML()
 	 * @generated
 	 */
-	EReference getSetenciaHTML_Propiedades();
+	EReference getSentenciaHTML_Propiedades();
 
 	/**
-	 * Returns the meta object for the attribute '{@link angularjs.SetenciaHTML#isSelfClosing <em>Self Closing</em>}'.
+	 * Returns the meta object for the containment reference list '{@link angularjs.SentenciaHTML#getDirectivas <em>Directivas</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Self Closing</em>'.
-	 * @see angularjs.SetenciaHTML#isSelfClosing()
-	 * @see #getSetenciaHTML()
+	 * @return the meta object for the containment reference list '<em>Directivas</em>'.
+	 * @see angularjs.SentenciaHTML#getDirectivas()
+	 * @see #getSentenciaHTML()
 	 * @generated
 	 */
-	EAttribute getSetenciaHTML_SelfClosing();
+	EReference getSentenciaHTML_Directivas();
 
 	/**
-	 * Returns the meta object for the reference list '{@link angularjs.SetenciaHTML#getDirectivas <em>Directivas</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Directivas</em>'.
-	 * @see angularjs.SetenciaHTML#getDirectivas()
-	 * @see #getSetenciaHTML()
-	 * @generated
-	 */
-	EReference getSetenciaHTML_Directivas();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link angularjs.SetenciaHTML#getCurlybraces <em>Curlybraces</em>}'.
+	 * Returns the meta object for the containment reference list '{@link angularjs.SentenciaHTML#getCurlybraces <em>Curlybraces</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Curlybraces</em>'.
-	 * @see angularjs.SetenciaHTML#getCurlybraces()
-	 * @see #getSetenciaHTML()
+	 * @see angularjs.SentenciaHTML#getCurlybraces()
+	 * @see #getSentenciaHTML()
 	 * @generated
 	 */
-	EReference getSetenciaHTML_Curlybraces();
+	EReference getSentenciaHTML_Curlybraces();
 
 	/**
 	 * Returns the meta object for class '{@link angularjs.Propiedad <em>Propiedad</em>}'.
@@ -1627,38 +1414,6 @@ public interface AngularjsPackage extends EPackage {
 	EAttribute getPropiedad_Valor();
 
 	/**
-	 * Returns the meta object for class '{@link angularjs.Referencia <em>Referencia</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Referencia</em>'.
-	 * @see angularjs.Referencia
-	 * @generated
-	 */
-	EClass getReferencia();
-
-	/**
-	 * Returns the meta object for the reference '{@link angularjs.Referencia#getObjeto <em>Objeto</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Objeto</em>'.
-	 * @see angularjs.Referencia#getObjeto()
-	 * @see #getReferencia()
-	 * @generated
-	 */
-	EReference getReferencia_Objeto();
-
-	/**
-	 * Returns the meta object for the attribute '{@link angularjs.Referencia#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see angularjs.Referencia#getName()
-	 * @see #getReferencia()
-	 * @generated
-	 */
-	EAttribute getReferencia_Name();
-
-	/**
 	 * Returns the meta object for class '{@link angularjs.Expresion <em>Expresion</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1680,10 +1435,10 @@ public interface AngularjsPackage extends EPackage {
 	EAttribute getExpresion_Valor();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link angularjs.Expresion#getReferencia <em>Referencia</em>}'.
+	 * Returns the meta object for the reference '{@link angularjs.Expresion#getReferencia <em>Referencia</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Referencia</em>'.
+	 * @return the meta object for the reference '<em>Referencia</em>'.
 	 * @see angularjs.Expresion#getReferencia()
 	 * @see #getExpresion()
 	 * @generated
@@ -1733,17 +1488,6 @@ public interface AngularjsPackage extends EPackage {
 	EClass getDirectiva();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link angularjs.Directiva#getReferencia <em>Referencia</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Referencia</em>'.
-	 * @see angularjs.Directiva#getReferencia()
-	 * @see #getDirectiva()
-	 * @generated
-	 */
-	EReference getDirectiva_Referencia();
-
-	/**
 	 * Returns the meta object for the attribute '{@link angularjs.Directiva#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1753,6 +1497,28 @@ public interface AngularjsPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getDirectiva_Name();
+
+	/**
+	 * Returns the meta object for the reference '{@link angularjs.Directiva#getCurlybraces <em>Curlybraces</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Curlybraces</em>'.
+	 * @see angularjs.Directiva#getCurlybraces()
+	 * @see #getDirectiva()
+	 * @generated
+	 */
+	EReference getDirectiva_Curlybraces();
+
+	/**
+	 * Returns the meta object for the reference '{@link angularjs.Directiva#getReferencia <em>Referencia</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Referencia</em>'.
+	 * @see angularjs.Directiva#getReferencia()
+	 * @see #getDirectiva()
+	 * @generated
+	 */
+	EReference getDirectiva_Referencia();
 
 	/**
 	 * Returns the meta object for class '{@link angularjs.CurlyBraces <em>Curly Braces</em>}'.
@@ -1776,10 +1542,10 @@ public interface AngularjsPackage extends EPackage {
 	EReference getCurlyBraces_Expresion();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link angularjs.CurlyBraces#getFiltro <em>Filtro</em>}'.
+	 * Returns the meta object for the containment reference '{@link angularjs.CurlyBraces#getFiltro <em>Filtro</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Filtro</em>'.
+	 * @return the meta object for the containment reference '<em>Filtro</em>'.
 	 * @see angularjs.CurlyBraces#getFiltro()
 	 * @see #getCurlyBraces()
 	 * @generated
@@ -1828,12 +1594,12 @@ public interface AngularjsPackage extends EPackage {
 		EReference APP_ANGULAR_JS__MODULOS = eINSTANCE.getAppAngularJS_Modulos();
 
 		/**
-		 * The meta object literal for the '<em><b>Template</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Templates</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference APP_ANGULAR_JS__TEMPLATE = eINSTANCE.getAppAngularJS_Template();
+		EReference APP_ANGULAR_JS__TEMPLATES = eINSTANCE.getAppAngularJS_Templates();
 
 		/**
 		 * The meta object literal for the '<em><b>Modelos</b></em>' containment reference list feature.
@@ -1852,6 +1618,22 @@ public interface AngularjsPackage extends EPackage {
 		EAttribute APP_ANGULAR_JS__NAME = eINSTANCE.getAppAngularJS_Name();
 
 		/**
+		 * The meta object literal for the '<em><b>Services</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference APP_ANGULAR_JS__SERVICES = eINSTANCE.getAppAngularJS_Services();
+
+		/**
+		 * The meta object literal for the '<em><b>Componentes</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference APP_ANGULAR_JS__COMPONENTES = eINSTANCE.getAppAngularJS_Componentes();
+
+		/**
 		 * The meta object literal for the '{@link angularjs.impl.ModuloImpl <em>Modulo</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1862,36 +1644,12 @@ public interface AngularjsPackage extends EPackage {
 		EClass MODULO = eINSTANCE.getModulo();
 
 		/**
-		 * The meta object literal for the '<em><b>Parametros</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Parametros</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EReference MODULO__PARAMETROS = eINSTANCE.getModulo_Parametros();
-
-		/**
-		 * The meta object literal for the '<em><b>Services</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference MODULO__SERVICES = eINSTANCE.getModulo_Services();
-
-		/**
-		 * The meta object literal for the '<em><b>Controller</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference MODULO__CONTROLLER = eINSTANCE.getModulo_Controller();
-
-		/**
-		 * The meta object literal for the '<em><b>Modulos</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference MODULO__MODULOS = eINSTANCE.getModulo_Modulos();
 
 		/**
 		 * The meta object literal for the '{@link angularjs.impl.AnotacionImpl <em>Anotacion</em>}' class.
@@ -1912,6 +1670,14 @@ public interface AngularjsPackage extends EPackage {
 		EAttribute ANOTACION__VALUE = eINSTANCE.getAnotacion_Value();
 
 		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ANOTACION__NAME = eINSTANCE.getAnotacion_Name();
+
+		/**
 		 * The meta object literal for the '{@link angularjs.impl.FuncionImpl <em>Funcion</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1922,28 +1688,28 @@ public interface AngularjsPackage extends EPackage {
 		EClass FUNCION = eINSTANCE.getFuncion();
 
 		/**
-		 * The meta object literal for the '<em><b>Funcion</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference FUNCION__FUNCION = eINSTANCE.getFuncion_Funcion();
+		EAttribute FUNCION__NAME = eINSTANCE.getFuncion_Name();
 
 		/**
-		 * The meta object literal for the '<em><b>Tiene Retorno</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Parametros</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute FUNCION__TIENE_RETORNO = eINSTANCE.getFuncion_TieneRetorno();
+		EAttribute FUNCION__PARAMETROS = eINSTANCE.getFuncion_Parametros();
 
 		/**
-		 * The meta object literal for the '<em><b>Parametros</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Variables</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference FUNCION__PARAMETROS = eINSTANCE.getFuncion_Parametros();
+		EReference FUNCION__VARIABLES = eINSTANCE.getFuncion_Variables();
 
 		/**
 		 * The meta object literal for the '<em><b>Body</b></em>' attribute feature.
@@ -1952,32 +1718,6 @@ public interface AngularjsPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute FUNCION__BODY = eINSTANCE.getFuncion_Body();
-
-		/**
-		 * The meta object literal for the '{@link angularjs.impl.ParametroImpl <em>Parametro</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see angularjs.impl.ParametroImpl
-		 * @see angularjs.impl.AngularjsPackageImpl#getParametro()
-		 * @generated
-		 */
-		EClass PARAMETRO = eINSTANCE.getParametro();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute PARAMETRO__NAME = eINSTANCE.getParametro_Name();
-
-		/**
-		 * The meta object literal for the '<em><b>Services</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference PARAMETRO__SERVICES = eINSTANCE.getParametro_Services();
 
 		/**
 		 * The meta object literal for the '{@link angularjs.impl.VariableImpl <em>Variable</em>}' class.
@@ -1998,7 +1738,7 @@ public interface AngularjsPackage extends EPackage {
 		EAttribute VARIABLE__VALOR = eINSTANCE.getVariable_Valor();
 
 		/**
-		 * The meta object literal for the '<em><b>Anotacion</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Anotacion</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -2006,54 +1746,30 @@ public interface AngularjsPackage extends EPackage {
 		EReference VARIABLE__ANOTACION = eINSTANCE.getVariable_Anotacion();
 
 		/**
-		 * The meta object literal for the '{@link angularjs.impl.ControllerImpl <em>Controller</em>}' class.
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see angularjs.impl.ControllerImpl
-		 * @see angularjs.impl.AngularjsPackageImpl#getController()
 		 * @generated
 		 */
-		EClass CONTROLLER = eINSTANCE.getController();
+		EAttribute VARIABLE__NAME = eINSTANCE.getVariable_Name();
 
 		/**
-		 * The meta object literal for the '<em><b>Services</b></em>' reference list feature.
+		 * The meta object literal for the '{@link angularjs.impl.ComponenteImpl <em>Componente</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
+		 * @see angularjs.impl.ComponenteImpl
+		 * @see angularjs.impl.AngularjsPackageImpl#getComponente()
 		 * @generated
 		 */
-		EReference CONTROLLER__SERVICES = eINSTANCE.getController_Services();
+		EClass COMPONENTE = eINSTANCE.getComponente();
 
 		/**
-		 * The meta object literal for the '<em><b>Funcion</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Funcion</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference CONTROLLER__FUNCION = eINSTANCE.getController_Funcion();
-
-		/**
-		 * The meta object literal for the '<em><b>Variable</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference CONTROLLER__VARIABLE = eINSTANCE.getController_Variable();
-
-		/**
-		 * The meta object literal for the '<em><b>Parametros</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference CONTROLLER__PARAMETROS = eINSTANCE.getController_Parametros();
-
-		/**
-		 * The meta object literal for the '<em><b>Body</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute CONTROLLER__BODY = eINSTANCE.getController_Body();
+		EReference COMPONENTE__FUNCION = eINSTANCE.getComponente_Funcion();
 
 		/**
 		 * The meta object literal for the '<em><b>Template</b></em>' reference feature.
@@ -2061,7 +1777,7 @@ public interface AngularjsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference CONTROLLER__TEMPLATE = eINSTANCE.getController_Template();
+		EReference COMPONENTE__TEMPLATE = eINSTANCE.getComponente_Template();
 
 		/**
 		 * The meta object literal for the '<em><b>Modelo</b></em>' reference list feature.
@@ -2069,7 +1785,23 @@ public interface AngularjsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference CONTROLLER__MODELO = eINSTANCE.getController_Modelo();
+		EReference COMPONENTE__MODELO = eINSTANCE.getComponente_Modelo();
+
+		/**
+		 * The meta object literal for the '<em><b>Parametros</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference COMPONENTE__PARAMETROS = eINSTANCE.getComponente_Parametros();
+
+		/**
+		 * The meta object literal for the '<em><b>Modulo</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference COMPONENTE__MODULO = eINSTANCE.getComponente_Modulo();
 
 		/**
 		 * The meta object literal for the '{@link angularjs.impl.ServiceImpl <em>Service</em>}' class.
@@ -2082,7 +1814,7 @@ public interface AngularjsPackage extends EPackage {
 		EClass SERVICE = eINSTANCE.getService();
 
 		/**
-		 * The meta object literal for the '<em><b>Funcion</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Funcion</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -2090,22 +1822,22 @@ public interface AngularjsPackage extends EPackage {
 		EReference SERVICE__FUNCION = eINSTANCE.getService_Funcion();
 
 		/**
-		 * The meta object literal for the '<em><b>Parametro</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Parametros</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference SERVICE__PARAMETRO = eINSTANCE.getService_Parametro();
+		EReference SERVICE__PARAMETROS = eINSTANCE.getService_Parametros();
 
 		/**
-		 * The meta object literal for the '{@link angularjs.impl.ObjetoJavaScriptImpl <em>Objeto Java Script</em>}' class.
+		 * The meta object literal for the '{@link angularjs.impl.ObjetoAngularImpl <em>Objeto Angular</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see angularjs.impl.ObjetoJavaScriptImpl
-		 * @see angularjs.impl.AngularjsPackageImpl#getObjetoJavaScript()
+		 * @see angularjs.impl.ObjetoAngularImpl
+		 * @see angularjs.impl.AngularjsPackageImpl#getObjetoAngular()
 		 * @generated
 		 */
-		EClass OBJETO_JAVA_SCRIPT = eINSTANCE.getObjetoJavaScript();
+		EClass OBJETO_ANGULAR = eINSTANCE.getObjetoAngular();
 
 		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -2113,7 +1845,7 @@ public interface AngularjsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute OBJETO_JAVA_SCRIPT__NAME = eINSTANCE.getObjetoJavaScript_Name();
+		EAttribute OBJETO_ANGULAR__NAME = eINSTANCE.getObjetoAngular_Name();
 
 		/**
 		 * The meta object literal for the '{@link angularjs.impl.ModeloImpl <em>Modelo</em>}' class.
@@ -2136,12 +1868,12 @@ public interface AngularjsPackage extends EPackage {
 		EClass TEMPLATE = eINSTANCE.getTemplate();
 
 		/**
-		 * The meta object literal for the '<em><b>Setenciahtml</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Sentenciashtml</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference TEMPLATE__SETENCIAHTML = eINSTANCE.getTemplate_Setenciahtml();
+		EReference TEMPLATE__SENTENCIASHTML = eINSTANCE.getTemplate_Sentenciashtml();
 
 		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -2152,22 +1884,6 @@ public interface AngularjsPackage extends EPackage {
 		EAttribute TEMPLATE__NAME = eINSTANCE.getTemplate_Name();
 
 		/**
-		 * The meta object literal for the '<em><b>Ruta Archivo</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute TEMPLATE__RUTA_ARCHIVO = eINSTANCE.getTemplate_RutaArchivo();
-
-		/**
-		 * The meta object literal for the '<em><b>Directiva</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference TEMPLATE__DIRECTIVA = eINSTANCE.getTemplate_Directiva();
-
-		/**
 		 * The meta object literal for the '<em><b>Controller</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2176,22 +1892,22 @@ public interface AngularjsPackage extends EPackage {
 		EReference TEMPLATE__CONTROLLER = eINSTANCE.getTemplate_Controller();
 
 		/**
-		 * The meta object literal for the '{@link angularjs.impl.SetenciaHTMLImpl <em>Setencia HTML</em>}' class.
+		 * The meta object literal for the '{@link angularjs.impl.SentenciaHTMLImpl <em>Sentencia HTML</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see angularjs.impl.SetenciaHTMLImpl
-		 * @see angularjs.impl.AngularjsPackageImpl#getSetenciaHTML()
+		 * @see angularjs.impl.SentenciaHTMLImpl
+		 * @see angularjs.impl.AngularjsPackageImpl#getSentenciaHTML()
 		 * @generated
 		 */
-		EClass SETENCIA_HTML = eINSTANCE.getSetenciaHTML();
+		EClass SENTENCIA_HTML = eINSTANCE.getSentenciaHTML();
 
 		/**
-		 * The meta object literal for the '<em><b>Setenciahtml</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Sentenciashtml</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference SETENCIA_HTML__SETENCIAHTML = eINSTANCE.getSetenciaHTML_Setenciahtml();
+		EReference SENTENCIA_HTML__SENTENCIASHTML = eINSTANCE.getSentenciaHTML_Sentenciashtml();
 
 		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -2199,7 +1915,7 @@ public interface AngularjsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute SETENCIA_HTML__NAME = eINSTANCE.getSetenciaHTML_Name();
+		EAttribute SENTENCIA_HTML__NAME = eINSTANCE.getSentenciaHTML_Name();
 
 		/**
 		 * The meta object literal for the '<em><b>Propiedades</b></em>' containment reference list feature.
@@ -2207,23 +1923,15 @@ public interface AngularjsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference SETENCIA_HTML__PROPIEDADES = eINSTANCE.getSetenciaHTML_Propiedades();
+		EReference SENTENCIA_HTML__PROPIEDADES = eINSTANCE.getSentenciaHTML_Propiedades();
 
 		/**
-		 * The meta object literal for the '<em><b>Self Closing</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Directivas</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute SETENCIA_HTML__SELF_CLOSING = eINSTANCE.getSetenciaHTML_SelfClosing();
-
-		/**
-		 * The meta object literal for the '<em><b>Directivas</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SETENCIA_HTML__DIRECTIVAS = eINSTANCE.getSetenciaHTML_Directivas();
+		EReference SENTENCIA_HTML__DIRECTIVAS = eINSTANCE.getSentenciaHTML_Directivas();
 
 		/**
 		 * The meta object literal for the '<em><b>Curlybraces</b></em>' containment reference list feature.
@@ -2231,7 +1939,7 @@ public interface AngularjsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference SETENCIA_HTML__CURLYBRACES = eINSTANCE.getSetenciaHTML_Curlybraces();
+		EReference SENTENCIA_HTML__CURLYBRACES = eINSTANCE.getSentenciaHTML_Curlybraces();
 
 		/**
 		 * The meta object literal for the '{@link angularjs.impl.PropiedadImpl <em>Propiedad</em>}' class.
@@ -2260,32 +1968,6 @@ public interface AngularjsPackage extends EPackage {
 		EAttribute PROPIEDAD__VALOR = eINSTANCE.getPropiedad_Valor();
 
 		/**
-		 * The meta object literal for the '{@link angularjs.impl.ReferenciaImpl <em>Referencia</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see angularjs.impl.ReferenciaImpl
-		 * @see angularjs.impl.AngularjsPackageImpl#getReferencia()
-		 * @generated
-		 */
-		EClass REFERENCIA = eINSTANCE.getReferencia();
-
-		/**
-		 * The meta object literal for the '<em><b>Objeto</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference REFERENCIA__OBJETO = eINSTANCE.getReferencia_Objeto();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute REFERENCIA__NAME = eINSTANCE.getReferencia_Name();
-
-		/**
 		 * The meta object literal for the '{@link angularjs.impl.ExpresionImpl <em>Expresion</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2304,7 +1986,7 @@ public interface AngularjsPackage extends EPackage {
 		EAttribute EXPRESION__VALOR = eINSTANCE.getExpresion_Valor();
 
 		/**
-		 * The meta object literal for the '<em><b>Referencia</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Referencia</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -2348,20 +2030,28 @@ public interface AngularjsPackage extends EPackage {
 		EClass DIRECTIVA = eINSTANCE.getDirectiva();
 
 		/**
-		 * The meta object literal for the '<em><b>Referencia</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference DIRECTIVA__REFERENCIA = eINSTANCE.getDirectiva_Referencia();
-
-		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EAttribute DIRECTIVA__NAME = eINSTANCE.getDirectiva_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Curlybraces</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DIRECTIVA__CURLYBRACES = eINSTANCE.getDirectiva_Curlybraces();
+
+		/**
+		 * The meta object literal for the '<em><b>Referencia</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DIRECTIVA__REFERENCIA = eINSTANCE.getDirectiva_Referencia();
 
 		/**
 		 * The meta object literal for the '{@link angularjs.impl.CurlyBracesImpl <em>Curly Braces</em>}' class.
@@ -2382,7 +2072,7 @@ public interface AngularjsPackage extends EPackage {
 		EReference CURLY_BRACES__EXPRESION = eINSTANCE.getCurlyBraces_Expresion();
 
 		/**
-		 * The meta object literal for the '<em><b>Filtro</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Filtro</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated

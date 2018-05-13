@@ -6,6 +6,7 @@ import angularjs.AngularjsPackage;
 import angularjs.Controller;
 import angularjs.Funcion;
 import angularjs.Modelo;
+import angularjs.ObjetoAngular;
 import angularjs.Parametro;
 import angularjs.Service;
 import angularjs.Template;
@@ -35,37 +36,26 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link angularjs.impl.ControllerImpl#getServices <em>Services</em>}</li>
- *   <li>{@link angularjs.impl.ControllerImpl#getFuncion <em>Funcion</em>}</li>
+ *   <li>{@link angularjs.impl.ControllerImpl#getFunciones <em>Funciones</em>}</li>
  *   <li>{@link angularjs.impl.ControllerImpl#getVariable <em>Variable</em>}</li>
- *   <li>{@link angularjs.impl.ControllerImpl#getParametros <em>Parametros</em>}</li>
  *   <li>{@link angularjs.impl.ControllerImpl#getBody <em>Body</em>}</li>
  *   <li>{@link angularjs.impl.ControllerImpl#getTemplate <em>Template</em>}</li>
  *   <li>{@link angularjs.impl.ControllerImpl#getModelo <em>Modelo</em>}</li>
+ *   <li>{@link angularjs.impl.ControllerImpl#getParametros <em>Parametros</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class ControllerImpl extends ObjetoJavaScriptImpl implements Controller {
+public class ControllerImpl extends ObjetoAngularImpl implements Controller {
 	/**
-	 * The cached value of the '{@link #getServices() <em>Services</em>}' reference list.
+	 * The cached value of the '{@link #getFunciones() <em>Funciones</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getServices()
+	 * @see #getFunciones()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Service> services;
-
-	/**
-	 * The cached value of the '{@link #getFuncion() <em>Funcion</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getFuncion()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Funcion> funcion;
+	protected EList<Funcion> funciones;
 
 	/**
 	 * The cached value of the '{@link #getVariable() <em>Variable</em>}' containment reference list.
@@ -76,16 +66,6 @@ public class ControllerImpl extends ObjetoJavaScriptImpl implements Controller {
 	 * @ordered
 	 */
 	protected EList<Variable> variable;
-
-	/**
-	 * The cached value of the '{@link #getParametros() <em>Parametros</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getParametros()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Parametro> parametros;
 
 	/**
 	 * The default value of the '{@link #getBody() <em>Body</em>}' attribute.
@@ -128,6 +108,16 @@ public class ControllerImpl extends ObjetoJavaScriptImpl implements Controller {
 	protected EList<Modelo> modelo;
 
 	/**
+	 * The cached value of the '{@link #getParametros() <em>Parametros</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getParametros()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<ObjetoAngular> parametros;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -151,23 +141,11 @@ public class ControllerImpl extends ObjetoJavaScriptImpl implements Controller {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Service> getServices() {
-		if (services == null) {
-			services = new EObjectResolvingEList<Service>(Service.class, this, AngularjsPackage.CONTROLLER__SERVICES);
+	public EList<Funcion> getFunciones() {
+		if (funciones == null) {
+			funciones = new EObjectContainmentEList<Funcion>(Funcion.class, this, AngularjsPackage.CONTROLLER__FUNCIONES);
 		}
-		return services;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<Funcion> getFuncion() {
-		if (funcion == null) {
-			funcion = new EObjectContainmentEList<Funcion>(Funcion.class, this, AngularjsPackage.CONTROLLER__FUNCION);
-		}
-		return funcion;
+		return funciones;
 	}
 
 	/**
@@ -187,9 +165,9 @@ public class ControllerImpl extends ObjetoJavaScriptImpl implements Controller {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Parametro> getParametros() {
+	public EList<ObjetoAngular> getParametros() {
 		if (parametros == null) {
-			parametros = new EObjectContainmentEList<Parametro>(Parametro.class, this, AngularjsPackage.CONTROLLER__PARAMETROS);
+			parametros = new EObjectResolvingEList<ObjetoAngular>(ObjetoAngular.class, this, AngularjsPackage.CONTROLLER__PARAMETROS);
 		}
 		return parametros;
 	}
@@ -273,12 +251,10 @@ public class ControllerImpl extends ObjetoJavaScriptImpl implements Controller {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case AngularjsPackage.CONTROLLER__FUNCION:
-				return ((InternalEList<?>)getFuncion()).basicRemove(otherEnd, msgs);
+			case AngularjsPackage.CONTROLLER__FUNCIONES:
+				return ((InternalEList<?>)getFunciones()).basicRemove(otherEnd, msgs);
 			case AngularjsPackage.CONTROLLER__VARIABLE:
 				return ((InternalEList<?>)getVariable()).basicRemove(otherEnd, msgs);
-			case AngularjsPackage.CONTROLLER__PARAMETROS:
-				return ((InternalEList<?>)getParametros()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -291,14 +267,10 @@ public class ControllerImpl extends ObjetoJavaScriptImpl implements Controller {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case AngularjsPackage.CONTROLLER__SERVICES:
-				return getServices();
-			case AngularjsPackage.CONTROLLER__FUNCION:
-				return getFuncion();
+			case AngularjsPackage.CONTROLLER__FUNCIONES:
+				return getFunciones();
 			case AngularjsPackage.CONTROLLER__VARIABLE:
 				return getVariable();
-			case AngularjsPackage.CONTROLLER__PARAMETROS:
-				return getParametros();
 			case AngularjsPackage.CONTROLLER__BODY:
 				return getBody();
 			case AngularjsPackage.CONTROLLER__TEMPLATE:
@@ -306,6 +278,8 @@ public class ControllerImpl extends ObjetoJavaScriptImpl implements Controller {
 				return basicGetTemplate();
 			case AngularjsPackage.CONTROLLER__MODELO:
 				return getModelo();
+			case AngularjsPackage.CONTROLLER__PARAMETROS:
+				return getParametros();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -319,21 +293,13 @@ public class ControllerImpl extends ObjetoJavaScriptImpl implements Controller {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case AngularjsPackage.CONTROLLER__SERVICES:
-				getServices().clear();
-				getServices().addAll((Collection<? extends Service>)newValue);
-				return;
-			case AngularjsPackage.CONTROLLER__FUNCION:
-				getFuncion().clear();
-				getFuncion().addAll((Collection<? extends Funcion>)newValue);
+			case AngularjsPackage.CONTROLLER__FUNCIONES:
+				getFunciones().clear();
+				getFunciones().addAll((Collection<? extends Funcion>)newValue);
 				return;
 			case AngularjsPackage.CONTROLLER__VARIABLE:
 				getVariable().clear();
 				getVariable().addAll((Collection<? extends Variable>)newValue);
-				return;
-			case AngularjsPackage.CONTROLLER__PARAMETROS:
-				getParametros().clear();
-				getParametros().addAll((Collection<? extends Parametro>)newValue);
 				return;
 			case AngularjsPackage.CONTROLLER__BODY:
 				setBody((String)newValue);
@@ -344,6 +310,10 @@ public class ControllerImpl extends ObjetoJavaScriptImpl implements Controller {
 			case AngularjsPackage.CONTROLLER__MODELO:
 				getModelo().clear();
 				getModelo().addAll((Collection<? extends Modelo>)newValue);
+				return;
+			case AngularjsPackage.CONTROLLER__PARAMETROS:
+				getParametros().clear();
+				getParametros().addAll((Collection<? extends ObjetoAngular>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -357,17 +327,11 @@ public class ControllerImpl extends ObjetoJavaScriptImpl implements Controller {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case AngularjsPackage.CONTROLLER__SERVICES:
-				getServices().clear();
-				return;
-			case AngularjsPackage.CONTROLLER__FUNCION:
-				getFuncion().clear();
+			case AngularjsPackage.CONTROLLER__FUNCIONES:
+				getFunciones().clear();
 				return;
 			case AngularjsPackage.CONTROLLER__VARIABLE:
 				getVariable().clear();
-				return;
-			case AngularjsPackage.CONTROLLER__PARAMETROS:
-				getParametros().clear();
 				return;
 			case AngularjsPackage.CONTROLLER__BODY:
 				setBody(BODY_EDEFAULT);
@@ -377,6 +341,9 @@ public class ControllerImpl extends ObjetoJavaScriptImpl implements Controller {
 				return;
 			case AngularjsPackage.CONTROLLER__MODELO:
 				getModelo().clear();
+				return;
+			case AngularjsPackage.CONTROLLER__PARAMETROS:
+				getParametros().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -390,20 +357,18 @@ public class ControllerImpl extends ObjetoJavaScriptImpl implements Controller {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case AngularjsPackage.CONTROLLER__SERVICES:
-				return services != null && !services.isEmpty();
-			case AngularjsPackage.CONTROLLER__FUNCION:
-				return funcion != null && !funcion.isEmpty();
+			case AngularjsPackage.CONTROLLER__FUNCIONES:
+				return funciones != null && !funciones.isEmpty();
 			case AngularjsPackage.CONTROLLER__VARIABLE:
 				return variable != null && !variable.isEmpty();
-			case AngularjsPackage.CONTROLLER__PARAMETROS:
-				return parametros != null && !parametros.isEmpty();
 			case AngularjsPackage.CONTROLLER__BODY:
 				return BODY_EDEFAULT == null ? body != null : !BODY_EDEFAULT.equals(body);
 			case AngularjsPackage.CONTROLLER__TEMPLATE:
 				return template != null;
 			case AngularjsPackage.CONTROLLER__MODELO:
 				return modelo != null && !modelo.isEmpty();
+			case AngularjsPackage.CONTROLLER__PARAMETROS:
+				return parametros != null && !parametros.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
