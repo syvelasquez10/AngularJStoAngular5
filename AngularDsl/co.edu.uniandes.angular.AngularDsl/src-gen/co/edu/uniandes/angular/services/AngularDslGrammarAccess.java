@@ -668,27 +668,26 @@ public class AngularDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "co.edu.uniandes.angular.AngularDsl.Variable");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cVariableAction_0 = (Action)cGroup.eContents().get(0);
-		private final Keyword cVarKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final RuleCall cVARTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
 		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cNameEStringParserRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
-		private final Keyword cEqualsSignKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final RuleCall cIGUALTerminalRuleCall_3 = (RuleCall)cGroup.eContents().get(3);
 		private final Assignment cValorAssignment_4 = (Assignment)cGroup.eContents().get(4);
 		private final RuleCall cValorEStringParserRuleCall_4_0 = (RuleCall)cValorAssignment_4.eContents().get(0);
 		private final RuleCall cPUNTO_Y_COMATerminalRuleCall_5 = (RuleCall)cGroup.eContents().get(5);
 		
 		//Variable:
-		//	{Variable}
-		//	'var' name=EString '=' valor=EString PUNTO_Y_COMA;
+		//	{Variable} VAR name=EString IGUAL valor=EString PUNTO_Y_COMA;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{Variable} 'var' name=EString '=' valor=EString PUNTO_Y_COMA
+		//{Variable} VAR name=EString IGUAL valor=EString PUNTO_Y_COMA
 		public Group getGroup() { return cGroup; }
 		
 		//{Variable}
 		public Action getVariableAction_0() { return cVariableAction_0; }
 		
-		//'var'
-		public Keyword getVarKeyword_1() { return cVarKeyword_1; }
+		//VAR
+		public RuleCall getVARTerminalRuleCall_1() { return cVARTerminalRuleCall_1; }
 		
 		//name=EString
 		public Assignment getNameAssignment_2() { return cNameAssignment_2; }
@@ -696,8 +695,8 @@ public class AngularDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EString
 		public RuleCall getNameEStringParserRuleCall_2_0() { return cNameEStringParserRuleCall_2_0; }
 		
-		//'='
-		public Keyword getEqualsSignKeyword_3() { return cEqualsSignKeyword_3; }
+		//IGUAL
+		public RuleCall getIGUALTerminalRuleCall_3() { return cIGUALTerminalRuleCall_3; }
 		
 		//valor=EString
 		public Assignment getValorAssignment_4() { return cValorAssignment_4; }
@@ -747,41 +746,41 @@ public class AngularDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "co.edu.uniandes.angular.AngularDsl.SentenciaHTML");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cSentenciaHTMLAction_0 = (Action)cGroup.eContents().get(0);
-		private final Keyword cLessThanSignKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final RuleCall cMENOR_QUETerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
 		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cNameEStringParserRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
 		private final Assignment cPropiedadesAssignment_3 = (Assignment)cGroup.eContents().get(3);
 		private final RuleCall cPropiedadesPropiedadParserRuleCall_3_0 = (RuleCall)cPropiedadesAssignment_3.eContents().get(0);
 		private final Assignment cDirectivasAssignment_4 = (Assignment)cGroup.eContents().get(4);
 		private final RuleCall cDirectivasDirectivaParserRuleCall_4_0 = (RuleCall)cDirectivasAssignment_4.eContents().get(0);
-		private final Keyword cSolidusKeyword_5 = (Keyword)cGroup.eContents().get(5);
-		private final Keyword cGreaterThanSignKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		private final RuleCall cSLASHTerminalRuleCall_5 = (RuleCall)cGroup.eContents().get(5);
+		private final RuleCall cMAYOR_QUETerminalRuleCall_6 = (RuleCall)cGroup.eContents().get(6);
 		private final Assignment cCurlybracesAssignment_7 = (Assignment)cGroup.eContents().get(7);
 		private final RuleCall cCurlybracesCurlyBracesParserRuleCall_7_0 = (RuleCall)cCurlybracesAssignment_7.eContents().get(0);
 		private final Assignment cSentenciashtmlAssignment_8 = (Assignment)cGroup.eContents().get(8);
 		private final CrossReference cSentenciashtmlSentenciaHTMLCrossReference_8_0 = (CrossReference)cSentenciashtmlAssignment_8.eContents().get(0);
 		private final RuleCall cSentenciashtmlSentenciaHTMLEStringParserRuleCall_8_0_1 = (RuleCall)cSentenciashtmlSentenciaHTMLCrossReference_8_0.eContents().get(1);
 		private final Group cGroup_9 = (Group)cGroup.eContents().get(9);
-		private final Keyword cLessThanSignSolidusKeyword_9_0 = (Keyword)cGroup_9.eContents().get(0);
-		private final RuleCall cSTRINGTerminalRuleCall_9_1 = (RuleCall)cGroup_9.eContents().get(1);
-		private final Keyword cGreaterThanSignKeyword_9_2 = (Keyword)cGroup_9.eContents().get(2);
+		private final RuleCall cMENOR_QUETerminalRuleCall_9_0 = (RuleCall)cGroup_9.eContents().get(0);
+		private final RuleCall cSLASHTerminalRuleCall_9_1 = (RuleCall)cGroup_9.eContents().get(1);
+		private final RuleCall cSTRINGTerminalRuleCall_9_2 = (RuleCall)cGroup_9.eContents().get(2);
+		private final RuleCall cMAYOR_QUETerminalRuleCall_9_3 = (RuleCall)cGroup_9.eContents().get(3);
 		
 		//SentenciaHTML:
-		//	{SentenciaHTML}
-		//	'<' name=EString propiedades+=Propiedad* directivas+=Directiva* '/'* '>'
+		//	{SentenciaHTML} MENOR_QUE name=EString propiedades+=Propiedad* directivas+=Directiva* SLASH* MAYOR_QUE
 		//	curlybraces+=CurlyBraces*
-		//	sentenciashtml+=[SentenciaHTML|EString]* ('</' STRING '>')?;
+		//	sentenciashtml+=[SentenciaHTML|EString]* (MENOR_QUE SLASH STRING MAYOR_QUE)?;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{SentenciaHTML} '<' name=EString propiedades+=Propiedad* directivas+=Directiva* '/'* '>' curlybraces+=CurlyBraces*
-		//sentenciashtml+=[SentenciaHTML|EString]* ('</' STRING '>')?
+		//{SentenciaHTML} MENOR_QUE name=EString propiedades+=Propiedad* directivas+=Directiva* SLASH* MAYOR_QUE
+		//curlybraces+=CurlyBraces* sentenciashtml+=[SentenciaHTML|EString]* (MENOR_QUE SLASH STRING MAYOR_QUE)?
 		public Group getGroup() { return cGroup; }
 		
 		//{SentenciaHTML}
 		public Action getSentenciaHTMLAction_0() { return cSentenciaHTMLAction_0; }
 		
-		//'<'
-		public Keyword getLessThanSignKeyword_1() { return cLessThanSignKeyword_1; }
+		//MENOR_QUE
+		public RuleCall getMENOR_QUETerminalRuleCall_1() { return cMENOR_QUETerminalRuleCall_1; }
 		
 		//name=EString
 		public Assignment getNameAssignment_2() { return cNameAssignment_2; }
@@ -801,11 +800,11 @@ public class AngularDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Directiva
 		public RuleCall getDirectivasDirectivaParserRuleCall_4_0() { return cDirectivasDirectivaParserRuleCall_4_0; }
 		
-		//'/'*
-		public Keyword getSolidusKeyword_5() { return cSolidusKeyword_5; }
+		//SLASH*
+		public RuleCall getSLASHTerminalRuleCall_5() { return cSLASHTerminalRuleCall_5; }
 		
-		//'>'
-		public Keyword getGreaterThanSignKeyword_6() { return cGreaterThanSignKeyword_6; }
+		//MAYOR_QUE
+		public RuleCall getMAYOR_QUETerminalRuleCall_6() { return cMAYOR_QUETerminalRuleCall_6; }
 		
 		//curlybraces+=CurlyBraces*
 		public Assignment getCurlybracesAssignment_7() { return cCurlybracesAssignment_7; }
@@ -822,17 +821,20 @@ public class AngularDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EString
 		public RuleCall getSentenciashtmlSentenciaHTMLEStringParserRuleCall_8_0_1() { return cSentenciashtmlSentenciaHTMLEStringParserRuleCall_8_0_1; }
 		
-		//('</' STRING '>')?
+		//(MENOR_QUE SLASH STRING MAYOR_QUE)?
 		public Group getGroup_9() { return cGroup_9; }
 		
-		//'</'
-		public Keyword getLessThanSignSolidusKeyword_9_0() { return cLessThanSignSolidusKeyword_9_0; }
+		//MENOR_QUE
+		public RuleCall getMENOR_QUETerminalRuleCall_9_0() { return cMENOR_QUETerminalRuleCall_9_0; }
+		
+		//SLASH
+		public RuleCall getSLASHTerminalRuleCall_9_1() { return cSLASHTerminalRuleCall_9_1; }
 		
 		//STRING
-		public RuleCall getSTRINGTerminalRuleCall_9_1() { return cSTRINGTerminalRuleCall_9_1; }
+		public RuleCall getSTRINGTerminalRuleCall_9_2() { return cSTRINGTerminalRuleCall_9_2; }
 		
-		//'>'
-		public Keyword getGreaterThanSignKeyword_9_2() { return cGreaterThanSignKeyword_9_2; }
+		//MAYOR_QUE
+		public RuleCall getMAYOR_QUETerminalRuleCall_9_3() { return cMAYOR_QUETerminalRuleCall_9_3; }
 	}
 	public class DirectivaElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "co.edu.uniandes.angular.AngularDsl.Directiva");
@@ -841,7 +843,7 @@ public class AngularDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cNgKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cNameEStringParserRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
-		private final Keyword cEqualsSignKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final RuleCall cIGUALTerminalRuleCall_3 = (RuleCall)cGroup.eContents().get(3);
 		private final Assignment cCurlybracesAssignment_4 = (Assignment)cGroup.eContents().get(4);
 		private final CrossReference cCurlybracesCurlyBracesCrossReference_4_0 = (CrossReference)cCurlybracesAssignment_4.eContents().get(0);
 		private final RuleCall cCurlybracesCurlyBracesEStringParserRuleCall_4_0_1 = (RuleCall)cCurlybracesCurlyBracesCrossReference_4_0.eContents().get(1);
@@ -851,10 +853,10 @@ public class AngularDslGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//Directiva:
 		//	{Directiva}
-		//	'ng-' name=EString '=' curlybraces=[CurlyBraces|EString]? referencia=[ObjetoAngular|EString];
+		//	'ng-' name=EString IGUAL curlybraces=[CurlyBraces|EString]? referencia=[ObjetoAngular|EString];
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{Directiva} 'ng-' name=EString '=' curlybraces=[CurlyBraces|EString]? referencia=[ObjetoAngular|EString]
+		//{Directiva} 'ng-' name=EString IGUAL curlybraces=[CurlyBraces|EString]? referencia=[ObjetoAngular|EString]
 		public Group getGroup() { return cGroup; }
 		
 		//{Directiva}
@@ -869,8 +871,8 @@ public class AngularDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EString
 		public RuleCall getNameEStringParserRuleCall_2_0() { return cNameEStringParserRuleCall_2_0; }
 		
-		//'='
-		public Keyword getEqualsSignKeyword_3() { return cEqualsSignKeyword_3; }
+		//IGUAL
+		public RuleCall getIGUALTerminalRuleCall_3() { return cIGUALTerminalRuleCall_3; }
 		
 		//curlybraces=[CurlyBraces|EString]?
 		public Assignment getCurlybracesAssignment_4() { return cCurlybracesAssignment_4; }
@@ -896,14 +898,14 @@ public class AngularDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Action cPropiedadAction_0 = (Action)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cNameEStringParserRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
-		private final Keyword cEqualsSignKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final RuleCall cIGUALTerminalRuleCall_2 = (RuleCall)cGroup.eContents().get(2);
 		private final RuleCall cSTRINGTerminalRuleCall_3 = (RuleCall)cGroup.eContents().get(3);
 		
 		//Propiedad:
-		//	{Propiedad} name=EString '=' STRING;
+		//	{Propiedad} name=EString IGUAL STRING;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{Propiedad} name=EString '=' STRING
+		//{Propiedad} name=EString IGUAL STRING
 		public Group getGroup() { return cGroup; }
 		
 		//{Propiedad}
@@ -915,8 +917,8 @@ public class AngularDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EString
 		public RuleCall getNameEStringParserRuleCall_1_0() { return cNameEStringParserRuleCall_1_0; }
 		
-		//'='
-		public Keyword getEqualsSignKeyword_2() { return cEqualsSignKeyword_2; }
+		//IGUAL
+		public RuleCall getIGUALTerminalRuleCall_2() { return cIGUALTerminalRuleCall_2; }
 		
 		//STRING
 		public RuleCall getSTRINGTerminalRuleCall_3() { return cSTRINGTerminalRuleCall_3; }
@@ -924,27 +926,26 @@ public class AngularDslGrammarAccess extends AbstractGrammarElementFinder {
 	public class CurlyBracesElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "co.edu.uniandes.angular.AngularDsl.CurlyBraces");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Action cCurlyBracesAction_0 = (Action)cGroup.eContents().get(0);
-		private final Keyword cLeftCurlyBracketLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final RuleCall cDOBLE_LLAVE_IZQUIERDATerminalRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
+		private final Keyword cDollarSignKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cExpresionAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cExpresionExpresionParserRuleCall_2_0 = (RuleCall)cExpresionAssignment_2.eContents().get(0);
 		private final Assignment cFiltroAssignment_3 = (Assignment)cGroup.eContents().get(3);
 		private final RuleCall cFiltroFiltroParserRuleCall_3_0 = (RuleCall)cFiltroAssignment_3.eContents().get(0);
-		private final Keyword cRightCurlyBracketRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final RuleCall cDOBLE_LLAVE_DERECHATerminalRuleCall_4 = (RuleCall)cGroup.eContents().get(4);
 		
 		//CurlyBraces:
-		//	{CurlyBraces}
-		//	'{{' expresion=Expresion filtro=Filtro? '}}';
+		//	DOBLE_LLAVE_IZQUIERDA '$'? expresion=Expresion filtro=Filtro? DOBLE_LLAVE_DERECHA;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{CurlyBraces} '{{' expresion=Expresion filtro=Filtro? '}}'
+		//DOBLE_LLAVE_IZQUIERDA '$'? expresion=Expresion filtro=Filtro? DOBLE_LLAVE_DERECHA
 		public Group getGroup() { return cGroup; }
 		
-		//{CurlyBraces}
-		public Action getCurlyBracesAction_0() { return cCurlyBracesAction_0; }
+		//DOBLE_LLAVE_IZQUIERDA
+		public RuleCall getDOBLE_LLAVE_IZQUIERDATerminalRuleCall_0() { return cDOBLE_LLAVE_IZQUIERDATerminalRuleCall_0; }
 		
-		//'{{'
-		public Keyword getLeftCurlyBracketLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketLeftCurlyBracketKeyword_1; }
+		//'$'?
+		public Keyword getDollarSignKeyword_1() { return cDollarSignKeyword_1; }
 		
 		//expresion=Expresion
 		public Assignment getExpresionAssignment_2() { return cExpresionAssignment_2; }
@@ -958,8 +959,8 @@ public class AngularDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Filtro
 		public RuleCall getFiltroFiltroParserRuleCall_3_0() { return cFiltroFiltroParserRuleCall_3_0; }
 		
-		//'}}'
-		public Keyword getRightCurlyBracketRightCurlyBracketKeyword_4() { return cRightCurlyBracketRightCurlyBracketKeyword_4; }
+		//DOBLE_LLAVE_DERECHA
+		public RuleCall getDOBLE_LLAVE_DERECHATerminalRuleCall_4() { return cDOBLE_LLAVE_DERECHATerminalRuleCall_4; }
 	}
 	public class ExpresionElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "co.edu.uniandes.angular.AngularDsl.Expresion");
@@ -1100,6 +1101,13 @@ public class AngularDslGrammarAccess extends AbstractGrammarElementFinder {
 	private final TerminalRule tPARENTESIS_CUADRADO_IZQUIERDO;
 	private final TerminalRule tPARENTESIS_CUADRADO_DERECHO;
 	private final TerminalRule tFUNCTION;
+	private final TerminalRule tVAR;
+	private final TerminalRule tIGUAL;
+	private final TerminalRule tMENOR_QUE;
+	private final TerminalRule tMAYOR_QUE;
+	private final TerminalRule tSLASH;
+	private final TerminalRule tDOBLE_LLAVE_IZQUIERDA;
+	private final TerminalRule tDOBLE_LLAVE_DERECHA;
 	
 	private final Grammar grammar;
 	
@@ -1145,6 +1153,13 @@ public class AngularDslGrammarAccess extends AbstractGrammarElementFinder {
 		this.tPARENTESIS_CUADRADO_IZQUIERDO = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "co.edu.uniandes.angular.AngularDsl.PARENTESIS_CUADRADO_IZQUIERDO");
 		this.tPARENTESIS_CUADRADO_DERECHO = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "co.edu.uniandes.angular.AngularDsl.PARENTESIS_CUADRADO_DERECHO");
 		this.tFUNCTION = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "co.edu.uniandes.angular.AngularDsl.FUNCTION");
+		this.tVAR = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "co.edu.uniandes.angular.AngularDsl.VAR");
+		this.tIGUAL = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "co.edu.uniandes.angular.AngularDsl.IGUAL");
+		this.tMENOR_QUE = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "co.edu.uniandes.angular.AngularDsl.MENOR_QUE");
+		this.tMAYOR_QUE = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "co.edu.uniandes.angular.AngularDsl.MAYOR_QUE");
+		this.tSLASH = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "co.edu.uniandes.angular.AngularDsl.SLASH");
+		this.tDOBLE_LLAVE_IZQUIERDA = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "co.edu.uniandes.angular.AngularDsl.DOBLE_LLAVE_IZQUIERDA");
+		this.tDOBLE_LLAVE_DERECHA = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "co.edu.uniandes.angular.AngularDsl.DOBLE_LLAVE_DERECHA");
 	}
 	
 	protected Grammar internalFindGrammar(GrammarProvider grammarProvider) {
@@ -1255,8 +1270,7 @@ public class AngularDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//Variable:
-	//	{Variable}
-	//	'var' name=EString '=' valor=EString PUNTO_Y_COMA;
+	//	{Variable} VAR name=EString IGUAL valor=EString PUNTO_Y_COMA;
 	public VariableElements getVariableAccess() {
 		return pVariable;
 	}
@@ -1276,10 +1290,9 @@ public class AngularDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//SentenciaHTML:
-	//	{SentenciaHTML}
-	//	'<' name=EString propiedades+=Propiedad* directivas+=Directiva* '/'* '>'
+	//	{SentenciaHTML} MENOR_QUE name=EString propiedades+=Propiedad* directivas+=Directiva* SLASH* MAYOR_QUE
 	//	curlybraces+=CurlyBraces*
-	//	sentenciashtml+=[SentenciaHTML|EString]* ('</' STRING '>')?;
+	//	sentenciashtml+=[SentenciaHTML|EString]* (MENOR_QUE SLASH STRING MAYOR_QUE)?;
 	public SentenciaHTMLElements getSentenciaHTMLAccess() {
 		return pSentenciaHTML;
 	}
@@ -1290,7 +1303,7 @@ public class AngularDslGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//Directiva:
 	//	{Directiva}
-	//	'ng-' name=EString '=' curlybraces=[CurlyBraces|EString]? referencia=[ObjetoAngular|EString];
+	//	'ng-' name=EString IGUAL curlybraces=[CurlyBraces|EString]? referencia=[ObjetoAngular|EString];
 	public DirectivaElements getDirectivaAccess() {
 		return pDirectiva;
 	}
@@ -1300,7 +1313,7 @@ public class AngularDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//Propiedad:
-	//	{Propiedad} name=EString '=' STRING;
+	//	{Propiedad} name=EString IGUAL STRING;
 	public PropiedadElements getPropiedadAccess() {
 		return pPropiedad;
 	}
@@ -1310,8 +1323,7 @@ public class AngularDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//CurlyBraces:
-	//	{CurlyBraces}
-	//	'{{' expresion=Expresion filtro=Filtro? '}}';
+	//	DOBLE_LLAVE_IZQUIERDA '$'? expresion=Expresion filtro=Filtro? DOBLE_LLAVE_DERECHA;
 	public CurlyBracesElements getCurlyBracesAccess() {
 		return pCurlyBraces;
 	}
@@ -1474,6 +1486,48 @@ public class AngularDslGrammarAccess extends AbstractGrammarElementFinder {
 	//	'function';
 	public TerminalRule getFUNCTIONRule() {
 		return tFUNCTION;
+	}
+	
+	//terminal VAR:
+	//	'var';
+	public TerminalRule getVARRule() {
+		return tVAR;
+	}
+	
+	//terminal IGUAL:
+	//	'=';
+	public TerminalRule getIGUALRule() {
+		return tIGUAL;
+	}
+	
+	//terminal MENOR_QUE:
+	//	'<';
+	public TerminalRule getMENOR_QUERule() {
+		return tMENOR_QUE;
+	}
+	
+	//terminal MAYOR_QUE:
+	//	'>';
+	public TerminalRule getMAYOR_QUERule() {
+		return tMAYOR_QUE;
+	}
+	
+	//terminal SLASH:
+	//	"/";
+	public TerminalRule getSLASHRule() {
+		return tSLASH;
+	}
+	
+	//terminal DOBLE_LLAVE_IZQUIERDA:
+	//	"{{";
+	public TerminalRule getDOBLE_LLAVE_IZQUIERDARule() {
+		return tDOBLE_LLAVE_IZQUIERDA;
+	}
+	
+	//terminal DOBLE_LLAVE_DERECHA:
+	//	"}}";
+	public TerminalRule getDOBLE_LLAVE_DERECHARule() {
+		return tDOBLE_LLAVE_DERECHA;
 	}
 	
 	//terminal ID:

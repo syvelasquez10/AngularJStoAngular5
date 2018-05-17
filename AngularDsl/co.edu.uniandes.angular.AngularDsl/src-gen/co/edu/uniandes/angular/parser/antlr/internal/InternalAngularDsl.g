@@ -886,9 +886,9 @@ ruleVariable returns [EObject current=null]
 					$current);
 			}
 		)
-		otherlv_1='var'
+		this_VAR_1=RULE_VAR
 		{
-			newLeafNode(otherlv_1, grammarAccess.getVariableAccess().getVarKeyword_1());
+			newLeafNode(this_VAR_1, grammarAccess.getVariableAccess().getVARTerminalRuleCall_1());
 		}
 		(
 			(
@@ -909,9 +909,9 @@ ruleVariable returns [EObject current=null]
 				}
 			)
 		)
-		otherlv_3='='
+		this_IGUAL_3=RULE_IGUAL
 		{
-			newLeafNode(otherlv_3, grammarAccess.getVariableAccess().getEqualsSignKeyword_3());
+			newLeafNode(this_IGUAL_3, grammarAccess.getVariableAccess().getIGUALTerminalRuleCall_3());
 		}
 		(
 			(
@@ -1030,9 +1030,9 @@ ruleSentenciaHTML returns [EObject current=null]
 					$current);
 			}
 		)
-		otherlv_1='<'
+		this_MENOR_QUE_1=RULE_MENOR_QUE
 		{
-			newLeafNode(otherlv_1, grammarAccess.getSentenciaHTMLAccess().getLessThanSignKeyword_1());
+			newLeafNode(this_MENOR_QUE_1, grammarAccess.getSentenciaHTMLAccess().getMENOR_QUETerminalRuleCall_1());
 		}
 		(
 			(
@@ -1092,14 +1092,14 @@ ruleSentenciaHTML returns [EObject current=null]
 			)
 		)*
 		(
-			otherlv_5='/'
+			this_SLASH_5=RULE_SLASH
 			{
-				newLeafNode(otherlv_5, grammarAccess.getSentenciaHTMLAccess().getSolidusKeyword_5());
+				newLeafNode(this_SLASH_5, grammarAccess.getSentenciaHTMLAccess().getSLASHTerminalRuleCall_5());
 			}
 		)*
-		otherlv_6='>'
+		this_MAYOR_QUE_6=RULE_MAYOR_QUE
 		{
-			newLeafNode(otherlv_6, grammarAccess.getSentenciaHTMLAccess().getGreaterThanSignKeyword_6());
+			newLeafNode(this_MAYOR_QUE_6, grammarAccess.getSentenciaHTMLAccess().getMAYOR_QUETerminalRuleCall_6());
 		}
 		(
 			(
@@ -1137,17 +1137,21 @@ ruleSentenciaHTML returns [EObject current=null]
 			)
 		)*
 		(
-			otherlv_9='</'
+			this_MENOR_QUE_9=RULE_MENOR_QUE
 			{
-				newLeafNode(otherlv_9, grammarAccess.getSentenciaHTMLAccess().getLessThanSignSolidusKeyword_9_0());
+				newLeafNode(this_MENOR_QUE_9, grammarAccess.getSentenciaHTMLAccess().getMENOR_QUETerminalRuleCall_9_0());
 			}
-			this_STRING_10=RULE_STRING
+			this_SLASH_10=RULE_SLASH
 			{
-				newLeafNode(this_STRING_10, grammarAccess.getSentenciaHTMLAccess().getSTRINGTerminalRuleCall_9_1());
+				newLeafNode(this_SLASH_10, grammarAccess.getSentenciaHTMLAccess().getSLASHTerminalRuleCall_9_1());
 			}
-			otherlv_11='>'
+			this_STRING_11=RULE_STRING
 			{
-				newLeafNode(otherlv_11, grammarAccess.getSentenciaHTMLAccess().getGreaterThanSignKeyword_9_2());
+				newLeafNode(this_STRING_11, grammarAccess.getSentenciaHTMLAccess().getSTRINGTerminalRuleCall_9_2());
+			}
+			this_MAYOR_QUE_12=RULE_MAYOR_QUE
+			{
+				newLeafNode(this_MAYOR_QUE_12, grammarAccess.getSentenciaHTMLAccess().getMAYOR_QUETerminalRuleCall_9_3());
 			}
 		)?
 	)
@@ -1199,9 +1203,9 @@ ruleDirectiva returns [EObject current=null]
 				}
 			)
 		)
-		otherlv_3='='
+		this_IGUAL_3=RULE_IGUAL
 		{
-			newLeafNode(otherlv_3, grammarAccess.getDirectivaAccess().getEqualsSignKeyword_3());
+			newLeafNode(this_IGUAL_3, grammarAccess.getDirectivaAccess().getIGUALTerminalRuleCall_3());
 		}
 		(
 			(
@@ -1280,9 +1284,9 @@ rulePropiedad returns [EObject current=null]
 				}
 			)
 		)
-		otherlv_2='='
+		this_IGUAL_2=RULE_IGUAL
 		{
-			newLeafNode(otherlv_2, grammarAccess.getPropiedadAccess().getEqualsSignKeyword_2());
+			newLeafNode(this_IGUAL_2, grammarAccess.getPropiedadAccess().getIGUALTerminalRuleCall_2());
 		}
 		this_STRING_3=RULE_STRING
 		{
@@ -1307,17 +1311,16 @@ ruleCurlyBraces returns [EObject current=null]
 	leaveRule();
 }:
 	(
-		(
-			{
-				$current = forceCreateModelElement(
-					grammarAccess.getCurlyBracesAccess().getCurlyBracesAction_0(),
-					$current);
-			}
-		)
-		otherlv_1='{{'
+		this_DOBLE_LLAVE_IZQUIERDA_0=RULE_DOBLE_LLAVE_IZQUIERDA
 		{
-			newLeafNode(otherlv_1, grammarAccess.getCurlyBracesAccess().getLeftCurlyBracketLeftCurlyBracketKeyword_1());
+			newLeafNode(this_DOBLE_LLAVE_IZQUIERDA_0, grammarAccess.getCurlyBracesAccess().getDOBLE_LLAVE_IZQUIERDATerminalRuleCall_0());
 		}
+		(
+			otherlv_1='$'
+			{
+				newLeafNode(otherlv_1, grammarAccess.getCurlyBracesAccess().getDollarSignKeyword_1());
+			}
+		)?
 		(
 			(
 				{
@@ -1356,9 +1359,9 @@ ruleCurlyBraces returns [EObject current=null]
 				}
 			)
 		)?
-		otherlv_4='}}'
+		this_DOBLE_LLAVE_DERECHA_4=RULE_DOBLE_LLAVE_DERECHA
 		{
-			newLeafNode(otherlv_4, grammarAccess.getCurlyBracesAccess().getRightCurlyBracketRightCurlyBracketKeyword_4());
+			newLeafNode(this_DOBLE_LLAVE_DERECHA_4, grammarAccess.getCurlyBracesAccess().getDOBLE_LLAVE_DERECHATerminalRuleCall_4());
 		}
 	)
 ;
@@ -1544,6 +1547,20 @@ RULE_PARENTESIS_CUADRADO_IZQUIERDO : '[';
 RULE_PARENTESIS_CUADRADO_DERECHO : ']';
 
 RULE_FUNCTION : 'function';
+
+RULE_VAR : 'var';
+
+RULE_IGUAL : '=';
+
+RULE_MENOR_QUE : '<';
+
+RULE_MAYOR_QUE : '>';
+
+RULE_SLASH : '/';
+
+RULE_DOBLE_LLAVE_IZQUIERDA : '{{';
+
+RULE_DOBLE_LLAVE_DERECHA : '}}';
 
 RULE_ID : '^'? ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
 

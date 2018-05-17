@@ -48,7 +48,7 @@ Funcion returns Funcion:
 
 Variable returns Variable:
 	{Variable}
-	'var'  name=EString  '='   valor=EString PUNTO_Y_COMA;
+	VAR  name=EString  IGUAL  valor=EString PUNTO_Y_COMA;
 
 Template returns Template:
 	{Template}
@@ -56,22 +56,21 @@ Template returns Template:
 	
 SentenciaHTML returns SentenciaHTML:
 	{SentenciaHTML}
-	'<'name=EString (propiedades+=Propiedad)* (directivas+=Directiva)* ('/')*'>'
+	MENOR_QUE name=EString (propiedades+=Propiedad)* (directivas+=Directiva)* (SLASH)* MAYOR_QUE
 		(curlybraces+=CurlyBraces)*
 		(sentenciashtml+=[SentenciaHTML|EString])*
-	('</' STRING'>')?;
+	( MENOR_QUE SLASH STRING MAYOR_QUE)?;
 
 Directiva returns Directiva:
 	{Directiva}
-	'ng-'name=EString'=' curlybraces=[CurlyBraces|EString]? referencia=[ObjetoAngular|EString] ;
+	'ng-'name=EString IGUAL curlybraces=[CurlyBraces|EString]? referencia=[ObjetoAngular|EString] ;
 
 Propiedad returns Propiedad:
 	{Propiedad}
-	name=EString '=' STRING;
+	name=EString IGUAL STRING;
 
 CurlyBraces returns CurlyBraces:
-	{CurlyBraces}
-	'{{' expresion=Expresion filtro=Filtro? '}}';
+	DOBLE_LLAVE_IZQUIERDA '$'? expresion=Expresion filtro=Filtro? DOBLE_LLAVE_DERECHA;
 
 Expresion returns Expresion:
 	{Expresion}
@@ -144,3 +143,24 @@ terminal PARENTESIS_CUADRADO_DERECHO:
 
 terminal FUNCTION:
 	'function';
+	
+terminal VAR:
+	'var';
+	
+terminal IGUAL:
+	'=';
+
+terminal MENOR_QUE:
+	'<';
+
+terminal MAYOR_QUE:
+	'>';
+	
+terminal SLASH:
+	"/";
+
+terminal DOBLE_LLAVE_IZQUIERDA:
+	"{{";
+	
+terminal DOBLE_LLAVE_DERECHA:
+	"}}";

@@ -22,18 +22,20 @@ public class AngularDslSyntacticSequencer extends AbstractSyntacticSequencer {
 
 	protected AngularDslGrammarAccess grammarAccess;
 	protected AbstractElementAlias match_Componente___COMILLASTerminalRuleCall_1_0_USETerminalRuleCall_1_1_STRICTTerminalRuleCall_1_2_COMILLASTerminalRuleCall_1_3_PUNTO_Y_COMATerminalRuleCall_1_4__q;
+	protected AbstractElementAlias match_CurlyBraces_DollarSignKeyword_1_q;
 	protected AbstractElementAlias match_Modulo___COMILLASTerminalRuleCall_1_0_USETerminalRuleCall_1_1_STRICTTerminalRuleCall_1_2_COMILLASTerminalRuleCall_1_3_PUNTO_Y_COMATerminalRuleCall_1_4__q;
-	protected AbstractElementAlias match_SentenciaHTML_SolidusKeyword_5_a;
-	protected AbstractElementAlias match_SentenciaHTML___LessThanSignSolidusKeyword_9_0_STRINGTerminalRuleCall_9_1_GreaterThanSignKeyword_9_2__q;
+	protected AbstractElementAlias match_SentenciaHTML_SLASHTerminalRuleCall_5_a;
+	protected AbstractElementAlias match_SentenciaHTML___MENOR_QUETerminalRuleCall_9_0_SLASHTerminalRuleCall_9_1_STRINGTerminalRuleCall_9_2_MAYOR_QUETerminalRuleCall_9_3__q;
 	protected AbstractElementAlias match_Service___COMILLASTerminalRuleCall_1_0_USETerminalRuleCall_1_1_STRICTTerminalRuleCall_1_2_COMILLASTerminalRuleCall_1_3_PUNTO_Y_COMATerminalRuleCall_1_4__q;
 	
 	@Inject
 	protected void init(IGrammarAccess access) {
 		grammarAccess = (AngularDslGrammarAccess) access;
 		match_Componente___COMILLASTerminalRuleCall_1_0_USETerminalRuleCall_1_1_STRICTTerminalRuleCall_1_2_COMILLASTerminalRuleCall_1_3_PUNTO_Y_COMATerminalRuleCall_1_4__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getComponenteAccess().getCOMILLASTerminalRuleCall_1_0()), new TokenAlias(false, false, grammarAccess.getComponenteAccess().getUSETerminalRuleCall_1_1()), new TokenAlias(false, false, grammarAccess.getComponenteAccess().getSTRICTTerminalRuleCall_1_2()), new TokenAlias(false, false, grammarAccess.getComponenteAccess().getCOMILLASTerminalRuleCall_1_3()), new TokenAlias(false, false, grammarAccess.getComponenteAccess().getPUNTO_Y_COMATerminalRuleCall_1_4()));
+		match_CurlyBraces_DollarSignKeyword_1_q = new TokenAlias(false, true, grammarAccess.getCurlyBracesAccess().getDollarSignKeyword_1());
 		match_Modulo___COMILLASTerminalRuleCall_1_0_USETerminalRuleCall_1_1_STRICTTerminalRuleCall_1_2_COMILLASTerminalRuleCall_1_3_PUNTO_Y_COMATerminalRuleCall_1_4__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getModuloAccess().getCOMILLASTerminalRuleCall_1_0()), new TokenAlias(false, false, grammarAccess.getModuloAccess().getUSETerminalRuleCall_1_1()), new TokenAlias(false, false, grammarAccess.getModuloAccess().getSTRICTTerminalRuleCall_1_2()), new TokenAlias(false, false, grammarAccess.getModuloAccess().getCOMILLASTerminalRuleCall_1_3()), new TokenAlias(false, false, grammarAccess.getModuloAccess().getPUNTO_Y_COMATerminalRuleCall_1_4()));
-		match_SentenciaHTML_SolidusKeyword_5_a = new TokenAlias(true, true, grammarAccess.getSentenciaHTMLAccess().getSolidusKeyword_5());
-		match_SentenciaHTML___LessThanSignSolidusKeyword_9_0_STRINGTerminalRuleCall_9_1_GreaterThanSignKeyword_9_2__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getSentenciaHTMLAccess().getLessThanSignSolidusKeyword_9_0()), new TokenAlias(false, false, grammarAccess.getSentenciaHTMLAccess().getSTRINGTerminalRuleCall_9_1()), new TokenAlias(false, false, grammarAccess.getSentenciaHTMLAccess().getGreaterThanSignKeyword_9_2()));
+		match_SentenciaHTML_SLASHTerminalRuleCall_5_a = new TokenAlias(true, true, grammarAccess.getSentenciaHTMLAccess().getSLASHTerminalRuleCall_5());
+		match_SentenciaHTML___MENOR_QUETerminalRuleCall_9_0_SLASHTerminalRuleCall_9_1_STRINGTerminalRuleCall_9_2_MAYOR_QUETerminalRuleCall_9_3__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getSentenciaHTMLAccess().getMENOR_QUETerminalRuleCall_9_0()), new TokenAlias(false, false, grammarAccess.getSentenciaHTMLAccess().getSLASHTerminalRuleCall_9_1()), new TokenAlias(false, false, grammarAccess.getSentenciaHTMLAccess().getSTRINGTerminalRuleCall_9_2()), new TokenAlias(false, false, grammarAccess.getSentenciaHTMLAccess().getMAYOR_QUETerminalRuleCall_9_3()));
 		match_Service___COMILLASTerminalRuleCall_1_0_USETerminalRuleCall_1_1_STRICTTerminalRuleCall_1_2_COMILLASTerminalRuleCall_1_3_PUNTO_Y_COMATerminalRuleCall_1_4__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getServiceAccess().getCOMILLASTerminalRuleCall_1_0()), new TokenAlias(false, false, grammarAccess.getServiceAccess().getUSETerminalRuleCall_1_1()), new TokenAlias(false, false, grammarAccess.getServiceAccess().getSTRICTTerminalRuleCall_1_2()), new TokenAlias(false, false, grammarAccess.getServiceAccess().getCOMILLASTerminalRuleCall_1_3()), new TokenAlias(false, false, grammarAccess.getServiceAccess().getPUNTO_Y_COMATerminalRuleCall_1_4()));
 	}
 	
@@ -49,14 +51,24 @@ public class AngularDslSyntacticSequencer extends AbstractSyntacticSequencer {
 			return getCOMPONENTToken(semanticObject, ruleCall, node);
 		else if (ruleCall.getRule() == grammarAccess.getCONTROLLERRule())
 			return getCONTROLLERToken(semanticObject, ruleCall, node);
+		else if (ruleCall.getRule() == grammarAccess.getDOBLE_LLAVE_DERECHARule())
+			return getDOBLE_LLAVE_DERECHAToken(semanticObject, ruleCall, node);
+		else if (ruleCall.getRule() == grammarAccess.getDOBLE_LLAVE_IZQUIERDARule())
+			return getDOBLE_LLAVE_IZQUIERDAToken(semanticObject, ruleCall, node);
 		else if (ruleCall.getRule() == grammarAccess.getDOS_PUNTOSRule())
 			return getDOS_PUNTOSToken(semanticObject, ruleCall, node);
 		else if (ruleCall.getRule() == grammarAccess.getFUNCTIONRule())
 			return getFUNCTIONToken(semanticObject, ruleCall, node);
+		else if (ruleCall.getRule() == grammarAccess.getIGUALRule())
+			return getIGUALToken(semanticObject, ruleCall, node);
 		else if (ruleCall.getRule() == grammarAccess.getLLAVE_DERECHARule())
 			return getLLAVE_DERECHAToken(semanticObject, ruleCall, node);
 		else if (ruleCall.getRule() == grammarAccess.getLLAVE_IZQUIERDARule())
 			return getLLAVE_IZQUIERDAToken(semanticObject, ruleCall, node);
+		else if (ruleCall.getRule() == grammarAccess.getMAYOR_QUERule())
+			return getMAYOR_QUEToken(semanticObject, ruleCall, node);
+		else if (ruleCall.getRule() == grammarAccess.getMENOR_QUERule())
+			return getMENOR_QUEToken(semanticObject, ruleCall, node);
 		else if (ruleCall.getRule() == grammarAccess.getMODULERule())
 			return getMODULEToken(semanticObject, ruleCall, node);
 		else if (ruleCall.getRule() == grammarAccess.getPARENTESIS_CUADRADO_DERECHORule())
@@ -71,6 +83,8 @@ public class AngularDslSyntacticSequencer extends AbstractSyntacticSequencer {
 			return getPUNTOToken(semanticObject, ruleCall, node);
 		else if (ruleCall.getRule() == grammarAccess.getPUNTO_Y_COMARule())
 			return getPUNTO_Y_COMAToken(semanticObject, ruleCall, node);
+		else if (ruleCall.getRule() == grammarAccess.getSLASHRule())
+			return getSLASHToken(semanticObject, ruleCall, node);
 		else if (ruleCall.getRule() == grammarAccess.getSTRICTRule())
 			return getSTRICTToken(semanticObject, ruleCall, node);
 		else if (ruleCall.getRule() == grammarAccess.getSTRINGRule())
@@ -79,6 +93,8 @@ public class AngularDslSyntacticSequencer extends AbstractSyntacticSequencer {
 			return getTEMPLATE_URLToken(semanticObject, ruleCall, node);
 		else if (ruleCall.getRule() == grammarAccess.getUSERule())
 			return getUSEToken(semanticObject, ruleCall, node);
+		else if (ruleCall.getRule() == grammarAccess.getVARRule())
+			return getVARToken(semanticObject, ruleCall, node);
 		return "";
 	}
 	
@@ -133,6 +149,26 @@ public class AngularDslSyntacticSequencer extends AbstractSyntacticSequencer {
 	}
 	
 	/**
+	 * terminal DOBLE_LLAVE_DERECHA:
+	 * 	"}}";
+	 */
+	protected String getDOBLE_LLAVE_DERECHAToken(EObject semanticObject, RuleCall ruleCall, INode node) {
+		if (node != null)
+			return getTokenText(node);
+		return "}}";
+	}
+	
+	/**
+	 * terminal DOBLE_LLAVE_IZQUIERDA:
+	 * 	"{{";
+	 */
+	protected String getDOBLE_LLAVE_IZQUIERDAToken(EObject semanticObject, RuleCall ruleCall, INode node) {
+		if (node != null)
+			return getTokenText(node);
+		return "{{";
+	}
+	
+	/**
 	 * terminal DOS_PUNTOS:
 	 * 	':';
 	 */
@@ -153,6 +189,16 @@ public class AngularDslSyntacticSequencer extends AbstractSyntacticSequencer {
 	}
 	
 	/**
+	 * terminal IGUAL:
+	 * 	'=';
+	 */
+	protected String getIGUALToken(EObject semanticObject, RuleCall ruleCall, INode node) {
+		if (node != null)
+			return getTokenText(node);
+		return "=";
+	}
+	
+	/**
 	 * terminal LLAVE_DERECHA: 
 	 * 	'}';
 	 */
@@ -170,6 +216,26 @@ public class AngularDslSyntacticSequencer extends AbstractSyntacticSequencer {
 		if (node != null)
 			return getTokenText(node);
 		return "{";
+	}
+	
+	/**
+	 * terminal MAYOR_QUE:
+	 * 	'>';
+	 */
+	protected String getMAYOR_QUEToken(EObject semanticObject, RuleCall ruleCall, INode node) {
+		if (node != null)
+			return getTokenText(node);
+		return ">";
+	}
+	
+	/**
+	 * terminal MENOR_QUE:
+	 * 	'<';
+	 */
+	protected String getMENOR_QUEToken(EObject semanticObject, RuleCall ruleCall, INode node) {
+		if (node != null)
+			return getTokenText(node);
+		return "<";
 	}
 	
 	/**
@@ -243,6 +309,16 @@ public class AngularDslSyntacticSequencer extends AbstractSyntacticSequencer {
 	}
 	
 	/**
+	 * terminal SLASH:
+	 * 	"/";
+	 */
+	protected String getSLASHToken(EObject semanticObject, RuleCall ruleCall, INode node) {
+		if (node != null)
+			return getTokenText(node);
+		return "/";
+	}
+	
+	/**
 	 * terminal STRICT:
 	 * 	'strict';
 	 */
@@ -284,6 +360,16 @@ public class AngularDslSyntacticSequencer extends AbstractSyntacticSequencer {
 		return "use";
 	}
 	
+	/**
+	 * terminal VAR:
+	 * 	'var';
+	 */
+	protected String getVARToken(EObject semanticObject, RuleCall ruleCall, INode node) {
+		if (node != null)
+			return getTokenText(node);
+		return "var";
+	}
+	
 	@Override
 	protected void emitUnassignedTokens(EObject semanticObject, ISynTransition transition, INode fromNode, INode toNode) {
 		if (transition.getAmbiguousSyntaxes().isEmpty()) return;
@@ -292,12 +378,14 @@ public class AngularDslSyntacticSequencer extends AbstractSyntacticSequencer {
 			List<INode> syntaxNodes = getNodesFor(transitionNodes, syntax);
 			if (match_Componente___COMILLASTerminalRuleCall_1_0_USETerminalRuleCall_1_1_STRICTTerminalRuleCall_1_2_COMILLASTerminalRuleCall_1_3_PUNTO_Y_COMATerminalRuleCall_1_4__q.equals(syntax))
 				emit_Componente___COMILLASTerminalRuleCall_1_0_USETerminalRuleCall_1_1_STRICTTerminalRuleCall_1_2_COMILLASTerminalRuleCall_1_3_PUNTO_Y_COMATerminalRuleCall_1_4__q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_CurlyBraces_DollarSignKeyword_1_q.equals(syntax))
+				emit_CurlyBraces_DollarSignKeyword_1_q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_Modulo___COMILLASTerminalRuleCall_1_0_USETerminalRuleCall_1_1_STRICTTerminalRuleCall_1_2_COMILLASTerminalRuleCall_1_3_PUNTO_Y_COMATerminalRuleCall_1_4__q.equals(syntax))
 				emit_Modulo___COMILLASTerminalRuleCall_1_0_USETerminalRuleCall_1_1_STRICTTerminalRuleCall_1_2_COMILLASTerminalRuleCall_1_3_PUNTO_Y_COMATerminalRuleCall_1_4__q(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_SentenciaHTML_SolidusKeyword_5_a.equals(syntax))
-				emit_SentenciaHTML_SolidusKeyword_5_a(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_SentenciaHTML___LessThanSignSolidusKeyword_9_0_STRINGTerminalRuleCall_9_1_GreaterThanSignKeyword_9_2__q.equals(syntax))
-				emit_SentenciaHTML___LessThanSignSolidusKeyword_9_0_STRINGTerminalRuleCall_9_1_GreaterThanSignKeyword_9_2__q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_SentenciaHTML_SLASHTerminalRuleCall_5_a.equals(syntax))
+				emit_SentenciaHTML_SLASHTerminalRuleCall_5_a(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_SentenciaHTML___MENOR_QUETerminalRuleCall_9_0_SLASHTerminalRuleCall_9_1_STRINGTerminalRuleCall_9_2_MAYOR_QUETerminalRuleCall_9_3__q.equals(syntax))
+				emit_SentenciaHTML___MENOR_QUETerminalRuleCall_9_0_SLASHTerminalRuleCall_9_1_STRINGTerminalRuleCall_9_2_MAYOR_QUETerminalRuleCall_9_3__q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_Service___COMILLASTerminalRuleCall_1_0_USETerminalRuleCall_1_1_STRICTTerminalRuleCall_1_2_COMILLASTerminalRuleCall_1_3_PUNTO_Y_COMATerminalRuleCall_1_4__q.equals(syntax))
 				emit_Service___COMILLASTerminalRuleCall_1_0_USETerminalRuleCall_1_1_STRICTTerminalRuleCall_1_2_COMILLASTerminalRuleCall_1_3_PUNTO_Y_COMATerminalRuleCall_1_4__q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else acceptNodes(getLastNavigableState(), syntaxNodes);
@@ -317,6 +405,17 @@ public class AngularDslSyntacticSequencer extends AbstractSyntacticSequencer {
 	
 	/**
 	 * Ambiguous syntax:
+	 *     '$'?
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     (rule start) DOBLE_LLAVE_IZQUIERDA (ambiguity) expresion=Expresion
+	 */
+	protected void emit_CurlyBraces_DollarSignKeyword_1_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
 	 *     (COMILLAS USE STRICT COMILLAS PUNTO_Y_COMA)?
 	 *
 	 * This ambiguous syntax occurs at:
@@ -328,35 +427,35 @@ public class AngularDslSyntacticSequencer extends AbstractSyntacticSequencer {
 	
 	/**
 	 * Ambiguous syntax:
-	 *     '/'*
+	 *     SLASH*
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     directivas+=Directiva (ambiguity) '>' ('</' STRING '>')? (rule end)
-	 *     directivas+=Directiva (ambiguity) '>' curlybraces+=CurlyBraces
-	 *     directivas+=Directiva (ambiguity) '>' sentenciashtml+=[SentenciaHTML|EString]
-	 *     name=EString (ambiguity) '>' ('</' STRING '>')? (rule end)
-	 *     name=EString (ambiguity) '>' curlybraces+=CurlyBraces
-	 *     name=EString (ambiguity) '>' sentenciashtml+=[SentenciaHTML|EString]
-	 *     propiedades+=Propiedad (ambiguity) '>' ('</' STRING '>')? (rule end)
-	 *     propiedades+=Propiedad (ambiguity) '>' curlybraces+=CurlyBraces
-	 *     propiedades+=Propiedad (ambiguity) '>' sentenciashtml+=[SentenciaHTML|EString]
+	 *     directivas+=Directiva (ambiguity) MAYOR_QUE (MENOR_QUE SLASH STRING MAYOR_QUE)? (rule end)
+	 *     directivas+=Directiva (ambiguity) MAYOR_QUE curlybraces+=CurlyBraces
+	 *     directivas+=Directiva (ambiguity) MAYOR_QUE sentenciashtml+=[SentenciaHTML|EString]
+	 *     name=EString (ambiguity) MAYOR_QUE (MENOR_QUE SLASH STRING MAYOR_QUE)? (rule end)
+	 *     name=EString (ambiguity) MAYOR_QUE curlybraces+=CurlyBraces
+	 *     name=EString (ambiguity) MAYOR_QUE sentenciashtml+=[SentenciaHTML|EString]
+	 *     propiedades+=Propiedad (ambiguity) MAYOR_QUE (MENOR_QUE SLASH STRING MAYOR_QUE)? (rule end)
+	 *     propiedades+=Propiedad (ambiguity) MAYOR_QUE curlybraces+=CurlyBraces
+	 *     propiedades+=Propiedad (ambiguity) MAYOR_QUE sentenciashtml+=[SentenciaHTML|EString]
 	 */
-	protected void emit_SentenciaHTML_SolidusKeyword_5_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_SentenciaHTML_SLASHTerminalRuleCall_5_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
 	/**
 	 * Ambiguous syntax:
-	 *     ('</' STRING '>')?
+	 *     (MENOR_QUE SLASH STRING MAYOR_QUE)?
 	 *
 	 * This ambiguous syntax occurs at:
 	 *     curlybraces+=CurlyBraces (ambiguity) (rule end)
-	 *     directivas+=Directiva '/'* '>' (ambiguity) (rule end)
-	 *     name=EString '/'* '>' (ambiguity) (rule end)
-	 *     propiedades+=Propiedad '/'* '>' (ambiguity) (rule end)
+	 *     directivas+=Directiva SLASH* MAYOR_QUE (ambiguity) (rule end)
+	 *     name=EString SLASH* MAYOR_QUE (ambiguity) (rule end)
+	 *     propiedades+=Propiedad SLASH* MAYOR_QUE (ambiguity) (rule end)
 	 *     sentenciashtml+=[SentenciaHTML|EString] (ambiguity) (rule end)
 	 */
-	protected void emit_SentenciaHTML___LessThanSignSolidusKeyword_9_0_STRINGTerminalRuleCall_9_1_GreaterThanSignKeyword_9_2__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_SentenciaHTML___MENOR_QUETerminalRuleCall_9_0_SLASHTerminalRuleCall_9_1_STRINGTerminalRuleCall_9_2_MAYOR_QUETerminalRuleCall_9_3__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
