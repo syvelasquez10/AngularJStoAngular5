@@ -1,0 +1,9 @@
+<!-- Template  [%=temp.name%] -->
+[% for (s in temp.sentenciashtml){ %]		
+	[% var propiedades = ""; 
+	 for (p in s.propiedades) { %]
+	  [% propiedades += p.name + "=" + "'" +  p.valor + "'"; %] 		
+ 	[% } %] 	
+ 	<[%=s.name%] [%=propiedades%]>
+ 	</[%=s.name%]>
+[% } %]

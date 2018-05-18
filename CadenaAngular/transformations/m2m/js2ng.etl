@@ -1,0 +1,9 @@
+pre {
+	"Ejecutando ETL".println();
+}
+
+rule rulename 
+	transform s : Angular!Variable
+	to t : Angular!Variable {
+		t.type = s.anotacion.value;	
+	}

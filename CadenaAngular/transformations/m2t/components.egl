@@ -1,0 +1,30 @@
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-[%=component.name%]',  
+  templateUrl: './[%=component.name%].component.html',
+  styleUrls: ['./[%=component.name%].component.css']
+})
+
+export class [%=component.name.firstToUpperCase%] {
+	
+	[%
+	 	var funcion = component.funcion;	 	
+	 	for (v in funcion.variables) { %]
+	 		 	
+	 	// se debe corregir el tipo de datos
+	 	 [%=v.name %]: string = [%=v.valor%] ;
+	 		 	
+	 [%	} %]
+	
+		
+	constructor () {}
+	
+	ngOnInit() {
+		
+	}		
+	
+	//Body
+	[%=funcion.body%]
+	
+}

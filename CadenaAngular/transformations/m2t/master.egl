@@ -1,0 +1,20 @@
+[%
+
+	var appAngular = Angular!AppAngularJS.all.at(0);
+	
+	
+	for(c in appAngular.componentes)
+    {        
+    	var componente:Template:= TemplateFactory.load('components.egl');
+    	componente.populate('component', c);
+		componente.generate('./src/'+ c.name +'/'+ c.name +'.component.ts');    
+    }
+    
+    
+    for(t in appAngular.templates)
+    {        
+    	var template:Template:= TemplateFactory.load('template.egl');
+    	template.populate('temp', t);
+		template.generate('./src/'+ t.name +'/'+ t.name +'.component.html');    
+    }
+%]

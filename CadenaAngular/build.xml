@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project default="build">
+	<property name="generated.location" location="${basedir}/generated"/>
+	<property name="transformations.location" location="${basedir}/transformations"/>
+	<property name="models.location" location="${basedir}/models"/>
+	<property name="metamodels.location" location="${basedir}/metamodels"/>
+	<property name="angular.metamodel.location" location="${metamodels.location}/angular.ecore" />
+	<property name="Angular5.metamodel.uri" value="Angular" />
+	<property name="Angular.metamodel.uri" value="https://uniandes.edu.co/angular" />
+	<target name="build">
+		<echo>Borrando el contenido de la carpeta generated</echo>
+		<delete dir="${generated.location}" failonerror="true" />
+		<antcall target="m2m" />
+	</target>
+	<target name="m2m">
+		<echo>Realizar transformación ETL</echo>
+		<epsilon.emf.register file="${graph.metamodel.location}"/>
+		<epsilon.emf.loadModel name="Angular" modelfile="${generated.location}/generado.graph" metamodeluri="${graph.metamodel.uri}" read="false" store="true" />
+		<epsilon.emf.loadModel name="Angular" modelfile="${models.location}/entrada.petrinet2" metamodeluri="${angular.metamodel.uri}" read="true" store="false" />
+		<epsilon.etl src="${transformations.location}/m2m/js2ng.etl">
+			<model ref="Angular" />
+			<model ref="Angular" />
+		 </epsilon.etl>
+		<antcall target="m2t" />
+	</target>
+	<target name="m2t">
+		<echo>Corriendo Template EGL</echo>
+		<epsilon.emf.register file="${.metamodel.location}"/>
+		<epsilon.emf.loadModel name="Graph" modelfile="${generated.location}/generado.graph" metamodeluri="${angular.metamodel.uri}" read="true" store="true" />
+		<epsilon.egl src="${transformations.location}/m2t/master.egl">
+			<model ref="Angular" />
+		</epsilon.egl>
+	</target>
+</project>
